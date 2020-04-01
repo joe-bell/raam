@@ -6,7 +6,7 @@
     "dev": "lerna run dev --stream",
     "lint": "lerna run lint:ts && npm run lint:es",
     "lint:es": "npx eslint '*/**/*.{js,ts,tsx}' --ignore-path .gitignore --fix",
-    "postinstall": "lerna bootstrap"
+    "production": "lerna bootstrap && npm run build"
   },
   "config": {
     "commitizen": {
