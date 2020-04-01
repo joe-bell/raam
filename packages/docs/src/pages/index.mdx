@@ -1,32 +1,35 @@
-import { Box, Link as ThemeUILink } from "theme-ui";
-import { Inline } from "../components/inline";
-
 > **raam** (estonian) ˈrɑːm _**n**._ frame.
 
-Beautifully boring cosmetic-free [React.js](https://reactjs.org/) components for structure and layout.
+**Beautifully boring cosmetic-free [React.js](https://reactjs.org/) components for structure and layout.**  
+⚠ <abbr title="Work in Progress">WIP</abbr>: Currently only supporting [Theme UI](https://theme-ui.com/).
 
 ## Components
 
 ### Inline
 
-<Inline>
-  {Array.from({ length: 24 }).map((item, i) => (
+```jsx live=true
+// import { Box } from "theme-ui";
+// import { Inline } from "raam";
+
+<Inline gap={3}>
+  {Array.from({ length: 36 }).map((item, i) => (
     <Box
       key={i}
-      sx={{ border: "1px solid black", width: "2rem", height: "2rem" }}
+      sx={{ width: "2rem", height: "2rem", backgroundColor: "primary" }}
     />
   ))}
 </Inline>
+```
 
-> Caveats
+> **Caveats**
 >
-> As of April 2020 flex `gap` is only supported by Firefox. As a fallback,
-> negative margins are used on the outer compoonent to counteract margins inside.
+> As of April 2020, flex `gap` is only supported by Firefox. As a fallback,
+> negative margins are used on the outer component to counteract margins inside.
 > If you place an `Inline` component it will **not** affect the margin flow, but
-> you may have issues if you want to adjust it.
+> you will experience issues if you try to adjust it.
 >
-> In a case where you want to adjust the margin, you should wrap `Inline` with
-> another element.
+> If you want to adjust the margin, you should wrap `Inline` with another
+> element.
 
 #### List
 
@@ -34,16 +37,26 @@ By default, all `Inline` child elements render wrapped in a `div`.
 If a list element is defined via the `as` prop (e.g. `ul` or `ol`), all items
 will render wrapped in an `li` without a list-style-type.
 
-<Inline as="ul">
-  {Array.from({ length: 24 }, (v, k) => k + 1).map(item => (
-    <ThemeUILink key={item} href={`#list-item-${item}`}>
-      Item {item}
-    </ThemeUILink>
-  ))}
-</Inline>
+```jsx live=true
+// import { Box, NavLink } from "theme-ui";
+// import { Inline, Stack } from "raam";
+<Stack padding={3}>
+  <Heading as="h2">Tags</Heading>
+
+  <Inline as="ul">
+    {Array.from({ length: 8 }, (v, k) => k + 1).map(item => (
+      <Link key={item} href={`#list-item-${item}`}>
+        Tag {item}
+      </Link>
+    ))}
+  </Inline>
+</Stack>
+```
 
 ### Stack
 
 TODO
 
 ## Getting Started
+
+TODO

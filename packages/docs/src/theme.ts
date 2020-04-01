@@ -3,6 +3,7 @@ const colors = {
   background: "#fff",
   primary: "#0072CE",
   muted: "#f6f6f6",
+  error: "#e23636",
 };
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];

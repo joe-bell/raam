@@ -20,8 +20,10 @@
     "theme-ui": "0.3.1",
     "preact": "10.3.4",
     "preact-render-to-string": "5.1.4",
+    "prism-react-renderer": "1.0.2",
     "react": "github:preact-compat/react#1.0.0",
-    "react-dom": "github:preact-compat/react-dom#1.0.0"
+    "react-dom": "github:preact-compat/react-dom#1.0.0",
+    "react-live": "2.2.2"
   },
   "devDependencies": {
     "@types/node": "13.9.8",
