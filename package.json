@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "root",
+  "scripts": {
+    "build": "lerna run build --stream",
+    "dev": "lerna run dev --stream",
+    "lint": "lerna run lint:ts && npm run lint:es",
+    "lint:es": "npx eslint '*/**/*.{js,ts,tsx}' --ignore-path .gitignore --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,html,css,md,mdx,yml}": "npx prettier --write",
+    "*.{js,jsx,ts,tsx}": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "13.9.8",
+    "@types/react": "16.9.30",
+    "@typescript-eslint/eslint-plugin": "2.25.0",
+    "@typescript-eslint/parser": "2.25.0",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.19.0",
+    "husky": "4.2.3",
+    "lerna": "3.15.0",
+    "lint-staged": "10.0.9",
+    "prettier": "1.19.1",
+    "rimraf": "3.0.2",
+    "typescript": "3.8.3"
+  }
+}

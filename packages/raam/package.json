@@ -1,0 +1,22 @@
+{
+  "name": "raam",
+  "version": "0.0.1",
+  "description": "Cosmetic-free React.js components for structure and layout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-bell/raam.git"
+  },
+  "author": "Joe Bell <joe@bigattic.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-bell/raam/issues"
+  },
+  "homepage": "https://github.com/joe-bell/raam#readme",
+  "peerDependencies": {
+    "theme-ui": ">= 0.3.1"
+  }
+}

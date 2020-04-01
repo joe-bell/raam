@@ -1,0 +1,9 @@
+// Node
+node_modules
+
+// Next Builds
+.next
+out
+
+// Repo
+.idea
