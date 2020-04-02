@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import * as React from "react";
 import { jsx, Box, Container, Heading, NavLink } from "theme-ui";
+import { Inline } from "raam";
 import config from "../config";
-import { Inline } from "./inline";
 
 const border = {
   border: "primary",

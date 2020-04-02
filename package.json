@@ -2,10 +2,12 @@
   "private": true,
   "name": "root",
   "scripts": {
-    "build": "lerna run build --stream",
+    "build": "lerna run prebuild && lerna run build",
+    "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
     "dev": "lerna run dev --stream",
-    "lint": "lerna run lint:ts && npm run lint:es",
-    "lint:es": "npx eslint '*/**/*.{js,ts,tsx}' --ignore-path .gitignore --fix",
+    "lint": "lerna run lint && npm run lint:es -- .",
+    "lint:es": "eslint --ignore-path .gitignore --fix --ext .js,.jsx,.ts,.tsx",
+    "lint:ts": "lerna run lint:ts",
     "production": "lerna bootstrap && npm run build"
   },
   "config": {
@@ -20,13 +22,17 @@
   },
   "lint-staged": {
     "*.{json,html,css,md,mdx,yml}": "npx prettier --write",
-    "*.{js,jsx,ts,tsx}": "npm run lint"
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:ts",
+      "npm run lint:es"
+    ]
   },
   "devDependencies": {
     "@types/node": "13.9.8",
     "@types/react": "16.9.30",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
+    "barrelsby": "^2.2.0",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "6.8.0",
@@ -37,6 +43,7 @@
     "husky": "4.2.3",
     "lerna": "3.15.0",
     "lint-staged": "10.0.9",
+    "microbundle": "0.11.0",
     "prettier": "1.19.1",
     "rimraf": "3.0.2",
     "typescript": "3.8.3"

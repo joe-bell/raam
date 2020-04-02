@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import * as React from "react";
+import { Children } from "react";
 import { jsx, Flex, FlexProps, GridProps, Box } from "theme-ui";
+import { li } from "./reset";
 
 type InlineMargin = string | number | null;
 
@@ -72,20 +73,13 @@ export const Inline = ({
       }}
       {...props}
     >
-      {React.Children.map(children, child => (
+      {Children.map(children, child => (
         <Box
           as={isList ? "li" : "div"}
           sx={{
             position: "relative",
             margin: theme => responsiveInlineMargin({ gap })(theme),
-            ...(isList && {
-              listStyleType: "none",
-              "&:before": {
-                position: "absolute",
-                content:
-                  '"\\200B"' /* Add zero-width space to prevent VoiceOver disable */,
-              },
-            }),
+            ...(isList && li.listStyleTypeNone),
           }}
         >
           {child}
