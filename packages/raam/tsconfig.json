@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": false,
+    "strictFunctionTypes": true
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+}

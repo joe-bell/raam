@@ -35,6 +35,7 @@ const theme = {
   },
   borders: {
     primary: `${space[1]}px solid ${colors.text}`,
+    divider: `${space[1]}px solid ${colors.muted}`,
   },
   styles: {
     root: {
@@ -124,6 +125,10 @@ const theme = {
     td: {
       textAlign: "left",
       borderBottomStyle: "solid",
+    },
+    hr: {
+      border: 0,
+      borderBottom: "divider",
     },
     img: {
       maxWidth: "100%",

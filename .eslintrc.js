@@ -20,7 +20,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/ban-ts-ignore": "off",
-    "jsx-a11y/label-has-for": "off", // Deprecated - https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
+    "jsx-a11y/label-has-for": "off",
     "react/prop-types": "off",
     "react/display-name": "off",
   },

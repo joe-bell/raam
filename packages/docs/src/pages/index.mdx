@@ -1,7 +1,8 @@
 > **raam** (estonian) ˈrɑːm _**n**._ frame.
 
-**Beautifully boring cosmetic-free [React.js](https://reactjs.org/) components for structure and layout.**  
-⚠ <abbr title="Work in Progress">WIP</abbr>: Currently only supporting [Theme UI](https://theme-ui.com/).
+**Beautifully boring cosmetic-free [React.js][reactjs] components for structure and layout.**
+
+---
 
 ## Components
 
@@ -12,7 +13,7 @@
 // import { Inline } from "raam";
 
 <Inline gap={3}>
-  {Array.from({ length: 36 }).map((item, i) => (
+  {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
       sx={{ width: "2rem", height: "2rem", backgroundColor: "primary" }}
@@ -55,8 +56,31 @@ will render wrapped in an `li` without a list-style-type.
 
 ### Stack
 
-TODO
+```jsx live=true
+// import { Box } from "theme-ui";
+// import { Stack } from "raam";
+
+<Stack gap={3}>
+  {Array.from({ length: 4 }).map((item, i) => (
+    <Box key={i} sx={{ height: "2rem", backgroundColor: "primary" }} />
+  ))}
+</Stack>
+```
+
+---
 
 ## Getting Started
 
-TODO
+### Installation
+
+> **⚠ <abbr title="Work in Progress">WIP</abbr>**
+>
+> This project is in development and comes with caveats:
+>
+> 1. Only supports React.js apps with [Theme UI][theme-ui] pre-installed (for the time being).
+> 2. Prone to regular unannounced changes.
+
+1. `npm i raam --save`
+
+[reactjs]: https://reactjs.org
+[theme-ui]: https://theme-ui.com/

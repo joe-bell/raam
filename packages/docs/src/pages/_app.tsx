@@ -9,6 +9,7 @@ import theme from "../theme";
 const RaamApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider
     theme={theme}
+    // @ts-ignore
     components={{ wrapper: Wrapper, code: Code, ...headings }}
   >
     <Styled.root>

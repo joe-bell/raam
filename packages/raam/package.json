@@ -1,9 +1,21 @@
 {
   "name": "raam",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Beautifully boring cosmetic-free React.js components for structure and layout.",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
+    "prebuild": "barrelsby --delete --directory src",
+    "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
+    "clean": "rimraf {dist,.rts2*}",
+    "lint:ts": "npx tsc --noEmit",
+    "dev": "npm run build -- watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +29,11 @@
   },
   "homepage": "https://github.com/joe-bell/raam#readme",
   "peerDependencies": {
+    "react": ">= 16.13.1",
     "theme-ui": ">= 0.3.1"
+  },
+  "devDependencies": {
+    "react": "16.13.1",
+    "theme-ui": "0.3.1"
   }
 }

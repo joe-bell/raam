@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Box, Grid as Stack, Heading, Link } from "theme-ui";
+import { jsx, Box, Heading, Link } from "theme-ui";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { Inline } from "../components/inline";
+import { Inline, Stack } from "raam";
 
 export default ({ children, className, live }) => {
   const language = className.replace(/language-/, "");
