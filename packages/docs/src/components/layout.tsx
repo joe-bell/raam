@@ -9,7 +9,7 @@ const border = {
   border: "primary",
 };
 
-export const Wrapper: React.FC = ({ children }) => (
+const Layout: React.FC = ({ children }) => (
   <>
     <Head>
       <meta charSet="UTF-8" />
@@ -106,3 +106,5 @@ export const Wrapper: React.FC = ({ children }) => (
     </Box>
   </>
 );
+
+export default Layout;
