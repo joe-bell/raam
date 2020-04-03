@@ -4,7 +4,7 @@
   "scripts": {
     "build": "lerna run prebuild && lerna run build",
     "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
-    "dev": "lerna run dev --stream",
+    "dev": "lerna run dev --parallel",
     "lint": "lerna run lint && npm run lint:es -- .",
     "lint:es": "eslint --ignore-path .gitignore --fix --ext .js,.jsx,.ts,.tsx",
     "lint:ts": "lerna run lint:ts",

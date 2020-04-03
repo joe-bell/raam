@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { Children } from "react";
-import { jsx, Flex, FlexProps, GridProps, Box } from "theme-ui";
+import * as React from "react";
+import { Flex, FlexProps, GridProps, Box } from "@theme-ui/components";
 import { li } from "./reset";
 
 type InlineMargin = string | number | null;
@@ -73,7 +72,7 @@ export const Inline = ({
       }}
       {...props}
     >
-      {Children.map(children, child => (
+      {React.Children.map(children, child => (
         <Box
           as={isList ? "li" : "div"}
           sx={{

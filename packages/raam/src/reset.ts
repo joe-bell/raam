@@ -1,4 +1,4 @@
-import { SxStyleProp } from "theme-ui";
+import { SxStyleProp } from "./types";
 
 type ResetLi = {
   listStyleTypeNone: SxStyleProp;

@@ -5,3 +5,4 @@
 export * from "./inline";
 export * from "./reset";
 export * from "./stack";
+export * from "./types";
