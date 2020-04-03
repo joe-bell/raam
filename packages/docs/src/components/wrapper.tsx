@@ -97,7 +97,12 @@ export const Wrapper: React.FC = ({ children }) => (
     </Box>
 
     <Box sx={{ ...border, borderTop: 0, paddingY: 3 }}>
-      <Container as="footer">© 2020 Joe Bell</Container>
+      <Container as="footer">
+        © 2020{" "}
+        <NavLink href={`https://twitter.com/${config.meta.social.twitter}`}>
+          {config.meta.author}
+        </NavLink>
+      </Container>
     </Box>
   </>
 );
