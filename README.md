@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://raam.joebell.co.uk" rel="nofollow">
-    <img src="packages/docs/public/img/banner-readme.png" alt="raam" title="raam" width="320">
+    <img src="packages/docs/public/img/logo-readme.png" alt="raam" title="raam" width="320">
   </a>
 </p>
 

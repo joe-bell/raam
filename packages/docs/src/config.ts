@@ -1,3 +1,8 @@
+const social = {
+  github: "joe-bell",
+  twitter: "joebell_",
+};
+
 const config = {
   navigation: [
     {
@@ -10,15 +15,24 @@ const config = {
     },
     {
       title: "GitHub",
-      url: "https://github.com/joe-bell/raam",
+      url: `https://github.com/${social.github}/raam`,
       external: true,
     },
     {
       title: "Twitter",
-      url: "https://twitter.com/joebell_",
+      url: `https://twitter.com/${social.twitter}`,
       external: true,
     },
   ],
+  googleAnalyticsID: "UA-111105740-2",
+  meta: {
+    title: "raam",
+    description:
+      "Beautifully boring cosmetic-free React.js components for structure and layout.",
+    author: "Joe Bell",
+    url: "https://raam.joebell.co.uk",
+    social,
+  },
 };
 
 export default config;

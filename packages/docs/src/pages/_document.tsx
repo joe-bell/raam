@@ -16,7 +16,7 @@ class RaamDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head />
         <body>
           <InitializeColorMode />
