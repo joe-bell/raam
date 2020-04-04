@@ -4,7 +4,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { Inline, Stack } from "raam";
 
-export default ({ children, className, live }) => {
+const Code = ({ children, className, live }) => {
   const language = className.replace(/language-/, "");
   if (live) {
     return (
@@ -55,3 +55,5 @@ export default ({ children, className, live }) => {
     </Highlight>
   );
 };
+
+export default Code;
