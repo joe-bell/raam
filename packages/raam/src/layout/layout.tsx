@@ -2,6 +2,8 @@ import * as React from "react";
 import { Box, BoxProps } from "../box";
 import { determineElement } from "../utils";
 import { GapProp } from "../types";
+import { ResponsiveValue } from "styled-system";
+import * as CSS from "csstype";
 
 type LayoutMargin = string | number | null;
 
@@ -50,24 +52,25 @@ const responsiveLayoutMargin = ({
 
 export type LayoutProps = BoxProps &
   GapProp & {
-    flexDirection?: string;
-    flexWrap?: string;
-    justifyContent?: string;
-    alignItems?: string;
-    variant?: "stack" | "inline" | "wrap";
+    alignContent?: ResponsiveValue<CSS.AlignContentProperty>;
+    alignItems?: ResponsiveValue<CSS.AlignItemsProperty>;
+    flexDirection?: ResponsiveValue<CSS.FlexDirectionProperty>;
+    flexWrap?: ResponsiveValue<CSS.FlexWrapProperty>;
+    justifyContent?: ResponsiveValue<CSS.JustifyContentProperty>;
   };
 
 export const Layout: React.FC<LayoutProps> = ({
   as = "div",
   gap = 3,
   children,
-  flexDirection = "column",
-  flexWrap = "no-wrap",
+  flexDirection = "row",
+  flexWrap = "nowrap",
   justifyContent = "flex-start",
-  alignItems = "center",
+  alignContent = "stretch",
+  alignItems = "stretch",
   ...props
 }) => {
-  const isWrapped = flexWrap === "wrap" || flexWrap === "wrap-reverse";
+  const noWrap = flexWrap === "nowrap";
 
   return (
     <Box
@@ -75,15 +78,15 @@ export const Layout: React.FC<LayoutProps> = ({
       as={as}
       __css={{
         display: "flex",
+        alignContent,
+        alignItems,
         flexDirection,
         flexWrap,
-        overflow: isWrapped && "hidden",
-        overflowX: !isWrapped && "auto",
+        overflow: !noWrap && "hidden",
+        overflowX: noWrap && flexDirection === "row" && "auto",
         justifyContent,
-        alignItems,
-        paddingLeft: 0,
         margin:
-          isWrapped &&
+          !noWrap &&
           (theme => responsiveLayoutMargin({ gap, negative: true })(theme)),
       }}
       {...props}
@@ -94,15 +97,14 @@ export const Layout: React.FC<LayoutProps> = ({
           as={determineElement(as)}
           __css={{
             position: "relative",
-            ...(isWrapped
+            ...(!noWrap
               ? { margin: theme => responsiveLayoutMargin({ gap })(theme) }
               : i > 0 && {
                   [flexDirection === "column"
                     ? "marginTop"
                     : "marginLeft"]: gap,
                 }),
-            flex: "0 0 auto",
-            width: flexDirection === "column" && !isWrapped && "100%",
+            flex: flexDirection === "row" && gap && "0 0 auto",
           }}
         >
           {child}

@@ -4,10 +4,10 @@ import { LayoutProps, Layout } from "./layout";
 export type InlineProps = LayoutProps;
 
 export const Inline: React.FC<InlineProps> = ({
+  alignItems = "center",
   flexDirection = "row",
   flexWrap = "wrap",
   justifyContent = "flex-start",
-  alignItems = "center",
   ...props
 }) => (
   <Layout
@@ -22,9 +22,9 @@ export const Inline: React.FC<InlineProps> = ({
 export type StackProps = LayoutProps;
 
 export const Stack: React.FC<StackProps> = ({
-  flexWrap = "no-wrap",
+  alignItems = "stretch",
   flexDirection = "column",
-  alignItems = "flex-start",
+  flexWrap = "nowrap",
   ...props
 }) => (
   <Layout

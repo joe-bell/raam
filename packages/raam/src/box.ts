@@ -36,6 +36,10 @@ const reset = props =>
   (typeof props.as === "string" &&
     {
       /**
+       * Override browser defaults.
+       */
+      ul: { paddingLeft: 0 },
+      /**
        * Ensure any list-items are rendered without bullets.
        * Adding a zero-width space in the content to prevent VoiceOver disable.
        */

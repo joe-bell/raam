@@ -35,11 +35,13 @@ A flex-based layout primitive.
 
 #### No Wrap
 
+If you'd rather let items flow elegantly in a single line, make use of `flex-wrap: nowrap;` to override the default behaviour:
+
 ```jsx live=true
 // import { Box } from "your-components";
 // import { Inline } from "raam";
 
-<Inline gap={3} flexWrap="no-wrap">
+<Inline gap={3} flexWrap="nowrap">
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
@@ -52,6 +54,33 @@ A flex-based layout primitive.
     />
   ))}
 </Inline>
+```
+
+or with some more chaotic values…
+
+```jsx live=true
+// import { Box } from "your-components";
+// import { Inline } from "raam";
+
+() => {
+  const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
+
+  return (
+    <Inline gap={3} flexWrap="nowrap">
+      {Array.from({ length: 32 }).map((item, i) => (
+        <Box
+          key={i}
+          sx={{
+            width: size(),
+            height: size(),
+            backgroundColor: "primary",
+            filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+          }}
+        />
+      ))}
+    </Inline>
+  );
+};
 ```
 
 #### Example
@@ -98,6 +127,34 @@ Let's take a look at a more real-world example; a "tag"-list at the bottom of an
     <Box key={i} sx={{ height: "2rem", backgroundColor: "primary" }} />
   ))}
 </Stack>
+```
+
+or with some more chaotic values…
+
+```jsx live=true
+// import { Box } from "your-components";
+// import { Inline } from "raam";
+
+() => {
+  const width = () => `${Math.floor(Math.random() * 100) + 1}%`;
+  const height = () => `${Math.floor(Math.random() * 4) + 1}rem`;
+
+  return (
+    <Stack gap={3}>
+      {Array.from({ length: 4 }).map((item, i) => (
+        <Box
+          key={i}
+          sx={{
+            width: width(),
+            height: height(),
+            backgroundColor: "primary",
+            filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+          }}
+        />
+      ))}
+    </Stack>
+  );
+};
 ```
 
 > "Hold up, why don't you just…"
