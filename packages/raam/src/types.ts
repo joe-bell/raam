@@ -1,3 +1,21 @@
-import { BoxOwnProps } from "@theme-ui/components";
+import { ResponsiveValue } from "styled-system";
 
-export type SxStyleProp = Pick<BoxOwnProps, "sx">["sx"];
+// Sourced from: @types/theme-ui
+export type Assign<T, U> = {
+  [P in keyof (T & U)]: P extends keyof T
+    ? T[P]
+    : P extends keyof U
+    ? U[P]
+    : never;
+};
+
+export type GapProp = {
+  /**
+   * The gutter between items.
+   */
+  gap?: ResponsiveValue<string | number>;
+};
+
+export { ColorProps, SpaceProps } from "styled-system";
+export { SxStyleProp } from "theme-ui";
+export { InterpolationWithTheme } from "@emotion/core";

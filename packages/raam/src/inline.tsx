@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Flex, FlexProps, GridProps, Box } from "@theme-ui/components";
-import { li } from "./reset";
+import { Box, BoxProps } from "./box";
+import { determineElement } from "./utils";
+import { GapProp } from "./types";
 
 type InlineMargin = string | number | null;
 
@@ -47,43 +48,40 @@ const responsiveInlineMargin = ({
   return null;
 };
 
-export type InlineProps = FlexProps & Pick<GridProps, "gap">;
+export type InlineProps = BoxProps & GapProp;
 
-export const Inline = ({
-  as,
+export const Inline: React.FC<InlineProps> = ({
+  as = "div",
   gap = 3,
   sx,
   children,
   ...props
-}: InlineProps) => {
-  const isList = as === "ul" || as === "ol";
-
-  return (
-    <Flex
-      as={as}
-      sx={{
-        flexWrap: "wrap",
-        overflow: "hidden",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        paddingLeft: 0,
-        ...(sx && sx),
-        margin: theme => responsiveInlineMargin({ gap, negative: true })(theme),
-      }}
-      {...props}
-    >
-      {React.Children.map(children, child => (
-        <Box
-          as={isList ? "li" : "div"}
-          sx={{
-            position: "relative",
-            margin: theme => responsiveInlineMargin({ gap })(theme),
-            ...(isList && li.listStyleTypeNone),
-          }}
-        >
-          {child}
-        </Box>
-      ))}
-    </Flex>
-  );
-};
+}) => (
+  <Box
+    data-raam="inline"
+    as={as}
+    __css={{
+      display: "flex",
+      flexWrap: "wrap",
+      overflow: "hidden",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      paddingLeft: 0,
+      margin: theme => responsiveInlineMargin({ gap, negative: true })(theme),
+    }}
+    {...props}
+  >
+    {React.Children.map(children, child => (
+      <Box
+        data-raam="inline__child"
+        as={determineElement(as)}
+        __css={{
+          position: "relative",
+          margin: theme => responsiveInlineMargin({ gap })(theme),
+        }}
+      >
+        {child}
+      </Box>
+    ))}
+  </Box>
+);

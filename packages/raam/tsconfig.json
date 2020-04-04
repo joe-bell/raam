@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "jsx": "react",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "strict": false,
-    "strictFunctionTypes": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "jsx": "preserve"
   },
+  "exclude": ["node_modules"],
   "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }
