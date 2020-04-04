@@ -53,8 +53,8 @@ const Layout: React.FC = ({ children }) => (
       <meta name="description" content={config.meta.description} />
 
       <link rel="canonical" href={config.meta.url} />
-      {/* @TODO Add Manifest */}
-      {/* <link rel="manifest" href="/manifest.webmanifest" /> */}
+
+      <link rel="manifest" href="/manifest.json" />
     </Head>
     <Box
       as="header"
