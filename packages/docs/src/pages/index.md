@@ -8,6 +8,10 @@
 
 ---
 
+### Layout
+
+A flex-based layout primitive.
+
 ### Inline
 
 ```jsx live=true
@@ -18,7 +22,33 @@
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
-      sx={{ width: "2rem", height: "2rem", backgroundColor: "primary" }}
+      sx={{
+        width: "2rem",
+        height: "2rem",
+        backgroundColor: "primary",
+        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+      }}
+    />
+  ))}
+</Inline>
+```
+
+#### No Wrap
+
+```jsx live=true
+// import { Box } from "your-components";
+// import { Inline } from "raam";
+
+<Inline gap={3} flexWrap="no-wrap">
+  {Array.from({ length: 32 }).map((item, i) => (
+    <Box
+      key={i}
+      sx={{
+        width: "2rem",
+        height: "2rem",
+        backgroundColor: "primary",
+        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+      }}
     />
   ))}
 </Inline>
