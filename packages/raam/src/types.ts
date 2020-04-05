@@ -16,6 +16,6 @@ export type GapProp = {
   gap?: ResponsiveValue<string | number>;
 };
 
-export { ColorProps, SpaceProps } from "styled-system";
+export { ColorProps, FlexboxProps, SpaceProps } from "styled-system";
 export { SxStyleProp } from "theme-ui";
 export { InterpolationWithTheme } from "@emotion/core";

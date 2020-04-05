@@ -2,23 +2,27 @@
 
 **Beautifully boring cosmetic-free [React.js][reactjs] components for structure and layout.**
 
----
-
-## Introduction
+Use **raam**'s layout primitives to build resilient theme-driven designs fast.
 
 ---
 
-### Layout
+## Components
 
-A flex-based layout primitive.
+1. [Wrap](#wrap)
+2. [Inline](#inline)
+3. [Stack](#stack)
+4. [Feature Candidates](#feature-candidates)
 
-### Inline
+### Wrap
+
+A [Flex](#flex)-based layout that renders and 'wraps' children inline spaced
+by the defined `gap`.
 
 ```jsx live=true
-// import { Box } from "your-components";
 // import { Inline } from "raam";
+// import { Box } from "your-components";
 
-<Inline gap={3}>
+<Wrap gap={3}>
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
@@ -30,18 +34,20 @@ A flex-based layout primitive.
       }}
     />
   ))}
-</Inline>
+</Wrap>
 ```
 
-#### No Wrap
+### Inline
 
-If you'd rather let items flow elegantly in a single line, make use of `flex-wrap: nowrap;` to override the default behaviour:
+If you'd rather let items flow elegantly in a single line, make use of `Inline`.
+
+Scroll behaviour can be removed with an `overflow: 'hidden'`.
 
 ```jsx live=true
-// import { Box } from "your-components";
 // import { Inline } from "raam";
+// import { Box } from "your-components";
 
-<Inline gap={3} flexWrap="nowrap">
+<Inline gap={3}>
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
@@ -59,8 +65,8 @@ If you'd rather let items flow elegantly in a single line, make use of `flex-wra
 or with some more chaotic values…
 
 ```jsx live=true
-// import { Box } from "your-components";
 // import { Inline } from "raam";
+// import { Box } from "your-components";
 
 () => {
   const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
@@ -87,74 +93,40 @@ or with some more chaotic values…
 
 Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
 
-- Padding is added to the `Stack`, rather than the `Inline` directly.
+- Padding is added to the `Stack`, [not the `Inline` directly](#caveats).
 - Inline uses the [shared configuration](#configuration) to render our `ul` with `li` children:
 
 ```jsx live=true
-// import { Box, Heading, Link } from "your-components";
 // import { Inline, Stack } from "raam";
+// import { Box, Heading, Link } from "your-components";
+
 <Stack padding={3}>
   <Heading as="h2">Tags</Heading>
 
-  <Inline as="ul">
+  <Wrap as="ul">
     {Array.from({ length: 8 }, (v, k) => k + 1).map(item => (
       <Link key={item} href={`#list-item-${item}`}>
         Tag {item}
       </Link>
     ))}
-  </Inline>
+  </Wrap>
 </Stack>
 ```
 
-> **Caveats**
->
-> As of April 2020, flex `gap` is only supported by Firefox. As a fallback,
-> negative margins are used on the outer component to counteract margins inside.
-> If you place an `Inline` component it will **not** affect the margin flow, but
-> you will experience issues if you try to adjust it.
->
-> If you want to adjust the margin, you should wrap `Inline` with another
-> element.
-
 ### Stack
 
+Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system), a [Flex](#flex)-based layout that renders children on top of each other, spaced
+by the defined `gap`.
+
 ```jsx live=true
-// import { Box } from "your-components";
 // import { Stack } from "raam";
+// import { Box } from "your-components";
 
 <Stack gap={3}>
   {Array.from({ length: 4 }).map((item, i) => (
     <Box key={i} sx={{ height: "2rem", backgroundColor: "primary" }} />
   ))}
 </Stack>
-```
-
-or with some more chaotic values…
-
-```jsx live=true
-// import { Box } from "your-components";
-// import { Inline } from "raam";
-
-() => {
-  const width = () => `${Math.floor(Math.random() * 100) + 1}%`;
-  const height = () => `${Math.floor(Math.random() * 4) + 1}rem`;
-
-  return (
-    <Stack gap={3}>
-      {Array.from({ length: 4 }).map((item, i) => (
-        <Box
-          key={i}
-          sx={{
-            width: width(),
-            height: height(),
-            backgroundColor: "primary",
-            filter: i > 0 && `hue-rotate(${i * 2}deg)`,
-          }}
-        />
-      ))}
-    </Stack>
-  );
-};
 ```
 
 > "Hold up, why don't you just…"
@@ -164,7 +136,23 @@ or with some more chaotic values…
 >   - It doesn't behave reliably for all elements (e.g. [`fieldset`](https://bugs.chromium.org/p/chromium/issues/detail?id=854565))
 >   - Can lead to ['blow out'](https://css-tricks.com/preventing-a-grid-blowout/).
 > - _"…make `Inline` and `Stack` one component"?_  
->   [Jump back up to the introduction for your answer](#introduction).
+>   [↓](#flex)
+
+### Flex
+
+A `display: flex;`-based layout primitive that aims to address the `gap`.
+
+`Stack`, `Wrap` and `Inline` are all effectively "presets" of Flex. Don't like that? It's OK, you can use `Flex` directly without opinionated defaults.
+
+#### Caveats
+
+> **TL;DR:** Mind the Gap
+
+At the time of **raam**'s release, usage of `gap` in flex-based layouts is only supported by Firefox. To address this shortcoming, fallbacks are used:
+
+1. In `nowrap` based layouts, margins are used in a single direction excluding the first-child.
+2. In `wrap` based layouts, negative margins are used on the outer component to counteract margins inside.  
+   It will **not** affect adjacent margins, **but** you will experience issues if you try to adjust it directly - instead consider wrapping the element.
 
 ### Feature Candidates
 
@@ -185,7 +173,9 @@ A layout primitive to control vertical rhythm and flow for typographic content.
 > 1. Only supports React.js apps with [Emotion][emotion] **or** [Theme UI][theme-ui] pre-installed (for the time being).
 > 2. Prone to regular unannounced changes.
 
-`npm i raam --save` (or Yarn)
+`npm i raam --save`  
+or  
+`yarn add raam`
 
 [reactjs]: https://reactjs.org
 [theme-ui]: https://theme-ui.com/
@@ -194,6 +184,7 @@ A layout primitive to control vertical rhythm and flow for typographic content.
 
 All components use a shared set of `props`:
 
+- [Color](https://styled-system.com/table#color), [Space](https://styled-system.com/table#space) and [Flexbox](https://styled-system.com/table#flexbox) prop from [Styled System](https://styled-system.com/).
 - `as`: change the HTML element rendered ([via Emotion](https://emotion.sh/docs/styled#as-prop)).
 
   **raam** makes an **opinionated** choice on how to render a
@@ -215,6 +206,13 @@ All components use a shared set of `props`:
 - `sx`: apply **themed** styles to the component ([via Theme UI](https://theme-ui.com/sx-prop/)).
 
   **Note**: Heavily recommended to install [Theme UI][theme-ui] before using. As with `css`, use with caution.
+
+### Acknowledgements
+
+Without these projects/people, this project wouldn't exist…
+
+- [**OOCSS** - Nicole Sullivan](https://github.com/stubbornella/oocss/wiki)
+- [**Braid** - Seek](https://github.com/seek-oss/braid-design-system)
 
 [emotion]: https://emotion.sh/
 [reactjs]: https://reactjs.org

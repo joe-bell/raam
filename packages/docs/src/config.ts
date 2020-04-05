@@ -8,10 +8,6 @@ const social = {
 const config = {
   navigation: [
     {
-      title: "Introduction",
-      url: "#introduction",
-    },
-    {
       title: "Components",
       url: "#components",
     },

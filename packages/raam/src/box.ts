@@ -5,9 +5,11 @@ import { css } from "@theme-ui/css";
 import { createShouldForwardProp } from "@styled-system/should-forward-prop";
 import space from "@styled-system/space";
 import color from "@styled-system/color";
+import flexbox from "@styled-system/flexbox";
 import {
   Assign,
   ColorProps,
+  FlexboxProps,
   SpaceProps,
   InterpolationWithTheme,
   SxStyleProp,
@@ -18,6 +20,7 @@ export type BoxOwnProps = {
   sx?: SxStyleProp;
   css?: InterpolationWithTheme<any>;
 } & ColorProps &
+  FlexboxProps &
   SpaceProps;
 
 export type BoxProps = Assign<
@@ -28,6 +31,7 @@ export type BoxProps = Assign<
 const shouldForwardProp = createShouldForwardProp([
   ...space.propNames,
   ...color.propNames,
+  ...flexbox.propNames,
 ]);
 
 const sx = props => css(props.sx)(props.theme);
@@ -65,6 +69,7 @@ export const Box = styled("div", {
   reset,
   space,
   color,
+  flexbox,
   sx,
   props => props.css
 );

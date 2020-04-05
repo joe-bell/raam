@@ -2,7 +2,7 @@
 import * as React from "react";
 
 import { jsx, Box, Container, Heading, NavLink } from "theme-ui";
-import { Inline } from "raam";
+import { Wrap } from "raam";
 import Head from "./head";
 import config from "../config";
 
@@ -31,20 +31,22 @@ const Layout: React.FC = ({ children }) => (
           justifyContent: [null, "space-between"],
         }}
       >
-        <Heading as="h1">raam</Heading>
+        <Heading as="h1" sx={{ fontSize: 5 }}>
+          raam
+        </Heading>
         <Box
           as="nav"
           sx={{
             marginTop: [3, 0],
           }}
         >
-          <Inline as="ul">
+          <Wrap as="ul" gap={3}>
             {config.navigation.map(item => (
               <NavLink key={item.url} href={item.url}>
                 {item.title}
               </NavLink>
             ))}
-          </Inline>
+          </Wrap>
         </Box>
       </Container>
     </Box>
