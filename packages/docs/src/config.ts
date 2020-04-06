@@ -1,3 +1,5 @@
+import manifest from "../public/manifest.json";
+
 const social = {
   github: "joe-bell",
   twitter: "joebell_",
@@ -26,9 +28,8 @@ const config = {
   ],
   googleAnalyticsID: "UA-111105740-2",
   meta: {
-    title: "raam",
-    description:
-      "Beautifully boring cosmetic-free React.js components for structure and layout.",
+    title: manifest.name,
+    description: manifest.description,
     author: "Joe Bell",
     url: "https://raam.joebell.co.uk",
     social,

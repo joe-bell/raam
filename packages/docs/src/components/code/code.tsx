@@ -2,9 +2,9 @@
 import { jsx, Box, Heading, Link } from "theme-ui";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { Inline, Stack } from "raam";
+import * as Raam from "raam";
 
-export default ({ children, className, live }) => {
+const Code = ({ children, className, live }) => {
   const language = className.replace(/language-/, "");
   if (live) {
     return (
@@ -18,7 +18,7 @@ export default ({ children, className, live }) => {
         <LiveProvider
           code={children}
           transformCode={code => "/** @jsx jsx */" + code}
-          scope={{ jsx, Box, Stack, Heading, Inline, Link }}
+          scope={{ jsx, Box, Heading, Link, ...Raam }}
         >
           <Box
             as={LivePreview}
@@ -55,3 +55,5 @@ export default ({ children, className, live }) => {
     </Highlight>
   );
 };
+
+export default Code;
