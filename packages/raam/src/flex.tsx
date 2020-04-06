@@ -3,7 +3,7 @@ import { Box, BoxProps } from "./box";
 import { determineElement } from "./utils";
 import { GapProp } from "./types";
 
-const flexMargin = ({
+const wrapMargin = ({
   gap,
   negative = false,
 }: {
@@ -23,7 +23,7 @@ const flexMargin = ({
     : `calc(${themedGap} / 2 * ${sign})`;
 };
 
-const responsiveFlexMargin = ({
+const responsiveWrapMargin = ({
   gap,
   negative = false,
 }: {
@@ -33,11 +33,11 @@ const responsiveFlexMargin = ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } & GapProp) => (theme: any) => {
   if (Array.isArray(gap)) {
-    return gap.map(gapValue => flexMargin({ gap: gapValue, negative })(theme));
+    return gap.map(gapValue => wrapMargin({ gap: gapValue, negative })(theme));
   }
 
   if (typeof gap === "number" || typeof gap === "string") {
-    return [flexMargin({ gap: gap, negative })(theme)];
+    return [wrapMargin({ gap: gap, negative })(theme)];
   }
 
   return null;
@@ -67,7 +67,7 @@ export const Flex = React.forwardRef<any, FlexProps>(
             overflowX: !wrap && !column && "auto",
             margin:
               wrap &&
-              (theme => responsiveFlexMargin({ gap, negative: true })(theme)),
+              (theme => responsiveWrapMargin({ gap, negative: true })(theme)),
           }),
         }}
         {...props}
@@ -78,7 +78,7 @@ export const Flex = React.forwardRef<any, FlexProps>(
             __css={{
               position: "relative",
               ...(gap && wrap
-                ? { margin: theme => responsiveFlexMargin({ gap })(theme) }
+                ? { margin: theme => responsiveWrapMargin({ gap })(theme) }
                 : i > 0 && {
                     [column ? "marginTop" : "marginLeft"]: gap,
                   }),
