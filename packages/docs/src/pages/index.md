@@ -19,7 +19,7 @@ A [Flex](#flex)-based layout that renders and 'wraps' children inline spaced
 by the defined `gap`.
 
 ```jsx live=true
-// import { Inline } from "raam";
+// import { Wrap } from "raam";
 // import { Box } from "your-components";
 
 <Wrap gap={3}>
@@ -35,6 +35,30 @@ by the defined `gap`.
     />
   ))}
 </Wrap>
+```
+
+#### Example
+
+Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
+
+- Padding is added to the [`Stack`](#stack), [not the `Wrap` directly](#caveats).
+- [`Wrap`](#wrap) uses the [shared configuration](#configuration) to render our `ul` with `li` children:
+
+```jsx live=true
+// import { Stack, Wrap } from "raam";
+// import { Box, Heading, Link } from "your-components";
+
+<Stack padding={3}>
+  <Heading as="h2">Tags</Heading>
+
+  <Wrap as="ul">
+    {Array.from({ length: 8 }, (v, k) => k + 1).map(item => (
+      <Link key={item} href={`#list-item-${item}`}>
+        Tag {item}
+      </Link>
+    ))}
+  </Wrap>
+</Stack>
 ```
 
 ### Inline
@@ -87,30 +111,6 @@ or with some more chaotic values…
     </Inline>
   );
 };
-```
-
-#### Example
-
-Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
-
-- Padding is added to the `Stack`, [not the `Inline` directly](#caveats).
-- Inline uses the [shared configuration](#configuration) to render our `ul` with `li` children:
-
-```jsx live=true
-// import { Inline, Stack } from "raam";
-// import { Box, Heading, Link } from "your-components";
-
-<Stack padding={3}>
-  <Heading as="h2">Tags</Heading>
-
-  <Wrap as="ul">
-    {Array.from({ length: 8 }, (v, k) => k + 1).map(item => (
-      <Link key={item} href={`#list-item-${item}`}>
-        Tag {item}
-      </Link>
-    ))}
-  </Wrap>
-</Stack>
 ```
 
 ### Stack
