@@ -7,8 +7,7 @@
     "dev": "lerna run dev --parallel",
     "lint": "lerna run lint && yarn lint:es -- .",
     "lint:es": "eslint --ignore-path .gitignore --fix --ext .js,.jsx,.ts,.tsx",
-    "lint:ts": "lerna run lint:ts",
-    "production": "lerna bootstrap && yarn build"
+    "lint:ts": "lerna run lint:ts"
   },
   "workspaces": [
     "packages/*"

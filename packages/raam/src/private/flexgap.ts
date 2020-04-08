@@ -4,7 +4,6 @@ import { GapValue, FlexboxProps } from "../types";
 export type FlexGapProps = {
   index?: number;
   flexParent?: FlexboxProps;
-  // @TODO Type
   flexChild?: any;
   gapOffset?: GapValue;
   gapTop?: GapValue;
@@ -51,7 +50,6 @@ type Config = {
   [key in keyof FlexGapProps]: {
     property: string;
     scale?: string;
-    // @TODO Type
     transform: (value: unknown, scale: unknown, props: any) => void;
   };
 };
