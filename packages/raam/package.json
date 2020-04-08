@@ -11,7 +11,7 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "barrelsby --delete --directory src --exclude {box,types,utils}.ts",
+    "prebuild": "barrelsby --delete --directory src --exclude {private,types.ts}",
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
     "lint:ts": "npx tsc --noEmit",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@styled-system/color": "5.1.2",
+    "@styled-system/core": "5.1.2",
     "@styled-system/flexbox": "5.1.2",
     "@styled-system/should-forward-prop": "5.1.2",
     "@styled-system/space": "5.1.2"
@@ -44,9 +45,6 @@
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "@theme-ui/css": "0.3.1",
-    "@types/styled-system": "5.1.9",
-    "@types/theme-ui": "0.3.1",
-    "csstype": "2.6.10",
     "react": "16.13.1"
   }
 }

@@ -9,13 +9,24 @@ export type Assign<T, U> = {
     : never;
 };
 
+export type GapValue = ResponsiveValue<string | number | null>;
+
 export type GapProp = {
   /**
    * The gutter between items.
    */
-  gap?: ResponsiveValue<string | number>;
+  gap?: GapValue;
 };
 
-export { ColorProps, FlexboxProps, SpaceProps } from "styled-system";
-export { SxStyleProp } from "theme-ui";
-export { InterpolationWithTheme } from "@emotion/core";
+/**
+ * Because these dependencies aren't being directly used, and just for typings,
+ * I'm exporting them from here.
+ */
+export {
+  ColorProps,
+  FlexboxProps,
+  SpaceProps,
+  Theme,
+  ThemeValue,
+} from "styled-system";
+export { SxStyleProp, SxProps } from "theme-ui";
