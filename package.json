@@ -5,11 +5,14 @@
     "build": "lerna run prebuild && lerna run build",
     "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
     "dev": "lerna run dev --parallel",
-    "lint": "lerna run lint && npm run lint:es -- .",
+    "lint": "lerna run lint && yarn lint:es -- .",
     "lint:es": "eslint --ignore-path .gitignore --fix --ext .js,.jsx,.ts,.tsx",
     "lint:ts": "lerna run lint:ts",
-    "production": "lerna bootstrap && npm run build"
+    "production": "lerna bootstrap && yarn build"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -23,17 +26,20 @@
   "lint-staged": {
     "*.{json,html,css,md,mdx,yml}": "npx prettier --write",
     "*.{js,jsx,ts,tsx}": [
-      "npm run lint:ts",
-      "npm run lint:es"
+      "yarn lint:ts",
+      "yarn lint:es"
     ]
   },
   "devDependencies": {
     "@types/node": "13.9.8",
     "@types/react": "16.9.30",
+    "@types/styled-system": "5.1.9",
+    "@types/theme-ui": "0.3.1",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
     "barrelsby": "^2.2.0",
     "commitizen": "4.0.3",
+    "csstype": "2.6.10",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.0",

@@ -25,9 +25,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
-      - run: npm ci
-      - run: npx lerna bootstrap
-      - run: npm run lint
-      - run: npm run build
+      - run: yarn install --frozen-lockfile
+      - run: yarn lint
+      - run: yarn build
         env:
           CI: true
