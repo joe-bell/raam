@@ -16,13 +16,41 @@ Use **raam**'s layout primitives to build resilient theme-driven designs fast.
 ### Wrap
 
 A [Flex](#flex)-based layout that renders and 'wraps' children inline spaced
-by the defined `gap`.
+by the defined [`gap`](#configuration).
+
+Here [`gap`](#configuration) is accessing the value from `theme.space[3]`.
 
 ```jsx live=true
 // import { Wrap } from "raam";
 // import { Box } from "your-components";
 
 <Wrap gap={3}>
+  {Array.from({ length: 32 }).map((item, i) => (
+    <Box
+      key={i}
+      sx={{
+        width: "2rem",
+        height: "2rem",
+        backgroundColor: "primary",
+        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+      }}
+    />
+  ))}
+</Wrap>
+```
+
+#### Responsive
+
+As the [`gap`](#configuration) prop is powered by [Styled System][styled-system], you have the ability to create responsive styles.
+
+Here [`gap`](#configuration) is accessing the value from `theme.space[3]`, then
+`theme.space[4]` at `breakpoint[1]` etc.
+
+```jsx live=true
+// import { Wrap } from "raam";
+// import { Box } from "your-components";
+
+<Wrap gap={[3, 4, 5]}>
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}
@@ -115,8 +143,7 @@ or with some more chaotic values…
 
 ### Stack
 
-Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system), a [Flex](#flex)-based layout that renders children on top of each other, spaced
-by the defined `gap`.
+Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system), a [Flex](#flex)-based layout that renders children on top of each other, spaced by the defined [`gap`](#configuration).
 
 ```jsx live=true
 // import { Stack } from "raam";
@@ -184,7 +211,11 @@ or
 
 All components use a shared set of `props`:
 
-- [Color](https://styled-system.com/table#color), [Space](https://styled-system.com/table#space) and [Flexbox](https://styled-system.com/table#flexbox) prop from [Styled System](https://styled-system.com/).
+- `gap`: a dynamic prop that aims to resolve the lack of `gap` support for `display: flex;` in most browsers.
+
+  It accepts a key from `theme.space` (as a string or number), but if that's not found it'll render the provided string (e.g. `em` or `rem`) or number as a `px` value.
+
+- [Color](https://styled-system.com/table#color), [Space](https://styled-system.com/table#space) and [Flexbox](https://styled-system.com/table#flexbox) prop from [Styled System][styled-system].
 - `as`: change the HTML element rendered ([via Emotion](https://emotion.sh/docs/styled#as-prop)).
 
   **raam** makes an **opinionated** choice on how to render a
@@ -216,4 +247,5 @@ Without these projects/people, this project wouldn't exist…
 
 [emotion]: https://emotion.sh/
 [reactjs]: https://reactjs.org
+[styled-system]: https://styled-system.com/
 [theme-ui]: https://theme-ui.com/
