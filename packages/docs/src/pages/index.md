@@ -159,7 +159,7 @@ Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system)
 > "Hold up, why don't you just…"
 >
 > - _"…use `display: grid;`"_  
->   Grid it fantastic for page layouts, but has its caveats for a 'simple' `Stack`:
+>   Grid is fantastic for page layouts, but has its caveats for a 'simple' `Stack`:
 >   - It doesn't behave reliably for all elements (e.g. [`fieldset`](https://bugs.chromium.org/p/chromium/issues/detail?id=854565))
 >   - Can lead to ['blow out'](https://css-tricks.com/preventing-a-grid-blowout/).
 > - _"…make `Inline` and `Stack` one component"?_  
