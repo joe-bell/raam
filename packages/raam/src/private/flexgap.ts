@@ -14,6 +14,8 @@ export type FlexGapProps = {
   overflowX?: GapValue;
 };
 
+const isNumber = n => typeof n === "number" && !isNaN(n);
+
 const isWrapped = (flexWrap: string) => (flexWrap === "nowrap" ? false : true);
 const isColumn = (flexDirection: string) =>
   ["column", "column-reverse"].includes(flexDirection);
@@ -21,7 +23,11 @@ const isRow = (flexDirection: string) =>
   ["row", "row-reverse"].includes(flexDirection);
 
 const transformGapOffset = (value, scale, props) => {
-  const offsetValue = -((scale[value] || value) / 2);
+  const themeValue = scale[value] || value;
+
+  const offsetValue = isNumber(themeValue)
+    ? -themeValue / 2
+    : `calc(-${themeValue} / 2)`;
 
   return props.flexWrap && isWrapped(props.flexWrap) ? offsetValue : undefined;
 };
@@ -30,7 +36,7 @@ const transformGap = (value, scale, props, property) => {
   const themeValue = scale[value] || value;
 
   if (props.flexParent && isWrapped(props.flexParent.flexWrap)) {
-    return themeValue / 2;
+    return isNumber(themeValue) ? themeValue / 2 : `calc(${themeValue} / 2)`;
   }
 
   /* This is disgusting but it works for now,I'll try to come back to it */
