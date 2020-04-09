@@ -1,0 +1,1503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex renders 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Flex renders an array of children 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex renders children as list-items 1`] = `
+Array [
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  list-style-type: none;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-0:before {
+  position: absolute;
+  content: "\\200B";
+}
+
+<ul
+    className="emotion-3"
+  >
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </li>
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </li>
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </li>
+  </ul>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  list-style-type: none;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-0:before {
+  position: absolute;
+  content: "\\200B";
+}
+
+<ol
+    className="emotion-3"
+  >
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </li>
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </li>
+    <li
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </li>
+  </ol>,
+]
+`;
+
+exports[`Flex renders children with span elements 1`] = `
+Array [
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<span
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </span>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<p
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </p>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h1
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h1>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h2
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h2>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h3
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h3>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h4
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h4>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h5
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h5>,
+  .emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<h6
+    className="emotion-3"
+  >
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#1"
+      >
+        Item 1
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#2"
+      >
+        Item 2
+      </a>
+    </span>
+    <span
+      className="emotion-0"
+    >
+      <a
+        href="#3"
+      >
+        Item 3
+      </a>
+    </span>
+  </h6>,
+]
+`;
+
+exports[`Flex style props renders with customised flexbox props 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin: -2.5px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: stretch;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 2.5px;
+  margin-right: 2.5px;
+  margin-bottom: 2.5px;
+  margin-left: 2.5px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Flex style props renders with defined gap 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 5px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Flex style props renders with defined theme gap (emotion) 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 64px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Flex style props renders with defined theme gap (theme-ui) 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 64px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Inline renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 4px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Inline renders with defined theme gap (emotion) 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Inline renders with defined theme gap (theme-ui) 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Stack renders 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 4px;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Stack renders with defined theme gap (emotion) 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Stack renders with defined theme gap (theme-ui) 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 32px;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Wrap renders 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin: -2px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Wrap renders with defined theme gap (emotion) 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin: -16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Wrap renders with defined theme gap (theme-ui) 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  margin: -16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
