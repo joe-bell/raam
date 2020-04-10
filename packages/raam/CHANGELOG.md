@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/joe-bell/raam/compare/v0.1.0...v0.1.1) (2020-04-10)
+
+### Bug Fixes
+
+- allow for use without a ThemeProvider ([8b53da7](https://github.com/joe-bell/raam/commit/8b53da75cc3336b7e4131b5374938adce03a1afb))
+
 # [0.1.0](https://github.com/joe-bell/raam/compare/v0.0.7...v0.1.0) (2020-04-08)
 
 ### Bug Fixes
