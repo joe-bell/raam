@@ -1,5 +1,6 @@
 import { system } from "@styled-system/core";
-import { GapValue, FlexboxProps } from "../types";
+import { GapValue } from "../types";
+import { FlexboxProps } from "./flexbox";
 
 export type FlexGapProps = {
   index?: number;

@@ -12,6 +12,9 @@ export const Flex = React.forwardRef<any, FlexProps>(
       gap,
       children,
       flex,
+      flexBasis,
+      flexGrow,
+      flexShrink,
       flexDirection = "row",
       flexWrap = "nowrap",
       ...props
@@ -44,6 +47,9 @@ export const Flex = React.forwardRef<any, FlexProps>(
           gapBottom={gap}
           gapLeft={gap}
           flexChild={flex}
+          flexBasis={flexBasis}
+          flexGrow={flexGrow}
+          flexShrink={flexShrink}
         >
           {child}
         </Box>

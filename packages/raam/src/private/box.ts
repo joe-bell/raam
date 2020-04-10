@@ -1,5 +1,3 @@
-// Extended from `@theme-ui/components` Box
-// Excludes `variant`, adds an opinionated `reset`.
 import styled from "@emotion/styled";
 import { InterpolationWithTheme } from "@emotion/core";
 import { css } from "@theme-ui/css";
@@ -7,15 +5,8 @@ import { createShouldForwardProp } from "@styled-system/should-forward-prop";
 import { compose } from "@styled-system/core";
 import space from "@styled-system/space";
 import color from "@styled-system/color";
-import flexbox from "@styled-system/flexbox";
-import {
-  Assign,
-  ColorProps,
-  FlexboxProps,
-  SpaceProps,
-  SxProps,
-  SxStyleProp,
-} from "../types";
+import { Assign, ColorProps, SpaceProps, SxProps, SxStyleProp } from "../types";
+import flexbox, { FlexboxProps } from "./flexbox";
 import flexgap, { FlexGapProps } from "./flexgap";
 
 export type BoxOwnProps = {
