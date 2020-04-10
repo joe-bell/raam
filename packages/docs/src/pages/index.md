@@ -215,7 +215,7 @@ All components use a shared set of `props`:
 
   It accepts a key from `theme.space` (as a string or number), but if that's not found it'll render the provided string (e.g. `em` or `rem`) or number as a `px` value.
 
-- [Color](https://styled-system.com/table#color), [Space](https://styled-system.com/table#space) and [Flexbox](https://styled-system.com/table#flexbox) prop from [Styled System][styled-system].
+- [Color](https://styled-system.com/table#color), [Space](https://styled-system.com/table#space) and [Flexbox](https://styled-system.com/table#flexbox) (excluding `order`, `alignSelf` and `justifySelf`) props from [Styled System][styled-system].
 - `as`: change the HTML element rendered ([via Emotion](https://emotion.sh/docs/styled#as-prop)).
 
   **raam** makes an **opinionated** choice on how to render a

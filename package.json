@@ -8,7 +8,8 @@
     "lint": "lerna run lint && yarn lint:es -- .",
     "lint:es": "eslint --ignore-path .gitignore --fix --ext .js,.jsx,.ts,.tsx",
     "lint:ts": "lerna run lint:ts",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git-cz"
   },
   "workspaces": [
     "packages/*"

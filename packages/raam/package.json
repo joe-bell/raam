@@ -11,7 +11,7 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "barrelsby --delete --directory src --exclude {private,types.ts}",
+    "prebuild": "barrelsby --delete --directory src --exclude private",
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
     "lint:ts": "npx tsc --noEmit",
@@ -37,7 +37,6 @@
   "dependencies": {
     "@styled-system/color": "5.1.2",
     "@styled-system/core": "5.1.2",
-    "@styled-system/flexbox": "5.1.2",
     "@styled-system/should-forward-prop": "5.1.2",
     "@styled-system/space": "5.1.2"
   },

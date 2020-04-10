@@ -24,7 +24,7 @@ export type GapProp = {
  */
 export {
   ColorProps,
-  FlexboxProps,
+  FlexboxProps as DefaultFlexboxProps,
   SpaceProps,
   Theme,
   ThemeValue,

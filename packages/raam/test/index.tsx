@@ -79,6 +79,9 @@ describe("Flex", () => {
           justifyContent="center"
           justifyItems="stretch"
           flex="1 1 auto"
+          flexGrow={2}
+          flexShrink={1}
+          flexBasis="100px"
           flexDirection="column"
           flexWrap="wrap"
         >
