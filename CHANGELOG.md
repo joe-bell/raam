@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/joe-bell/raam/compare/v0.1.1...v0.2.0) (2020-04-10)
+
+### Features
+
+- **flex:** use custom system, pass flex item styles to child ([b8c9828](https://github.com/joe-bell/raam/commit/b8c9828be13890a6400c8af18799a4e69df5a31e))
+
 ## [0.1.1](https://github.com/joe-bell/raam/compare/v0.1.0...v0.1.1) (2020-04-10)
 
 ### Bug Fixes
