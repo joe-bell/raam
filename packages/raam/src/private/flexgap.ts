@@ -23,7 +23,7 @@ const isRow = (flexDirection: string) =>
   ["row", "row-reverse"].includes(flexDirection);
 
 const transformGapOffset = (value, scale, props) => {
-  const themeValue = scale[value] || value;
+  const themeValue = (scale && scale[value]) || value;
 
   const offsetValue = isNumber(themeValue)
     ? -themeValue / 2
@@ -33,7 +33,7 @@ const transformGapOffset = (value, scale, props) => {
 };
 
 const transformGap = (value, scale, props, property) => {
-  const themeValue = scale[value] || value;
+  const themeValue = (scale && scale[value]) || value;
 
   if (props.flexParent && isWrapped(props.flexParent.flexWrap)) {
     return isNumber(themeValue) ? themeValue / 2 : `calc(${themeValue} / 2)`;
