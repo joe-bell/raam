@@ -5,9 +5,9 @@ import { createShouldForwardProp } from "@styled-system/should-forward-prop";
 import { compose } from "@styled-system/core";
 import space from "@styled-system/space";
 import color from "@styled-system/color";
-import { Assign, ColorProps, SpaceProps, SxProps, SxStyleProp } from "../types";
 import flexbox, { FlexboxProps } from "./flexbox";
 import flexgap, { FlexGapProps } from "./flexgap";
+import { Assign, ColorProps, SpaceProps, SxProps, SxStyleProp } from "./types";
 
 export type BoxOwnProps = {
   as?: React.ElementType;

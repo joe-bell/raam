@@ -1,5 +1,5 @@
 import { system } from "@styled-system/core";
-import { DefaultFlexboxProps } from "../types";
+import { DefaultFlexboxProps } from "./types";
 
 export type FlexboxProps = Omit<
   DefaultFlexboxProps,

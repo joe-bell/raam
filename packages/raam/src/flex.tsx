@@ -1,7 +1,22 @@
 import * as React from "react";
 import { Box, BoxProps } from "./private/box";
-import { determineElement } from "./private/utils";
-import { GapProp } from "./types";
+import { GapProp } from "./private/types";
+
+const determineChild = (parent: FlexProps["as"]) =>
+  typeof parent === "string"
+    ? {
+        ul: "li",
+        ol: "li",
+        span: "span",
+        p: "span",
+        h1: "span",
+        h2: "span",
+        h3: "span",
+        h4: "span",
+        h5: "span",
+        h6: "span",
+      }[parent] || "div"
+    : parent;
 
 export type FlexProps = BoxProps & GapProp;
 
@@ -36,7 +51,7 @@ export const Flex = React.forwardRef<any, FlexProps>(
     >
       {React.Children.map(children, (child, i) => (
         <Box
-          as={determineElement(as)}
+          as={determineChild(as)}
           __css={{
             position: "relative",
           }}

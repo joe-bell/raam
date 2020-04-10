@@ -11,7 +11,7 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "barrelsby --delete --directory src --exclude {private,types.ts}",
+    "prebuild": "barrelsby --delete --directory src --exclude private",
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
     "lint:ts": "npx tsc --noEmit",
