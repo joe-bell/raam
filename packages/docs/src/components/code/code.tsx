@@ -11,7 +11,8 @@ const Code = ({ children, className, live }) => {
       <Box
         sx={{
           display: "block",
-          border: "primary",
+          border: "thick",
+          borderColor: "border",
           overflow: "hidden",
         }}
       >
@@ -22,17 +23,24 @@ const Code = ({ children, className, live }) => {
         >
           <Box
             as={LivePreview}
-            sx={{ fontFamily: "body", borderBottom: "primary" }}
+            sx={{
+              fontFamily: "body",
+              borderBottom: "thick",
+              borderColor: "border",
+            }}
           />
-          <Box as={LiveEditor} sx={{ padding: 3, backgroundColor: "text" }} />
+          <Box
+            as={LiveEditor}
+            sx={{ padding: 3, backgroundColor: "backgroundCode" }}
+          />
           <Box
             as={LiveError}
             sx={{
               padding: 3,
-              borderTop: "primary",
+              borderTop: "thick",
               borderColor: "error",
-              color: "muted",
-              backgroundColor: "text",
+              color: "textCode",
+              backgroundColor: "backgroundCode",
             }}
           />
         </LiveProvider>
