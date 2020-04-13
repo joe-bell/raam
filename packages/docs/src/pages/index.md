@@ -50,7 +50,7 @@ Here [`gap`](#configuration) is accessing the value from `theme.space[3]`, then
 // import { Wrap } from "raam";
 // import { Box } from "your-components";
 
-<Wrap gap={[3, 4, 5]}>
+<Wrap gap={[2, 3, 4]}>
   {Array.from({ length: 32 }).map((item, i) => (
     <Box
       key={i}

@@ -1,19 +1,46 @@
+const black = "#000";
+const white = "#FFF";
+
 const colors = {
-  text: "#000",
-  background: "#fff",
+  text: black,
+  textCode: "#f6f6f6",
+  background: white,
+  backgroundCode: black,
+  border: black,
   primary: "#0072CE",
   muted: "#f6f6f6",
   error: "#e23636",
 };
 
+const colorModes = {
+  modes: {
+    dark: {
+      text: white,
+      background: black,
+      border: white,
+      muted: "#1C1B20",
+    },
+  },
+};
+
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 
+const borderStyles = {
+  thick: "solid",
+};
+
+const borderWidths = {
+  thick: space[1],
+};
+
 const theme = {
-  colors,
+  colors: {
+    ...colors,
+    ...colorModes,
+  },
   space,
   fonts: {
-    body:
-      '-apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: '-apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
@@ -33,9 +60,10 @@ const theme = {
     body: 1.5,
     heading: 1.125,
   },
+  borderStyles,
+  borderWidths,
   borders: {
-    primary: `${space[1]}px solid ${colors.text}`,
-    divider: `${space[1]}px solid ${colors.muted}`,
+    thick: `${borderWidths.thick}px ${borderStyles.thick}`,
   },
   styles: {
     root: {
