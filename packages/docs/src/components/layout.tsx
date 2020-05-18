@@ -14,7 +14,7 @@ const border = {
 const gap = 3;
 
 const Layout: React.FC = ({ children }) => (
-  <>
+  <React.Fragment>
     <Head />
     <Box
       as="header"
@@ -76,7 +76,7 @@ const Layout: React.FC = ({ children }) => (
         </NavLink>
       </Container>
     </Box>
-  </>
+  </React.Fragment>
 );
 
 export default Layout;
