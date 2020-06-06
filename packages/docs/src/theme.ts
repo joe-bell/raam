@@ -40,7 +40,7 @@ const theme = {
   },
   space,
   fonts: {
-    body: '-apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: '"Inter", sans-serif',
     heading: "inherit",
     monospace: "Menlo, monospace",
   },
