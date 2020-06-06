@@ -1,6 +1,5 @@
 import * as React from "react";
 import { AppProps } from "next/app";
-import { GoogleFontsProvider } from "next-google-fonts";
 import { ThemeProvider } from "theme-ui";
 import Code from "../components/code";
 import Layout from "../components/layout";
@@ -13,9 +12,7 @@ const RaamApp = ({ Component, pageProps }: AppProps) => (
     // @ts-ignore
     components={{ wrapper: Layout, code: Code, ...headings }}
   >
-    <GoogleFontsProvider href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-      <Component {...pageProps} />
-    </GoogleFontsProvider>
+    <Component {...pageProps} />
   </ThemeProvider>
 );
 
