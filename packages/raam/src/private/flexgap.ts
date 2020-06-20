@@ -57,37 +57,44 @@ type Config = {
   [key in keyof FlexGapProps]: {
     property: string;
     scale?: string;
+    defaultScale?: number[];
     transform: (value: unknown, scale: unknown, props: any) => void;
   };
+};
+
+const space = {
+  scale: "space",
+  // from @styled-system/space
+  defaultScale: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 };
 
 const config: Config = {
   gapOffset: {
     property: "margin",
-    scale: "space",
+    ...space,
     transform: transformGapOffset,
   },
   gapTop: {
     property: "marginTop",
-    scale: "space",
+    ...space,
     transform: (value, scale, props) =>
       transformGap(value, scale, props, "marginTop"),
   },
   gapRight: {
     property: "marginRight",
-    scale: "space",
+    ...space,
     transform: (value, scale, props) =>
       transformGap(value, scale, props, "marginRight"),
   },
   gapBottom: {
     property: "marginBottom",
-    scale: "space",
+    ...space,
     transform: (value, scale, props) =>
       transformGap(value, scale, props, "marginBottom"),
   },
   gapLeft: {
     property: "marginLeft",
-    scale: "space",
+    ...space,
     transform: (value, scale, props) =>
       transformGap(value, scale, props, "marginLeft"),
   },
