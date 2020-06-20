@@ -26,13 +26,6 @@ export type BoxProps = Assign<
   BoxOwnProps
 >;
 
-const shouldForwardProp = createShouldForwardProp([
-  ...space.propNames,
-  ...color.propNames,
-  ...flexbox.propNames,
-  ...flexgap.propNames,
-]);
-
 const reset = props =>
   (typeof props.as === "string" &&
     {
@@ -55,8 +48,15 @@ const reset = props =>
   {};
 
 export const Box = styled("div", {
-  shouldForwardProp,
-})<BoxOwnProps & BoxPrivateProps>([
+  shouldForwardProp: createShouldForwardProp([
+    ...space.propNames,
+    ...color.propNames,
+    ...flexbox.propNames,
+    ...flexgap.propNames,
+  ]),
+  // Add color override to prevent incompatible collisions
+  // https://github.com/emotion-js/emotion/issues/1272
+})<BoxOwnProps & BoxPrivateProps & { color?: string }>([
   {
     boxSizing: "border-box",
     margin: 0,
