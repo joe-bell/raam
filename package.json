@@ -24,13 +24,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "*.{json,html,css,md,mdx,yml}": "npx prettier --write",
-    "*.{js,jsx,ts,tsx}": [
-      "yarn lint:ts",
-      "yarn lint:es"
-    ]
-  },
   "jest": {
     "testMatch": [
       "**/packages/**/test/*.{ts,tsx}"

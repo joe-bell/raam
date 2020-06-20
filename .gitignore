@@ -1,10 +1,8 @@
-// Node
+.eslintcache
 node_modules
 
-// Next Builds
 .next
 out
 
-// Microbundle
 dist
 .rts2_cache*
