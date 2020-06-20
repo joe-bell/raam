@@ -705,7 +705,7 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  margin: -2.5px;
+  margin: -32px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -731,10 +731,10 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  margin-top: 2.5px;
-  margin-right: 2.5px;
-  margin-bottom: 2.5px;
-  margin-left: 2.5px;
+  margin-top: 32px;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  margin-left: 32px;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -810,7 +810,7 @@ exports[`Flex style props renders with defined gap 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  margin-left: 5px;
+  margin-left: 64px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1012,7 +1012,7 @@ exports[`Inline renders 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  margin-left: 4px;
+  margin-left: 32px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1196,7 +1196,7 @@ exports[`Stack renders 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  margin-top: 4px;
+  margin-top: 32px;
 }
 
 <div
@@ -1336,7 +1336,7 @@ exports[`Wrap renders 1`] = `
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  margin: -2px;
+  margin: -16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1358,10 +1358,10 @@ exports[`Wrap renders 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
-  margin-top: 2px;
-  margin-right: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
