@@ -1,6 +1,6 @@
 {
   "name": "raam",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Beautifully boring cosmetic-free React.js components for structure and layout.",
   "source": "src/index.ts",
   "main": "dist/index.js",

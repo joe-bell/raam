@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/joe-bell/raam/compare/v0.2.0...v0.2.1) (2020-06-20)
+
+### Bug Fixes
+
+- add fallback values ([3ee6df6](https://github.com/joe-bell/raam/commit/3ee6df600ec724ee0a6f64ede95305491b5981d6))
+- add workaround for type conflict ([b5f0e29](https://github.com/joe-bell/raam/commit/b5f0e29da1814abb9ba4d401b00c706ba95b3506))
+
 # [0.2.0](https://github.com/joe-bell/raam/compare/v0.1.1...v0.2.0) (2020-04-10)
 
 ### Features

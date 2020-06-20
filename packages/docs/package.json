@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
@@ -16,7 +16,7 @@
     "next": "9.3.3",
     "next-google-fonts": "1.1.0",
     "prism-react-renderer": "1.0.2",
-    "raam": "^0.2.0",
+    "raam": "^0.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-live": "2.2.2",
