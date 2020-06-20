@@ -37,7 +37,7 @@
   "dependencies": {
     "@styled-system/color": "5.1.2",
     "@styled-system/core": "5.1.2",
-    "@styled-system/should-forward-prop": "5.1.2",
+    "@styled-system/should-forward-prop": "5.1.5",
     "@styled-system/space": "5.1.2"
   },
   "devDependencies": {
