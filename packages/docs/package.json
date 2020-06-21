@@ -13,7 +13,7 @@
   "dependencies": {
     "@mdx-js/loader": "1.5.8",
     "@next/mdx": "9.3.3",
-    "next": "9.3.3",
+    "next": "9.4.4",
     "next-google-fonts": "1.1.0",
     "prism-react-renderer": "1.0.2",
     "raam": "^0.2.1",
