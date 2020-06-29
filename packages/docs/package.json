@@ -15,7 +15,7 @@
     "@next/mdx": "9.3.3",
     "next": "9.3.3",
     "next-google-fonts": "1.1.0",
-    "prism-react-renderer": "1.0.2",
+    "prism-react-renderer": "1.1.1",
     "raam": "^0.2.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
