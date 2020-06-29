@@ -3027,10 +3027,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@next/mdx@9.3.3":
-  version "9.3.3"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-9.3.3.tgz#c7537a65d70ec7e44c6faa11a1d113663bc803d1"
-  integrity sha512-pUtkBYovCeC2ctsbpH7RoeHP0FkCat+dXKapEEuAckerv6yxRfxI7r5M8AlyVwSTCP0rjF+/SZN+uqrM579rtQ==
+"@next/mdx@9.4.4":
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-9.4.4.tgz#ad1da5ecd2f3ee4b07fdf9a938441efffd58af6b"
+  integrity sha512-d1WPPxube7kgQo5JjfiFxPoK+set0OBCNeIJnF8TN176v4SsFNngfB4I5RIxsdXqD7aPzWeFcxCGGGvbzjKa8A==
 
 "@next/polyfill-nomodule@9.3.3":
   version "9.3.3"

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.6",
-    "@next/mdx": "9.3.3",
+    "@next/mdx": "9.4.4",
     "next": "9.3.3",
     "next-google-fonts": "1.1.0",
     "prism-react-renderer": "1.0.2",
