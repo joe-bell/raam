@@ -18,10 +18,7 @@ const determineChild = (parent: FlexProps["as"]) =>
       }[parent] || "div"
     : parent;
 
-export type FlexProps = BoxProps &
-  GapProp & {
-    cloneElement?: boolean;
-  };
+export type FlexProps = BoxProps & GapProp;
 
 export const Flex = React.forwardRef<any, FlexProps>(
   (
