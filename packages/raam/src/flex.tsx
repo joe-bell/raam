@@ -18,7 +18,10 @@ const determineChild = (parent: FlexProps["as"]) =>
       }[parent] || "div"
     : parent;
 
-export type FlexProps = BoxProps & GapProp;
+export type FlexProps = BoxProps &
+  GapProp & {
+    cloneElement?: boolean;
+  };
 
 export const Flex = React.forwardRef<any, FlexProps>(
   (
@@ -49,26 +52,28 @@ export const Flex = React.forwardRef<any, FlexProps>(
       flexWrap={flexWrap}
       {...props}
     >
-      {React.Children.map(children, (child, i) => (
-        <Box
-          as={determineChild(as)}
-          __css={{
-            position: "relative",
-          }}
-          index={i}
-          flexParent={{ flexWrap, flexDirection }}
-          gapTop={gap}
-          gapRight={gap}
-          gapBottom={gap}
-          gapLeft={gap}
-          flexChild={flex}
-          flexBasis={flexBasis}
-          flexGrow={flexGrow}
-          flexShrink={flexShrink}
-        >
-          {child}
-        </Box>
-      ))}
+      {React.Children.map(children, (child, i) => {
+        return (
+          <Box
+            as={determineChild(as)}
+            __css={{
+              position: "relative",
+            }}
+            index={i}
+            flexParent={{ flexWrap, flexDirection }}
+            gapTop={gap}
+            gapRight={gap}
+            gapBottom={gap}
+            gapLeft={gap}
+            flexChild={flex}
+            flexBasis={flexBasis}
+            flexGrow={flexGrow}
+            flexShrink={flexShrink}
+          >
+            {child}
+          </Box>
+        );
+      })}
     </Box>
   )
 );

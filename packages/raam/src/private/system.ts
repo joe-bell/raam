@@ -1,10 +1,14 @@
 import { system } from "@styled-system/core";
-import { FlexboxProps } from "./flexbox";
-import { GapValue } from "./types";
+import { DefaultFlexboxProps, GapValue } from "./types";
 
-export type FlexGapProps = {
+export type RaamSystemPropsPublic = Omit<
+  DefaultFlexboxProps,
+  "alignSelf" | "justifySelf" | "order"
+>;
+
+export type RaamSystemPropsPrivate = {
   index?: number;
-  flexParent?: FlexboxProps;
+  flexParent?: RaamSystemPropsPublic;
   flexChild?: any;
   gapOffset?: GapValue;
   gapTop?: GapValue;
@@ -13,6 +17,19 @@ export type FlexGapProps = {
   gapLeft?: GapValue;
   overflow?: GapValue;
   overflowX?: GapValue;
+};
+
+export type RaamSystemProps = RaamSystemPropsPrivate & RaamSystemPropsPublic;
+
+export type RaamSystemConfig = {
+  [key in keyof RaamSystemProps]:
+    | {
+        property: string;
+        scale?: string;
+        defaultScale?: number[];
+        transform: (value: unknown, scale: unknown, props: any) => void;
+      }
+    | boolean;
 };
 
 const isNumber = n => typeof n === "number" && !isNaN(n);
@@ -53,22 +70,25 @@ const transformGap = (value, scale, props, property) => {
   return undefined;
 };
 
-type Config = {
-  [key in keyof FlexGapProps]: {
-    property: string;
-    scale?: string;
-    defaultScale?: number[];
-    transform: (value: unknown, scale: unknown, props: any) => void;
-  };
-};
-
 const space = {
   scale: "space",
   // from @styled-system/space
   defaultScale: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 };
 
-const config: Config = {
+export const raamSystemConfig: RaamSystemConfig = {
+  alignItems: true,
+  alignContent: true,
+  justifyItems: true,
+  justifyContent: true,
+  flexWrap: true,
+  flexDirection: true,
+  // Flex Item
+  flex: true,
+  flexBasis: true,
+  flexGrow: true,
+  flexShrink: true,
+  // Flex Gap
   gapOffset: {
     property: "margin",
     ...space,
@@ -127,6 +147,6 @@ const config: Config = {
   },
 };
 
-export const flexgap = system(config);
+const raamSystem = system(raamSystemConfig);
 
-export default flexgap;
+export default raamSystem;

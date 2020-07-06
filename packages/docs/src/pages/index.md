@@ -23,20 +23,38 @@ Here [`gap`](#configuration) is accessing the value from `theme.space[3]`.
 ```jsx live=true
 // import { Wrap } from "raam";
 // import { Box } from "your-components";
+<React.Fragment>
+  <Wrap gap={3}>
+    {Array.from({ length: 32 }).map((item, i) => (
+      <FlexChild
+        as="p"
+        key={i}
+        sx={{
+          width: "2rem",
+          height: "2rem",
+          backgroundColor: "primary",
+          filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+        }}
+      >
+        {i}
+      </FlexChild>
+    ))}
+  </Wrap>
 
-<Wrap gap={3}>
-  {Array.from({ length: 32 }).map((item, i) => (
-    <Box
-      key={i}
-      sx={{
-        width: "2rem",
-        height: "2rem",
-        backgroundColor: "primary",
-        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
-      }}
-    />
-  ))}
-</Wrap>
+  <Wrap gap={3}>
+    {Array.from({ length: 32 }).map((item, i) => (
+      <Box
+        key={i}
+        sx={{
+          width: "2rem",
+          height: "2rem",
+          backgroundColor: "primary",
+          filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+        }}
+      />
+    ))}
+  </Wrap>
+</React.Fragment>
 ```
 
 #### Responsive

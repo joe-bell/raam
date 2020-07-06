@@ -5,8 +5,10 @@ import { createShouldForwardProp } from "@styled-system/should-forward-prop";
 import { compose } from "@styled-system/core";
 import space from "@styled-system/space";
 import color from "@styled-system/color";
-import flexbox, { FlexboxProps } from "./flexbox";
-import flexgap, { FlexGapProps } from "./flexgap";
+import raamSystem, {
+  RaamSystemPropsPublic,
+  RaamSystemPropsPrivate,
+} from "./system";
 import { Assign, ColorProps, SpaceProps, SxProps, SxStyleProp } from "./types";
 
 export type BoxOwnProps = {
@@ -14,12 +16,12 @@ export type BoxOwnProps = {
   css?: InterpolationWithTheme<any>;
 } & SxProps &
   ColorProps &
-  FlexboxProps &
+  RaamSystemPropsPublic &
   SpaceProps;
 
 export type BoxPrivateProps = {
   __css?: SxStyleProp;
-} & FlexGapProps;
+} & RaamSystemPropsPrivate;
 
 export type BoxProps = Assign<
   React.ComponentPropsWithoutRef<"div">,
@@ -51,8 +53,7 @@ export const Box = styled("div", {
   shouldForwardProp: createShouldForwardProp([
     ...space.propNames,
     ...color.propNames,
-    ...flexbox.propNames,
-    ...flexgap.propNames,
+    ...raamSystem.propNames,
   ]),
   // Add color override to prevent incompatible collisions
   // https://github.com/emotion-js/emotion/issues/1272
@@ -68,5 +69,5 @@ export const Box = styled("div", {
     props.sx && css(props.sx)(props.theme),
     props.css,
   ],
-  compose(space, color, flexbox, flexgap),
+  compose(space, color, raamSystem),
 ]);
