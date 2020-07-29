@@ -62,6 +62,6 @@
     "prettier": "1.19.1",
     "react-test-renderer": "16.13.1",
     "rimraf": "3.0.2",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   }
 }
