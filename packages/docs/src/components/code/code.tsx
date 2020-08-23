@@ -3,6 +3,7 @@ import { jsx, Box, Heading, Link } from "theme-ui";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import * as Raam from "raam";
+import * as RaamThemeUI from "@raam/theme-ui";
 
 const Code = ({ children, className, live }) => {
   const language = className.replace(/language-/, "");
@@ -18,8 +19,8 @@ const Code = ({ children, className, live }) => {
       >
         <LiveProvider
           code={children}
-          transformCode={code => "/** @jsx jsx */" + code}
-          scope={{ jsx, Box, Heading, Link, ...Raam }}
+          transformCode={(code) => "/** @jsx jsx */" + code}
+          scope={{ jsx, Box, Heading, Link, ...Raam, ...RaamThemeUI }}
         >
           <Box
             as={LivePreview}

@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "paths": {
+      /**
+       * If this isn't added, the build throws the following error:
+       *    semantic error TS2742:
+       *    The inferred type of 'Flex' cannot be named without a reference to
+       *    'raam/node_modules/csstype'. This is likely not portable. A type
+       *    annotation is necessary.
+       */
+      "csstype": ["node_modules/csstype"]
+    }
+  }
+}

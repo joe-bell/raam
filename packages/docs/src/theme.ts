@@ -9,6 +9,8 @@ const colors = {
   border: black,
   primary: "#0072CE",
   muted: "#f6f6f6",
+  neutral: "#8a8a8a",
+  hr: "#e2e2e2",
   error: "#e23636",
 };
 
@@ -63,10 +65,13 @@ const theme = {
   borderStyles,
   borderWidths,
   borders: {
+    divider: `${borderWidths.thick}px ${borderStyles.thick}`,
     thick: `${borderWidths.thick}px ${borderStyles.thick}`,
   },
   styles: {
     root: {
+      "--color-primary": (t) => t.colors.primary,
+      "--color-white": "#FFFFFF",
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
@@ -151,6 +156,7 @@ const theme = {
       width: "100%",
       borderCollapse: "separate",
       borderSpacing: 0,
+      overflowX: "auto",
     },
     th: {
       padding: 1,
@@ -161,7 +167,8 @@ const theme = {
       padding: 1,
       textAlign: "left",
       borderBottomStyle: "solid",
-      borderBottomWidth: 2,
+      borderBottomWidth: 1,
+      borderBottomColor: "neutral",
     },
     hr: {
       border: 0,

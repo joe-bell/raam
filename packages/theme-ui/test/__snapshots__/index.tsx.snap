@@ -1,5 +1,379 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Flex Variants Inline renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex Variants Inline renders with defined theme gap 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex Variants Stack renders 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex Variants Stack renders with defined theme gap 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: 32px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-1"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex Variants Wrap renders 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
+exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    Item 1
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 2
+  </div>
+  <div
+    className="emotion-0"
+  >
+    Item 3
+  </div>
+</div>
+`;
+
 exports[`Flex renders 1`] = `
 .emotion-3 {
   box-sizing: border-box;
@@ -942,6 +1316,79 @@ exports[`Flex style props renders with defined theme gap (theme-ui) 1`] = `
   margin: 0;
   min-width: 0;
   position: relative;
+  margin-left: 64px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div
+  className="emotion-3"
+>
+  <div
+    className="emotion-0"
+  >
+    <p>
+      Item 1
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 2
+    </p>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <p>
+      Item 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Flex style props renders with defined theme gap 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 64px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   margin-left: 64px;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;

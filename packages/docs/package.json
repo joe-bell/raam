@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "clean": "rimraf {.next,out}",
-    "lint:ts": "npx tsc --noEmit",
+    "lint": "npx tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "next start"
   },
@@ -16,6 +16,7 @@
     "next": "9.5.5",
     "next-google-fonts": "1.2.1",
     "prism-react-renderer": "1.1.1",
+    "@raam/theme-ui": "^0.2.3",
     "raam": "^0.2.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",

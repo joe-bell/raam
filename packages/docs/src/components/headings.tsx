@@ -1,10 +1,16 @@
 /** @jsx jsx */
 import { jsx, NavLink } from "theme-ui";
 
-const heading = Tag => props => {
+const heading = (Tag) => (props) => {
   if (!props.id) return <Tag {...props} />;
   return (
-    <Tag {...props}>
+    <Tag
+      {...props}
+      sx={{
+        // Rough approximation of header size to avoid overlap
+        scrollMarginTop: ["11rem", "6rem"],
+      }}
+    >
       <NavLink
         sx={{
           textDecoration: "none",
@@ -20,7 +26,7 @@ const heading = Tag => props => {
   );
 };
 
-const components = {
+const headings = {
   h1: heading("h1"),
   h2: heading("h2"),
   h3: heading("h3"),
@@ -29,4 +35,4 @@ const components = {
   h6: heading("h6"),
 };
 
-export default components;
+export default headings;

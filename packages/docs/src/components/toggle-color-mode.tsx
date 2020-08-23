@@ -19,7 +19,7 @@ const ToggleColorMode: React.FC<IconButtonProps> = ({ sx, ...props }) => {
     <IconButton
       aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
       // @ts-ignore
-      onClick={e => {
+      onClick={(e) => {
         e.preventDefault();
         setMode(mode === "dark" ? "default" : "dark");
       }}
