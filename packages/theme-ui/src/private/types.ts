@@ -17,16 +17,3 @@ export type GapProp = {
    */
   gap?: GapValue;
 };
-
-/**
- * Because these dependencies aren't being directly used, and just for typings,
- * I'm exporting them from here.
- */
-export {
-  ColorProps,
-  FlexboxProps as DefaultFlexboxProps,
-  SpaceProps,
-  Theme,
-  ThemeValue,
-} from "styled-system";
-export { SxStyleProp, SxProps } from "theme-ui";

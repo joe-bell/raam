@@ -1,18 +1,13 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 import { matchers } from "jest-emotion";
-import { Inline, Flex, Stack, Wrap } from "../src";
-import { ThemeProvider as EmotionProvider } from "emotion-theming";
+import { Flex } from "../src";
 import { ThemeProvider as ThemeUIProvider } from "theme-ui";
 
 expect.extend(matchers);
 
 const theme = { space: [0, 4, 8, 16, 32, 64, 128, 256, 512] };
 const renderJSON = (el: React.ReactNode) => renderer.create(el).toJSON();
-
-const emotionProvider = (el: React.ReactNode) => (
-  <EmotionProvider theme={theme}>{el}</EmotionProvider>
-);
 
 const themeUIProvider = (el: React.ReactNode) => (
   <ThemeUIProvider theme={theme}>{el}</ThemeUIProvider>
@@ -106,20 +101,7 @@ describe("Flex", () => {
       expect(flex).toMatchSnapshot();
     });
 
-    test("renders with defined theme gap (emotion)", () => {
-      const flex = renderJSON(
-        emotionProvider(
-          <Flex gap={5}>
-            <p>Item 1</p>
-            <p>Item 2</p>
-            <p>Item 3</p>
-          </Flex>
-        )
-      );
-      expect(flex).toMatchSnapshot();
-    });
-
-    test("renders with defined theme gap (theme-ui)", () => {
+    test("renders with defined theme gap", () => {
       const flex = renderJSON(
         themeUIProvider(
           <Flex gap={5}>
@@ -133,76 +115,70 @@ describe("Flex", () => {
       expect(flex).toMatchSnapshot();
     });
   });
-});
 
-describe("Inline", () => {
-  test("renders", () => {
-    const json = renderJSON(
-      <Inline gap={4}>{["Item 1", "Item 2", "Item 3"]}</Inline>
-    );
-    expect(json).toMatchSnapshot();
-  });
+  describe("Variants", () => {
+    describe("Inline", () => {
+      test("renders", () => {
+        const json = renderJSON(
+          <Flex variant="inline" gap={4}>
+            {["Item 1", "Item 2", "Item 3"]}
+          </Flex>
+        );
+        expect(json).toMatchSnapshot();
+      });
 
-  test("renders with defined theme gap (emotion)", () => {
-    const json = renderJSON(
-      emotionProvider(<Inline gap={4}>{["Item 1", "Item 2", "Item 3"]}</Inline>)
-    );
-    expect(json).toMatchSnapshot();
-  });
+      test("renders with defined theme gap", () => {
+        const json = renderJSON(
+          themeUIProvider(
+            <Flex variant="inline" gap={4}>
+              {["Item 1", "Item 2", "Item 3"]}
+            </Flex>
+          )
+        );
+        expect(json).toMatchSnapshot();
+      });
+    });
 
-  test("renders with defined theme gap (theme-ui)", () => {
-    const json = renderJSON(
-      themeUIProvider(<Inline gap={4}>{["Item 1", "Item 2", "Item 3"]}</Inline>)
-    );
+    describe("Stack", () => {
+      test("renders", () => {
+        const json = renderJSON(
+          <Flex variant="vStack" gap={4}>
+            {["Item 1", "Item 2", "Item 3"]}
+          </Flex>
+        );
+        expect(json).toMatchSnapshot();
+      });
 
-    expect(json).toMatchSnapshot();
-  });
-});
+      test("renders with defined theme gap", () => {
+        const json = renderJSON(
+          themeUIProvider(
+            <Flex variant="vStack" gap={4}>
+              {["Item 1", "Item 2", "Item 3"]}
+            </Flex>
+          )
+        );
 
-describe("Stack", () => {
-  test("renders", () => {
-    const json = renderJSON(
-      <Stack gap={4}>{["Item 1", "Item 2", "Item 3"]}</Stack>
-    );
-    expect(json).toMatchSnapshot();
-  });
+        expect(json).toMatchSnapshot();
+      });
+    });
 
-  test("renders with defined theme gap (emotion)", () => {
-    const json = renderJSON(
-      emotionProvider(<Stack gap={4}>{["Item 1", "Item 2", "Item 3"]}</Stack>)
-    );
-    expect(json).toMatchSnapshot();
-  });
+    describe("Wrap", () => {
+      test("renders", () => {
+        const json = renderJSON(
+          <Flex variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flex>
+        );
+        expect(json).toMatchSnapshot();
+      });
 
-  test("renders with defined theme gap (theme-ui)", () => {
-    const json = renderJSON(
-      themeUIProvider(<Stack gap={4}>{["Item 1", "Item 2", "Item 3"]}</Stack>)
-    );
+      test("renders with defined theme gap", () => {
+        const json = renderJSON(
+          themeUIProvider(
+            <Flex variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flex>
+          )
+        );
 
-    expect(json).toMatchSnapshot();
-  });
-});
-
-describe("Wrap", () => {
-  test("renders", () => {
-    const json = renderJSON(
-      <Wrap gap={4}>{["Item 1", "Item 2", "Item 3"]}</Wrap>
-    );
-    expect(json).toMatchSnapshot();
-  });
-
-  test("renders with defined theme gap (emotion)", () => {
-    const json = renderJSON(
-      emotionProvider(<Wrap gap={4}>{["Item 1", "Item 2", "Item 3"]}</Wrap>)
-    );
-    expect(json).toMatchSnapshot();
-  });
-
-  test("renders with defined theme gap (theme-ui)", () => {
-    const json = renderJSON(
-      themeUIProvider(<Wrap gap={4}>{["Item 1", "Item 2", "Item 3"]}</Wrap>)
-    );
-
-    expect(json).toMatchSnapshot();
+        expect(json).toMatchSnapshot();
+      });
+    });
   });
 });

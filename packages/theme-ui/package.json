@@ -1,7 +1,7 @@
 {
-  "name": "raam",
+  "name": "@raam/theme-ui",
   "version": "0.2.3",
-  "description": "Beautifully boring cosmetic-free styles for structure and layout.",
+  "description": "Beautifully boring cosmetic-free React.js components for structure and layout.",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,6 +11,7 @@
     "README.md"
   ],
   "scripts": {
+    "prebuild": "barrelsby --delete --directory src --exclude private",
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
     "lint:ts": "npx tsc --noEmit",
@@ -27,7 +28,16 @@
     "url": "https://github.com/joe-bell/raam/issues"
   },
   "homepage": "https://github.com/joe-bell/raam#readme",
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "theme-ui": "0.3.1"
+  },
+  "dependencies": {
+    "raam": "^0.2.3"
+  },
   "devDependencies": {
-    "csstype": "3.0.2"
-  }
+    "react": "16.13.1",
+    "theme-ui": "0.3.1"
+  },
+  "gitHead": "a6e19e2884b0d784a69a7c8af29cae7008a5cb16"
 }
