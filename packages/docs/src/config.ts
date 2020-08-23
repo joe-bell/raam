@@ -8,12 +8,12 @@ const social = {
 const config = {
   navigation: [
     {
-      title: "Components",
-      url: "#components",
+      title: "Getting Started",
+      url: "#hooks",
     },
     {
-      title: "Getting Started",
-      url: "#getting-started",
+      title: "Recipes",
+      url: "#recipes",
     },
     {
       title: "GitHub",

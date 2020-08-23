@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from "react";
-import { jsx, Box, Container, Heading, NavLink } from "theme-ui";
-import { Wrap } from "raam";
+import { jsx, Box, Container, Heading, NavLink, Link } from "theme-ui";
+import { Flex } from "@raam/theme-ui";
 import Head from "./head";
 import ToggleColorMode from "./toggle-color-mode";
 import config from "../config";
@@ -11,7 +11,8 @@ const border = {
   borderColor: "border",
 };
 
-const gap = 3;
+// @TODO Support themed values
+const gap = "1rem";
 
 const Layout: React.FC = ({ children }) => (
   <>
@@ -35,7 +36,17 @@ const Layout: React.FC = ({ children }) => (
         }}
       >
         <Heading as="h1" sx={{ fontSize: 5 }}>
-          raam
+          <Link
+            href="#"
+            sx={{
+              "&:not(:hover):not(:focus)": {
+                color: "text",
+                textDecoration: "none",
+              },
+            }}
+          >
+            raam
+          </Link>
         </Heading>
 
         <Box
@@ -45,13 +56,14 @@ const Layout: React.FC = ({ children }) => (
             marginTop: [gap, 0],
           }}
         >
-          <Wrap as="ul" gap={gap}>
-            {config.navigation.map(item => (
+          <Flex as="ul" alignItems="center" gap={gap} variant="wrap">
+            {config.navigation.map((item) => (
               <NavLink key={item.url} href={item.url}>
                 {item.title}
               </NavLink>
             ))}
-          </Wrap>
+          </Flex>
+
           <ToggleColorMode
             sx={{
               position: ["absolute", "relative"],
