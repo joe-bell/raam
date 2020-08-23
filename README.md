@@ -10,7 +10,7 @@
 
 <p align="center">
   <b>
-    Beautifully boring cosmetic-free <a href="https://reactjs.org/" rel="nofollow">React.js</a> components for structure and layout.
+    Beautifully boring cosmetic-free styles for structure and layout.
   </b>
 </p>
 

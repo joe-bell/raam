@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, NavLink } from "theme-ui";
 
-const heading = Tag => props => {
+const heading = (Tag) => (props) => {
   if (!props.id) return <Tag {...props} />;
   return (
     <Tag {...props}>

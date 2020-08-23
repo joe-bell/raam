@@ -18,7 +18,7 @@ const Code = ({ children, className, live }) => {
       >
         <LiveProvider
           code={children}
-          transformCode={code => "/** @jsx jsx */" + code}
+          transformCode={(code) => "/** @jsx jsx */" + code}
           scope={{ jsx, Box, Heading, Link, ...Raam }}
         >
           <Box

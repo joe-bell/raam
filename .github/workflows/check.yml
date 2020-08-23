@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: "${{ steps.nvm.outputs.NVMRC }}"
       - run: yarn install --frozen-lockfile
+      - run: yarn prettier . --check
       - run: yarn lint
       - run: yarn test
       - run: yarn build

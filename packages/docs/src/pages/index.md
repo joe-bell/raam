@@ -6,7 +6,47 @@ Use **raam**'s layout primitives to build resilient theme-driven designs fast.
 
 ---
 
+## Hooks
+
+### useFlex
+
+## Recipes
+
+### Wrap
+
+- `useFlex()`
+  - `parent`
+  - `child`
+
+```jsx live=true
+// import { useFlex } from "raam";
+// import { Box } from "your-components";
+
+() => {
+  const flex = useFlex();
+
+  return (
+    <Box sx={flex.parent()}>
+      {Array.from({ length: 5 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...flex.child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `hue-rotate(${index * 2}deg)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
 ## Components
+
+> Prior to `v1`, `raam` exported Theme-UI components. These have now moved to `@raam/emotion`.
 
 1. [Wrap](#wrap)
 2. [Inline](#inline)
@@ -21,22 +61,33 @@ by the defined [`gap`](#configuration).
 Here [`gap`](#configuration) is accessing the value from `theme.space[3]`.
 
 ```jsx live=true
-// import { Wrap } from "raam";
+// import { useFlex } from "raam";
 // import { Box } from "your-components";
 
-<Wrap gap={3}>
-  {Array.from({ length: 32 }).map((item, i) => (
-    <Box
-      key={i}
-      sx={{
-        width: "2rem",
-        height: "2rem",
-        backgroundColor: "primary",
-        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
-      }}
-    />
-  ))}
-</Wrap>
+() => {
+  const wrap = useFlex({ variant: "wrap" });
+
+  const parentAs = "ul";
+  const childAs = "li";
+
+  return (
+    <Box as={parentAs} sx={wrap.parent({ as: parentAs })}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          as={childAs}
+          key={index}
+          sx={{
+            ...wrap.child({ as: childAs, index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `hue-rotate(${index * 2}deg)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
 ```
 
 #### Responsive
@@ -47,22 +98,46 @@ Here [`gap`](#configuration) is accessing the value from `theme.space[3]`, then
 `theme.space[4]` at `breakpoint[1]` etc.
 
 ```jsx live=true
-// import { Wrap } from "raam";
+// import { useFlex } from "raam";
 // import { Box } from "your-components";
 
-<Wrap gap={[2, 3, 4]}>
-  {Array.from({ length: 32 }).map((item, i) => (
-    <Box
-      key={i}
-      sx={{
-        width: "2rem",
-        height: "2rem",
-        backgroundColor: "primary",
-        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
-      }}
-    />
-  ))}
-</Wrap>
+() => {
+  // TODO
+  // <Wrap gap={[2, 3, 4]}>
+  const wrap = useFlex({
+    variant: "wrap",
+    gap: [
+      "1rem",
+      {
+        "@media (min-width: 500px)": "2rem",
+      },
+      {
+        "@media (min-width: 900px)": "3rem",
+      },
+    ],
+  });
+
+  const parentAs = "ul";
+  const childAs = "li";
+
+  return (
+    <Box as={parentAs} sx={wrap.parent({ as: parentAs })}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          as={childAs}
+          key={index}
+          sx={{
+            ...wrap.child({ as: childAs, index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `hue-rotate(${index * 2}deg)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
 ```
 
 #### Example
@@ -73,20 +148,40 @@ Let's take a look at a more real-world example; a "tag"-list at the bottom of an
 - [`Wrap`](#wrap) uses the [shared configuration](#configuration) to render our `ul` with `li` children:
 
 ```jsx live=true
-// import { Stack, Wrap } from "raam";
-// import { Box, Heading, Link } from "your-components";
+// import { useFlex } from "raam";
+// import { Box } from "your-components";
 
-<Stack padding={3}>
-  <Heading as="h2">Tags</Heading>
+() => {
+  const stack = useFlex({ variant: "vStack", gap: "1rem" });
+  const wrap = useFlex({ variant: "wrap", gap: "1rem" });
 
-  <Wrap as="ul">
-    {Array.from({ length: 8 }, (v, k) => k + 1).map(item => (
-      <Link key={item} href={`#list-item-${item}`}>
-        Tag {item}
-      </Link>
-    ))}
-  </Wrap>
-</Stack>
+  const tagsParentAs = "ul";
+  const tagsChildAs = "li";
+
+  return (
+    <Box sx={{ padding: 3, ...stack.parent({}) }}>
+      <Heading as="h2" sx={stack.child({ index: 0 })}>
+        Tags
+      </Heading>
+
+      <Box sx={stack.child({ index: 1 })}>
+        <Box as={tagsParentAs} sx={wrap.parent({ as: tagsParentAs })}>
+          {Array.from({ length: 8 }, (v, k) => k + 1).map((item, index) => (
+            <Box
+              key={index}
+              as={tagsChildAs}
+              sx={wrap.child({ as: tagsChildAs, index })}
+            >
+              <Link key={item} href={`#list-item-${item}`}>
+                Tag {item}
+              </Link>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
+  );
+};
 ```
 
 ### Inline
@@ -96,47 +191,56 @@ If you'd rather let items flow elegantly in a single line, make use of `Inline`.
 Scroll behaviour can be removed with an `overflow: 'hidden'`.
 
 ```jsx live=true
-// import { Inline } from "raam";
+// import { useFlex } from "raam";
 // import { Box } from "your-components";
 
-<Inline gap={3}>
-  {Array.from({ length: 32 }).map((item, i) => (
-    <Box
-      key={i}
-      sx={{
-        width: "2rem",
-        height: "2rem",
-        backgroundColor: "primary",
-        filter: i > 0 && `hue-rotate(${i * 2}deg)`,
-      }}
-    />
-  ))}
-</Inline>
+() => {
+  const inline = useFlex({ variant: "inline", gap: "1rem" });
+
+  return (
+    <Box sx={{ ...inline.parent(), overflowX: "auto" }}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...inline.child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `hue-rotate(${index * 2}deg)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
 ```
 
 or with some more chaotic values…
 
 ```jsx live=true
-// import { Inline } from "raam";
+// import { useFlex } from "raam";
 // import { Box } from "your-components";
 
 () => {
   const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
+  const inline = useFlex({ variant: "inline", gap: "1rem" });
 
   return (
-    <Inline gap={3} flexWrap="nowrap">
-      {Array.from({ length: 32 }).map((item, i) => (
+    <Box sx={{ ...inline.parent(), overflowX: "auto" }}>
+      {Array.from({ length: 32 }).map((item, index) => (
         <Box
-          key={i}
+          key={index}
           sx={{
+            ...inline.child({ index }),
             width: size(),
             height: size(),
             backgroundColor: "primary",
-            filter: i > 0 && `hue-rotate(${i * 2}deg)`,
+            filter: index > 0 && `hue-rotate(${index * 2}deg)`,
           }}
         />
       ))}
-    </Inline>
+    </Box>
   );
 };
 ```
@@ -145,15 +249,55 @@ or with some more chaotic values…
 
 Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system), a [Flex](#flex)-based layout that renders children on top of each other, spaced by the defined [`gap`](#configuration).
 
+#### VStack
+
 ```jsx live=true
-// import { Stack } from "raam";
+// import { useFlex } from "raam";
 // import { Box } from "your-components";
 
-<Stack gap={3}>
-  {Array.from({ length: 4 }).map((item, i) => (
-    <Box key={i} sx={{ height: "2rem", backgroundColor: "primary" }} />
-  ))}
-</Stack>
+() => {
+  const vStack = useFlex({ variant: "vStack", gap: "1rem" });
+
+  return (
+    <Box sx={vStack.parent()}>
+      {Array.from({ length: 4 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...vStack.child({ index }),
+            height: "2rem",
+            backgroundColor: "primary",
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+```jsx live=true
+// import { useFlex } from "raam";
+// import { Box } from "your-components";
+
+() => {
+  const hStack = useFlex({ variant: "hStack", gap: "1rem" });
+
+  return (
+    <Box sx={hStack.parent()}>
+      {Array.from({ length: 8 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...hStack.child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
 ```
 
 > "Hold up, why don't you just…"
@@ -189,7 +333,7 @@ A layout primitive to control vertical rhythm and flow for typographic content.
 
 ---
 
-## Getting Started
+## Setup
 
 ### Installation
 

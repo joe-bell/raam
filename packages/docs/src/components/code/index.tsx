@@ -3,4 +3,4 @@ import dynamic from "next/dynamic";
 
 const CodeDynamic = dynamic(() => import("./code"));
 
-export default props => <CodeDynamic {...props} />;
+export default (props) => <CodeDynamic {...props} />;
