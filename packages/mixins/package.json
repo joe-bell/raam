@@ -1,0 +1,33 @@
+{
+  "name": "@raam/mixins",
+  "version": "0.2.1",
+  "description": "Beautifully boring cosmetic-free styles for structure and layout.",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
+    "clean": "rimraf {dist,.rts2*}",
+    "lint:ts": "npx tsc --noEmit",
+    "dev": "npm run build -- watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-bell/raam.git"
+  },
+  "author": "Joe Bell <joe@joebell.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-bell/raam/issues"
+  },
+  "homepage": "https://github.com/joe-bell/raam#readme",
+  "devDependencies": {
+    "csstype": "3.0.2"
+  }
+}
