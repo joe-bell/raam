@@ -3423,13 +3423,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/react@*", "@types/react@16.9.43":
-  version "16.9.43"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.43.tgz#c287f23f6189666ee3bebc2eb8d0f84bcb6cdb6b"
-  integrity sha512-PxshAFcnJqIWYpJbLPriClH53Z2WlJcVZE+NP2etUtWQs2s7yIMj3/LDKZT/5CHJ/F62iyjVCDu2H3jHEXIxSg==
+"@types/react@*", "@types/react@16.9.48":
+  version "16.9.48"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.48.tgz#d3387329f070d1b1bc0ff4a54a54ceefd5a8485c"
+  integrity sha512-4ykBVswgYitPGMXFRxJCHkxJDU2rjfU3/zw67f8+dB7sNdVJXsrwqoYxz/stkAucymnEEbRPFmX7Ce5Mc/kJCw==
   dependencies:
     "@types/prop-types" "*"
-    csstype "^2.2.0"
+    csstype "^3.0.2"
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -5763,10 +5763,15 @@ cssstyle@^2.2.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@2.6.10, csstype@^2.2.0, csstype@^2.5.7, csstype@^2.6.6, csstype@^2.6.9:
+csstype@2.6.10, csstype@^2.5.7, csstype@^2.6.6, csstype@^2.6.9:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
   integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
+
+csstype@^3.0.2:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.3.tgz#2b410bbeba38ba9633353aff34b05d9755d065f8"
+  integrity sha512-jPl+wbWPOWJ7SXsWyqGRk3lGecbar0Cb0OvZF/r/ZU011R4YqiRehgkQ9p4eQfo9DSDLqLL3wHwfxeJiuIsNag==
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
