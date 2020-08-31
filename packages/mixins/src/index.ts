@@ -40,43 +40,104 @@ type RaamStyleProps<K extends keyof RaamCSS, T = void> = {
   [P in K]?: RaamStyleProp<K, T> | RaamStyleProp<K, T>[];
 };
 
+const transformResponsiveStyleProp = (
+  property: string,
+  // string | number | { string: string | number }
+  value: unknown
+): RaamCSS =>
+  typeof value === "object"
+    ? {
+        [Object.keys(value)[0]]: {
+          [property]: Object.values(value)[0],
+        },
+      }
+    : { [property]: value };
+
+// @TODO Update props types to reflect StyleProps, not Styles
+const stylePropsToCSS = (props: unknown): RaamCSS =>
+  Object.keys(props)
+    .map(key =>
+      Array.isArray(props[key])
+        ? props[key].map(arrayValue =>
+            transformResponsiveStyleProp(key, arrayValue)
+          )
+        : transformResponsiveStyleProp(key, props[key])
+    )
+    .flat()
+    .reduce((acc, cv) => Object.assign(acc, cv), {});
+
+// Flex
+
 type FlexProps = {
   as?: string;
-} & RaamStyleProps<"flexDirection" | "gap" | "overflowX">;
+} & RaamStyleProps<"flexDirection" | "flexWrap" | "gap" | "overflowX">;
 
-const flex = (props: FlexProps): RaamCSS => ({
-  ...reset(props.as),
-  gap: 0,
-  "@media": {
-    gap: "30",
-  },
+const flex = ({ as, ...props }: FlexProps): RaamCSS => ({
+  ...reset(as),
+  display: "flex",
+  ...stylePropsToCSS(props),
 });
 
-type Test = CSS.AtRules;
+type FlexChildProps = {
+  i?: number;
+} & FlexProps;
 
+// @TODO Set gap responsively
+// @TODO row/column gap
+const flexChild = (props: FlexChildProps): RaamCSS => {
+  const gap = (): RaamCSS => {
+    if (props.flexWrap !== "nowrap") {
+      const halfGap = `calc(${props.gap} / 2)`;
+      return {
+        marginTop: halfGap,
+        marginRight: halfGap,
+        marginBottom: halfGap,
+        marginLeft: halfGap,
+      };
+    }
+
+    return props.i !== 0
+      ? {
+          [props.flexDirection === "column" ||
+          props.flexDirection === "column-reverse"
+            ? "marginTop"
+            : "marginLeft"]: props.gap,
+        }
+      : {};
+  };
+
+  return {
+    ...reset(props.as),
+    ...gap(),
+  };
+};
+
+// Stack
 type StackProps = FlexProps;
+const stackDefaults = {
+  gap: "1rem",
+  flexDirection: "column",
+  flexWrap: "nowrap",
+};
 
 export const stack = ({
-  gap = "1rem",
-  flexDirection = "column",
+  gap = stackDefaults.gap,
+  flexDirection = stackDefaults.flexDirection,
+  flexWrap = stackDefaults.flexWrap,
   ...props
 }: StackProps) =>
   flex({
     gap,
     flexDirection,
+    flexWrap,
     ...props,
   });
 
-export const stackChild = {};
+type StackChildProps = FlexChildProps;
 
-// const CustomStack = styled.div({
-//     ...stack({
-//         gap: [
-//             30,
-//             {
-//             '@media (min-width: 40em)': '1.5rem',
-//             }
-//         ]
-//     }),
-//     color: 'red',
-// })
+export const stackChild = ({
+  gap = stackDefaults.gap,
+  flexDirection = stackDefaults.flexDirection,
+  flexWrap = stackDefaults.flexWrap,
+  ...props
+}: StackChildProps) => flexChild({ gap, flexDirection, flexWrap, ...props });

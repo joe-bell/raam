@@ -5,6 +5,7 @@ import { Wrap } from "raam";
 import Head from "./head";
 import ToggleColorMode from "./toggle-color-mode";
 import config from "../config";
+import { HStack, VStack } from "./stack";
 
 const border = {
   border: "thick",
@@ -65,7 +66,41 @@ const Layout: React.FC = ({ children }) => (
     </Box>
 
     <Box sx={{ ...border, borderTop: 0, paddingY: gap }}>
-      <Container as="main">{children}</Container>
+      <Container as="main">
+        <HStack>
+          {["Test 1", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6"]}
+        </HStack>
+
+        <Box mt="4" />
+
+        <VStack
+          flexDirection={[
+            "column",
+            // @ts-ignore
+            {
+              "@media (min-width: 500px)": "row",
+            },
+          ]}
+          gap={[
+            // @ts-ignore
+            "16px",
+            // @ts-ignore
+            {
+              "@media (min-width: 500px)": "2rem",
+            },
+            // @ts-ignore
+            {
+              "@media (min-width: 600px)": "4rem",
+            },
+          ]}
+        >
+          {["Test 1", "Test 2", "Test 3"]}
+        </VStack>
+
+        <Box mt="4" />
+
+        {children}
+      </Container>
     </Box>
 
     <Box sx={{ ...border, borderTop: 0, paddingY: gap }}>
