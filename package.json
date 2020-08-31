@@ -59,7 +59,7 @@
     "lerna": "3.22.1",
     "lint-staged": "10.2.11",
     "microbundle": "0.12.2",
-    "prettier": "1.19.1",
+    "prettier": "2.1.1",
     "react-test-renderer": "16.13.1",
     "rimraf": "3.0.2",
     "typescript": "3.9.7"
