@@ -55,6 +55,7 @@ export const Flex = React.forwardRef<any, FlexProps>(
           __css={{
             position: "relative",
           }}
+          key={i}
           index={i}
           flexParent={{ flexWrap, flexDirection }}
           gapTop={gap}
