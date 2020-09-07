@@ -49,7 +49,7 @@ export const Flex = React.forwardRef<any, FlexProps>(
       flexWrap={flexWrap}
       {...props}
     >
-      {React.Children.map(children, (child, i) => (
+      {React.Children.toArray(children).map((child, i) => (
         <Box
           as={determineChild(as)}
           __css={{
