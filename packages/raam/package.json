@@ -41,7 +41,7 @@
     "@styled-system/space": "5.1.2"
   },
   "devDependencies": {
-    "@emotion/core": "10.0.28",
+    "@emotion/core": "10.0.35",
     "@emotion/styled": "10.0.27",
     "@theme-ui/css": "0.3.1",
     "emotion-theming": "10.0.27",
