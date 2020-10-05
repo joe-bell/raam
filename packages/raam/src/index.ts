@@ -69,7 +69,17 @@ const stylePropsToCSS = (props: unknown): RaamCSS =>
     .flat()
     .reduce((acc, cv) => Object.assign(acc, cv), {});
 
-const objectWithoutUndefined = <T>(obj: T) =>
+const stylePropItemContains = (prop: unknown, condition: any): boolean =>
+  typeof prop === "object"
+    ? Object.values(prop).includes(condition)
+    : prop === condition;
+
+const stylePropContains = (prop: unknown, condition: any): boolean =>
+  Array.isArray(prop)
+    ? prop.map(item => stylePropItemContains(item, condition)).includes(true)
+    : stylePropItemContains(prop, condition);
+
+const propsWithoutUndefined = <T>(obj: T) =>
   Object.keys(obj).reduce((acc, key) => {
     if (obj[key] !== undefined) acc[key] = obj[key];
     return acc;
@@ -92,7 +102,31 @@ const flexVariants: Record<FlexVariants, FlexParentProps> = {
   inline: { gap: "1rem", alignItems: "center", flexDirection: "row" },
 };
 
-// Flex
+const flexGap = (
+  props: FlexParentProps & Pick<FlexChildProps, "index">
+): RaamCSS => {
+  if (props.gap && !stylePropContains(props.flexWrap, "nowrap")) {
+    // @TODO Fix usage with Theme-ui (may require passing theme via props)
+    const halfGap = `calc(${props.gap} / 2)`;
+    return {
+      marginTop: halfGap,
+      marginRight: halfGap,
+      marginBottom: halfGap,
+      marginLeft: halfGap,
+    };
+  }
+
+  return props.index && props.index !== 0
+    ? {
+        [props.flexDirection === "column" ||
+        props.flexDirection === "column-reverse"
+          ? "marginTop"
+          : "marginLeft"]: props.gap,
+      }
+    : {};
+};
+
+// flex
 // ==============================================
 
 type FlexParentStyleProps =
@@ -116,7 +150,7 @@ const flex = ({ as, ...props }: FlexParentProps): RaamCSS => ({
   ...stylePropsToCSS(props),
 });
 
-// FlexChild
+// flexChild
 // ==============================================
 
 type FlexChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
@@ -129,7 +163,6 @@ type FlexChildProps = {
 // @TODO Pick flex child props
 const flexChild = ({
   as,
-  index,
   flex = "0 0 auto",
   flexBasis,
   flexGrow,
@@ -138,31 +171,10 @@ const flexChild = ({
 }: FlexChildProps): RaamCSS => {
   // @TODO Set gap based on responsive values
   // @TODO Migrate gap polyfil
-  const gap = (): RaamCSS => {
-    if (props.flexWrap !== "nowrap") {
-      // @TODO Fix usage with Theme-ui (may require passing theme via props)
-      const halfGap = `calc(${props.gap} / 2)`;
-      return {
-        marginTop: halfGap,
-        marginRight: halfGap,
-        marginBottom: halfGap,
-        marginLeft: halfGap,
-      };
-    }
-
-    return index !== 0
-      ? {
-          [props.flexDirection === "column" ||
-          props.flexDirection === "column-reverse"
-            ? "marginTop"
-            : "marginLeft"]: props.gap,
-        }
-      : {};
-  };
 
   return {
     ...reset(as),
-    ...gap(),
+    ...flexGap(props),
     ...stylePropsToCSS({ flex, flexBasis, flexGrow, flexShrink }),
   };
 };
@@ -187,7 +199,7 @@ export const useFlex = ({
   const propsWithVariant = variant
     ? {
         ...flexVariants[variant],
-        ...objectWithoutUndefined(props),
+        ...propsWithoutUndefined(props),
       }
     : props;
 
