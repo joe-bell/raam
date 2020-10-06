@@ -1,6 +1,6 @@
 {
   "name": "@raam/theme-ui",
-  "version": "0.2.3",
+  "version": "1.0.0-alpha.12+2a10973",
   "description": "Beautifully boring cosmetic-free Theme UI components for structure and layout.",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -32,10 +32,11 @@
     "theme-ui": "0.3.1"
   },
   "dependencies": {
-    "raam": "^0.2.3"
+    "raam": "^1.0.0-alpha.12+2a10973"
   },
   "devDependencies": {
     "react": "16.13.1",
     "theme-ui": "0.3.1"
-  }
+  },
+  "gitHead": "2a109738250cff0be586c00a093102fa7801bcbc"
 }
