@@ -1,6 +1,6 @@
 import * as CSSType from "csstype";
 
-// @TODO Ensure RaamCSS is valid with other CSS libraries. Right now it throws
+// @RFC-TODO Ensure RaamCSS is valid with other CSS libraries. Right now it throws
 // incompatibility errors
 type RaamCSSProperties = CSSType.PropertiesFallback;
 type RaamCSS =
@@ -58,7 +58,7 @@ type RaamFlexGap = {
 type StylePropsToCSS = RaamStyleProps<keyof RaamCSS> & RaamFlexGap;
 
 const stylePropToCSS = (
-  // @TODO This probably shouldn't be a string type
+  // @RFC-TODO This probably shouldn't be a string type
   property: keyof StylePropsToCSS | string,
   originalValue
 ): RaamCSS => {
@@ -68,7 +68,7 @@ const stylePropToCSS = (
   const getValue =
     (typeof originalValue === "object" && Object.values(originalValue)[0]) ||
     originalValue;
-  // @TODO Support Themed Values
+  // @RFC-TODO Support Themed Values
   const value = typeof getValue === "number" ? `${getValue}px` : getValue;
 
   const polyfill = {
@@ -164,8 +164,8 @@ type FlexParentStyleProps =
   | "justifyContent"
   | "justifyItems";
 
-// @TODO Gap types should support numbers
-// @TODO Support Row/Column Gap
+// @RFC-TODO Gap types should support numbers
+// @RFC-TODO Support Row/Column Gap
 type FlexParentProps = {
   as?: unknown;
 } & RaamStyleProps<FlexParentStyleProps>;
@@ -174,7 +174,7 @@ const flex = ({ as, gap: flexGap, ...props }: FlexParentProps): RaamCSS => ({
   ...reset(as),
   display: "flex",
   margin: `var(${CSS_VARS.FLEX_GAP_OFFSET}, initial)`,
-  // @TODO Repair gap/flexGap types
+  // @RFC-TODO Repair gap/flexGap types
   // @ts-ignore
   ...stylePropsToCSS({ flexGap, ...props }),
 });
@@ -224,7 +224,7 @@ export const useFlex = ({
   variant = "hStack",
   ...props
 }: UseFlexProps = {}) => {
-  // @TODO Support Responsive Variants
+  // @RFC-TODO Support Responsive Variants
   const propsWithVariant = variant
     ? {
         ...flexVariants[variant],

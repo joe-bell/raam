@@ -8,7 +8,7 @@ import {
 } from "raam";
 
 export type FlexProps = Omit<BoxProps, "variant"> &
-  // @TODO Fix Gap
+  // @RFC-TODO Fix Gap
   Omit<UseFlexProps, "gap"> & {
     gap?: UseFlexProps["gap"] | number;
   } & UseFlexParentProps &
@@ -55,7 +55,7 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
     },
     ref
   ) => {
-    // @TODO Pre-transform Theme-UI's responsive props to `raam`'s style props
+    // @RFC-TODO Pre-transform Theme-UI's responsive props to `raam`'s style props
     const flexStyles = useFlex({
       alignItems,
       alignContent,

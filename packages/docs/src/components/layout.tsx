@@ -11,7 +11,7 @@ const border = {
   borderColor: "border",
 };
 
-// @TODO Support themed values
+// @RFC-TODO Support themed values
 const gap = "1rem";
 
 const Layout: React.FC = ({ children }) => (
