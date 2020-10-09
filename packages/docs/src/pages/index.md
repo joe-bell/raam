@@ -45,15 +45,23 @@ This returns functional styles for:
 // import { useFlex } from "raam";
 
 () => {
-  const flex = useFlex({ gap: "1rem" });
+  const flex = useFlex({
+    // gap: "1rem"
+    gap: [
+      "2rem",
+      {
+        "@media (min-width: 40em)": "1rem",
+      },
+    ],
+  });
 
   return (
-    <ul style={flex.parent({ as: "ul" })}>
+    <Box style={flex.parent()}>
       {Array.from({ length: 3 }).map((item, index) => (
         <li
           key={index}
           style={{
-            ...flex.child({ as: "li", index }),
+            ...flex.child({ index }),
             backgroundColor: "var(--color-primary)",
             color: "var(--color-white)",
             padding: "0.5rem 1rem",
@@ -62,7 +70,7 @@ This returns functional styles for:
           Item {index + 1}
         </li>
       ))}
-    </ul>
+    </Box>
   );
 };
 ```
