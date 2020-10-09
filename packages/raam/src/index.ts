@@ -26,6 +26,16 @@ enum CSS_VARS {
 // Utils
 // ==============================================
 
+// Polyfill for `.flat()`
+const flat = (arr: any[]) =>
+  arr.reduce(
+    (accumulator, currentValue) =>
+      accumulator.concat(
+        Array.isArray(currentValue) ? flat(currentValue) : currentValue
+      ),
+    []
+  );
+
 const reset = (as: unknown): RaamCSS => ({
   // @TODO Possibly bin-off these 3 initial styles to avoid duplication
   boxSizing: "border-box",
@@ -131,14 +141,16 @@ const styleOptionToCSS = (
 };
 
 const styleOptionsToCSS = (props: StyleOptionsToCSS): RaamCSS => {
-  return Object.keys(props)
-    .map((key) =>
-      Array.isArray(props[key])
-        ? props[key].map((arrayValue) => styleOptionToCSS(key, arrayValue))
-        : styleOptionToCSS(key, props[key])
-    )
-    .flat()
-    .reduce((acc, cv) => Object.assign(acc, cv), {});
+  const transformedStyleOptions = Object.keys(props).map((key) =>
+    Array.isArray(props[key])
+      ? props[key].map((arrayValue) => styleOptionToCSS(key, arrayValue))
+      : styleOptionToCSS(key, props[key])
+  );
+
+  return flat(transformedStyleOptions).reduce(
+    (acc, cv) => Object.assign(acc, cv),
+    {}
+  );
 };
 
 const propsWithoutUndefined = <T>(obj: T) =>
@@ -206,7 +218,7 @@ const flexChild = ({
   flexBasis,
   flexGrow,
   flexShrink,
-  index,
+  index = 1,
 }: FlexChildProps): RaamCSS => ({
   ...reset(as),
   marginTop: `var(${CSS_VARS.FLEX_GAP}, ${
@@ -226,7 +238,7 @@ const flexChild = ({
 export type UseFlexProps =
   | (Omit<FlexParentProps, "as"> & { variant?: FlexVariants })
   | undefined;
-export type UseFlexParentProps = Pick<FlexParentProps, "as"> | undefined;
+export type UseFlexParentProps = Pick<FlexParentProps, "as">;
 export type UseFlexChildProps = Pick<
   FlexChildProps,
   "as" | "index" | FlexChildStyleProps
@@ -245,9 +257,11 @@ export const useFlex = ({
     : props;
 
   return {
-    parent: (parentProps: UseFlexParentProps) =>
+    parent: (parentProps?: UseFlexParentProps) =>
       flex({ ...parentProps, ...propsWithVariant }),
-    child: (childProps: UseFlexChildProps) =>
-      flexChild({ ...childProps, ...propsWithVariant }),
+    child: (childProps?: UseFlexChildProps) =>
+      flexChild(
+        childProps ? { ...childProps, ...propsWithVariant } : propsWithVariant
+      ),
   };
 };
