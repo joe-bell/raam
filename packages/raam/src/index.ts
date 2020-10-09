@@ -103,8 +103,8 @@ const styleOptionToCSS = (
     flexGap: {
       [CSS_VARS.FLEX_GAP_TOP]: value,
       [CSS_VARS.FLEX_GAP_LEFT]: value,
-      [CSS_VARS.FLEX_GAP_OFFSET]: `calc(-${value} / 2)`,
-      [CSS_VARS.FLEX_GAP]: `calc(${value} / 2)`,
+      [CSS_VARS.FLEX_GAP_OFFSET]: `calc(${value} * -0.5)`,
+      [CSS_VARS.FLEX_GAP]: `calc(${value} * 0.5)`,
     },
   }[property] || { [property]: value };
 
