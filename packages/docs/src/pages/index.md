@@ -46,19 +46,13 @@ This returns functional styles for:
 
 () => {
   const flex = useFlex({
-    // gap: "1rem"
-    gap: [
-      "2rem",
-      {
-        "@media (min-width: 40em)": "1rem",
-      },
-    ],
+    gap: "1rem",
   });
 
   return (
-    <Box style={flex.parent()}>
+    <div style={flex.parent()}>
       {Array.from({ length: 3 }).map((item, index) => (
-        <li
+        <div
           key={index}
           style={{
             ...flex.child({ index }),
@@ -68,9 +62,9 @@ This returns functional styles for:
           }}
         >
           Item {index + 1}
-        </li>
+        </div>
       ))}
-    </Box>
+    </div>
   );
 };
 ```

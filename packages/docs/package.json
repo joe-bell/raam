@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "docs",
-  "version": "1.0.0-alpha.15",
+  "version": "0.2.3",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
@@ -13,11 +13,11 @@
   "dependencies": {
     "@mdx-js/loader": "1.6.18",
     "@next/mdx": "9.5.3",
-    "@raam/theme-ui": "^1.0.0-alpha.15",
+    "@raam/theme-ui": "^0.2.3",
     "next": "9.5.5",
     "next-google-fonts": "1.2.1",
     "prism-react-renderer": "1.1.1",
-    "raam": "^1.0.0-alpha.15",
+    "raam": "^0.2.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-live": "2.2.2",
