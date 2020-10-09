@@ -1,6 +1,6 @@
 {
   "name": "raam",
-  "version": "0.2.3",
+  "version": "1.0.0-alpha.15",
   "description": "Beautifully boring cosmetic-free primitives for structure and layout.",
   "source": "src/index.ts",
   "main": "dist/index.js",
