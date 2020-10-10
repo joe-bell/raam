@@ -26,9 +26,5 @@
   "bugs": {
     "url": "https://github.com/joe-bell/raam/issues"
   },
-  "homepage": "https://github.com/joe-bell/raam#readme",
-  "devDependencies": {
-    "csstype": "3.0.2"
-  },
-  "gitHead": "2a109738250cff0be586c00a093102fa7801bcbc"
+  "homepage": "https://github.com/joe-bell/raam#readme"
 }
