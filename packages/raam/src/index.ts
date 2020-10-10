@@ -1,20 +1,4 @@
-import * as CSSType from "csstype";
-
-// @TODO Ensure RaamCSS is valid with other CSS libraries. Right now it throws
-// incompatibility errors
-type RaamCSSProperties = CSSType.PropertiesFallback;
-type RaamCSS =
-  | RaamCSSProperties
-  | { [P in CSSType.SimplePseudos | string]: RaamCSSProperties };
-
-type RaamStyleOption<K extends keyof RaamCSS, T = void> =
-  | RaamCSS[K]
-  | T
-  | { [mediaQuery: string]: RaamCSS[K] | T };
-
-type RaamStyleOptions<K extends keyof RaamCSS, T = void> = {
-  [P in K]?: RaamStyleOption<K, T> | RaamStyleOption<K, T>[];
-};
+import { RaamCSS, RaamStyleProp, RaamStyleProps } from "./types";
 
 enum CSS_VARS {
   FLEX_GAP_OFFSET = "--raam-fg-offset",
@@ -64,13 +48,14 @@ const reset = (as: unknown): RaamCSS => ({
 });
 
 type RaamFlexGap = {
-  flexGap?: RaamStyleOption<"gap">;
+  flexGap?: RaamStyleProp<"gap">;
 };
-type StyleOptionsToCSS = RaamStyleOptions<keyof RaamCSS> & RaamFlexGap;
+
+interface StylePropsToCSS extends RaamStyleProps<keyof RaamCSS>, RaamFlexGap {}
 
 const styleOptionGetValue = (
   // @TODO This probably shouldn't be a string type
-  property: keyof StyleOptionsToCSS | string,
+  property: keyof StylePropsToCSS | string,
   originalValue
 ) => {
   const getValue =
@@ -84,9 +69,9 @@ const styleOptionGetValue = (
   return getValue;
 };
 
-const styleOptionToCSS = (
+const stylePropToCSS = (
   // @TODO This probably shouldn't be a string type
-  property: keyof StyleOptionsToCSS | string,
+  property: keyof StylePropsToCSS | string,
   originalValue
 ): RaamCSS => {
   const breakpoint =
@@ -140,11 +125,11 @@ const styleOptionToCSS = (
   return breakpoint ? { [breakpoint]: style } : style;
 };
 
-const styleOptionsToCSS = (props: StyleOptionsToCSS): RaamCSS => {
+const stylePropsToCSS = (props: StylePropsToCSS): RaamCSS => {
   const transformedStyleOptions = Object.keys(props).map((key) =>
     Array.isArray(props[key])
-      ? props[key].map((arrayValue) => styleOptionToCSS(key, arrayValue))
-      : styleOptionToCSS(key, props[key])
+      ? props[key].map((arrayValue) => stylePropToCSS(key, arrayValue))
+      : stylePropToCSS(key, props[key])
   );
 
   return flat(transformedStyleOptions).reduce(
@@ -184,7 +169,6 @@ type FlexParentStyleProps =
   | "flexDirection"
   | "flexWrap"
   | "gap"
-  | "overflowX"
   | "justifyContent"
   | "justifyItems";
 
@@ -192,15 +176,19 @@ type FlexParentStyleProps =
 // @TODO Support Row/Column Gap
 type FlexParentProps = {
   as?: unknown;
-} & RaamStyleOptions<FlexParentStyleProps>;
+} & RaamStyleProps<FlexParentStyleProps>;
 
-const flex = ({ as, gap: flexGap, ...props }: FlexParentProps): RaamCSS => ({
+const flexParent = ({
+  as,
+  gap: flexGap,
+  ...props
+}: FlexParentProps): RaamCSS => ({
   ...reset(as),
   display: "flex",
   margin: `var(${CSS_VARS.FLEX_GAP_OFFSET}, initial)`,
   // @TODO Repair gap/flexGap types
   // @ts-ignore
-  ...styleOptionsToCSS({ flexGap, ...props }),
+  ...stylePropsToCSS({ flexGap, ...props }),
 });
 
 // flexChild
@@ -210,7 +198,7 @@ type FlexChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
 type FlexChildProps = {
   index?: number;
 } & FlexParentProps &
-  RaamStyleOptions<FlexChildStyleProps>;
+  RaamStyleProps<FlexChildStyleProps>;
 
 const flexChild = ({
   as,
@@ -229,7 +217,7 @@ const flexChild = ({
   marginLeft: `var(${CSS_VARS.FLEX_GAP}, ${
     index > 0 ? `var(${CSS_VARS.FLEX_GAP_LEFT}, initial)` : "initial"
   })`,
-  ...styleOptionsToCSS({ flex, flexBasis, flexGrow, flexShrink }),
+  ...stylePropsToCSS({ flex, flexBasis, flexGrow, flexShrink }),
 });
 
 // useFlex
@@ -258,10 +246,13 @@ export const useFlex = ({
 
   return {
     parent: (parentProps?: UseFlexParentProps) =>
-      flex({ ...parentProps, ...propsWithVariant }),
+      flexParent({ ...parentProps, ...propsWithVariant }),
     child: (childProps?: UseFlexChildProps) =>
       flexChild(
         childProps ? { ...childProps, ...propsWithVariant } : propsWithVariant
       ),
   };
 };
+
+// src/reusable-ui.ts
+// export const useFlex = (...args) => useRaamFlex<Theme>()

@@ -8,9 +8,8 @@ import {
 } from "raam";
 
 export type FlexProps = Omit<BoxProps, "variant"> &
-  // @TODO Fix Gap
   Omit<UseFlexProps, "gap"> & {
-    gap?: UseFlexProps["gap"] | number;
+    gap?: UseFlexProps["gap"];
   } & UseFlexParentProps &
   UseFlexChildProps;
 
@@ -61,7 +60,6 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
       alignContent,
       flexDirection,
       flexWrap,
-      // @ts-ignore
       gap,
       justifyContent,
       justifyItems,
