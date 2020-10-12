@@ -43,7 +43,7 @@
     "@types/theme-ui": "0.3.4",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
-    "babel-jest": "26.3.0",
+    "babel-jest": "26.5.2",
     "barrelsby": "2.2.0",
     "commitizen": "4.1.2",
     "csstype": "3.0.3",
