@@ -38,8 +38,12 @@ export type RaamStyleProp<K extends keyof CSSProperties, T = void> =
 /**
  * Responsive Style Props
  */
-export type RaamStyleProps<K extends keyof CSSProperties, T = void> = {
-  [P in K]?: RaamStyleProp<P, T> | RaamStyleProp<P, T>[];
+// export type RaamStyleProps<K extends keyof CSSProperties, T = void> = {
+//   [P in K]?: RaamStyleProp<P, T> | RaamStyleProp<P, T>[];
+// };
+
+export type RaamStyleProps = {
+  [K in keyof CSSProperties]: RaamStyleProp<K> | RaamStyleProp<K>[];
 };
 
 /**
