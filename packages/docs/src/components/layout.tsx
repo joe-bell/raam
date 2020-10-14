@@ -56,7 +56,7 @@ const Layout: React.FC = ({ children }) => (
             marginTop: [gap, 0],
           }}
         >
-          <Flex as="ul" alignItems="center" gap={gap} variant="wrap">
+          <Flex as="ul" alignItems="center" gap={3} variant="wrap">
             {config.navigation.map((item) => (
               <NavLink key={item.url} href={item.url}>
                 {item.title}

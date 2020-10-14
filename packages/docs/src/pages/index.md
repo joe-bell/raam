@@ -155,13 +155,13 @@ A [`flex`](#use-flex)-based layout primitive that aims to address the `gap`.
 // import { Flex } from "@raam/theme-ui";
 // import { Box } from "theme-ui";
 
-<Flex variant="hStack" gap="2rem">
+<Flex alignItems={["center", "start", "end"]} variant="hStack" gap={[3, 4, 5]}>
   {Array.from({ length: 6 }).map((item, index) => (
     <Box
       key={index}
       sx={{
         width: "2rem",
-        height: "2rem",
+        height: `${index + 1}rem`,
         backgroundColor: "primary",
         filter: index > 0 && `brightness(${100 - index * 10}%)`,
       }}
