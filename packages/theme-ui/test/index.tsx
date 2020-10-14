@@ -123,10 +123,10 @@ describe("Flex", () => {
       const flex = renderJSON(
         themeUIProvider(
           <Flex
-            gap={[3, 4, 5]}
+            gap={[3, null, 5]}
             // @TODO Debug why first item gets ignored
             alignContent={["flex-end", "normal", "flex-start"]}
-            alignItems={["top", "revert", "center"]}
+            alignItems={[null, "revert", "center"]}
             flexWrap={["nowrap", "wrap-reverse"]}
           >
             <p>Item 1</p>

@@ -39,7 +39,7 @@ interface StylePropsToCSS extends RaamStyleProps {
 const hasThemeKey = (theme: unknown, key: keyof RaamTheme) =>
   theme && typeof theme !== "undefined" && theme.hasOwnProperty(key);
 
-const styleOptionGetValue = (
+const stylePropGetValue = (
   // @TODO This probably shouldn't be a string type
   property: keyof StylePropsToCSS | ({} & string),
   originalValue,
@@ -116,7 +116,14 @@ const stylePropToCSS = ({
 }): RaamCSS => {
   const breakpoint = getBreakpoint({ originalValue, arrayIndex, theme });
 
-  const value = styleOptionGetValue(property, originalValue, theme);
+  const value = stylePropGetValue(property, originalValue, theme);
+
+  if (
+    !breakpoint &&
+    (originalValue === null || typeof originalValue === "undefined")
+  ) {
+    return null;
+  }
 
   const polyfill = {
     /**
@@ -173,12 +180,19 @@ const stylePropsToCSS = ({
   const transformedStyleOptions = Object.keys(props).map((key) =>
     Array.isArray(props[key])
       ? props[key].map((originalValue, arrayIndex) =>
-          stylePropToCSS({ property: key, originalValue, arrayIndex, theme })
+          stylePropToCSS({
+            property: key,
+            originalValue,
+            arrayIndex,
+            theme,
+          })
         )
       : stylePropToCSS({ property: key, originalValue: props[key], theme })
   );
 
-  const flattenStyleOptions = flat(transformedStyleOptions);
+  const flattenStyleOptions = flat(transformedStyleOptions).filter(
+    (item) => item
+  );
 
   const mergeMediaQueries = flattenStyleOptions.reduce((acc, cv) => {
     const mqKey = Object.keys(cv)[0];
@@ -209,7 +223,12 @@ const stylePropsToCSS = ({
   /**
    * Transform to Style Object
    */
-  return mergeMediaQueries.reduce((acc, cv) => Object.assign(acc, cv), {});
+  const styleObject = mergeMediaQueries.reduce(
+    (acc, cv) => Object.assign(acc, cv),
+    {}
+  );
+
+  return styleObject;
 };
 
 const propsWithoutUndefined = <T>(obj: T) =>
