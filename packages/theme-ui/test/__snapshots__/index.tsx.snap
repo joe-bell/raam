@@ -5,7 +5,6 @@ exports[`Flex Variants Wrap renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -25,7 +24,6 @@ exports[`Flex Variants Wrap renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -45,13 +43,14 @@ exports[`Flex Variants Wrap renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: 1rem;
   --raam-fg-l: initial;
   --raam-fg-offset: initial;
@@ -62,11 +61,6 @@ exports[`Flex Variants Wrap renders 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -95,7 +89,6 @@ exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -115,7 +108,6 @@ exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -135,13 +127,14 @@ exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: 1rem;
   --raam-fg-l: initial;
   --raam-fg-offset: initial;
@@ -152,11 +145,6 @@ exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -185,7 +173,6 @@ exports[`Flex Variants hStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -205,7 +192,6 @@ exports[`Flex Variants hStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -225,13 +211,14 @@ exports[`Flex Variants hStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 4px;
   --raam-fg-offset: initial;
@@ -242,11 +229,6 @@ exports[`Flex Variants hStack renders 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -275,7 +257,6 @@ exports[`Flex Variants hStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -295,7 +276,6 @@ exports[`Flex Variants hStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -315,13 +295,14 @@ exports[`Flex Variants hStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 32px;
   --raam-fg-offset: initial;
@@ -332,11 +313,6 @@ exports[`Flex Variants hStack renders with defined theme gap 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -365,7 +341,6 @@ exports[`Flex Variants vStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -385,7 +360,6 @@ exports[`Flex Variants vStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -405,13 +379,14 @@ exports[`Flex Variants vStack renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: 4px;
   --raam-fg-l: initial;
   --raam-fg-offset: initial;
@@ -422,11 +397,6 @@ exports[`Flex Variants vStack renders 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -455,7 +425,6 @@ exports[`Flex Variants vStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -475,7 +444,6 @@ exports[`Flex Variants vStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -495,13 +463,14 @@ exports[`Flex Variants vStack renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: 32px;
   --raam-fg-l: initial;
   --raam-fg-offset: initial;
@@ -512,11 +481,6 @@ exports[`Flex Variants vStack renders with defined theme gap 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -545,13 +509,14 @@ exports[`Flex renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -564,16 +529,10 @@ exports[`Flex renders 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -593,7 +552,6 @@ exports[`Flex renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -641,13 +599,14 @@ exports[`Flex renders an array of children 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -660,16 +619,10 @@ exports[`Flex renders an array of children 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -689,7 +642,6 @@ exports[`Flex renders an array of children 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -732,13 +684,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -751,16 +704,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -780,7 +727,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -831,13 +777,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -850,16 +797,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -879,7 +820,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -935,13 +875,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -954,16 +895,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -983,7 +918,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1034,13 +968,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1053,16 +988,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1082,7 +1011,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1133,13 +1061,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1152,16 +1081,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1181,7 +1104,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1232,13 +1154,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1251,16 +1174,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1280,7 +1197,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1331,13 +1247,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1350,16 +1267,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1379,7 +1290,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1430,13 +1340,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1449,16 +1360,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1478,7 +1383,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1529,13 +1433,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1548,16 +1453,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1577,7 +1476,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1628,13 +1526,14 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1647,16 +1546,10 @@ Array [
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1676,7 +1569,6 @@ Array [
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1731,13 +1623,14 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: initial;
   --raam-fg-offset: calc(5px * -0.5);
@@ -1762,16 +1655,10 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   justify-items: stretch;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1801,7 +1688,6 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1859,13 +1745,14 @@ exports[`Flex style props renders with defined gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 1rem;
   --raam-fg-offset: initial;
@@ -1878,16 +1765,10 @@ exports[`Flex style props renders with defined gap 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1907,7 +1788,6 @@ exports[`Flex style props renders with defined gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1955,7 +1835,6 @@ exports[`Flex style props renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -1975,7 +1854,6 @@ exports[`Flex style props renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -1995,13 +1873,14 @@ exports[`Flex style props renders with defined theme gap 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 64px;
   --raam-fg-offset: initial;
@@ -2012,11 +1891,6 @@ exports[`Flex style props renders with defined theme gap 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
 }
 
 <div
@@ -2051,7 +1925,6 @@ exports[`Flex style props renders with responsive props 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,initial);
   margin-right: var(--raam-fg,initial);
@@ -2071,7 +1944,6 @@ exports[`Flex style props renders with responsive props 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  padding-left: 0;
   list-style-type: none;
   margin-top: var(--raam-fg,var(--raam-fg-t,initial));
   margin-right: var(--raam-fg,initial);
@@ -2091,13 +1963,14 @@ exports[`Flex style props renders with responsive props 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
   padding-left: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: var(--raam-fg-offset,initial);
   --raam-fg-t: initial;
   --raam-fg-l: 16px;
   --raam-fg-offset: initial;
@@ -2108,26 +1981,25 @@ exports[`Flex style props renders with responsive props 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3:before {
-  position: absolute;
-  content: "\\200B";
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
 }
 
 @media screen and (min-width:40em) {
   .emotion-3 {
-    --raam-fg-t: initial;
-    --raam-fg-l: initial;
-    --raam-fg-offset: calc(32px * -0.5);
-    --raam-fg: calc(32px * 0.5);
     -webkit-flex-wrap: wrap-reverse;
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    -webkit-align-items: revert;
+    -webkit-box-align: revert;
+    -ms-flex-align: revert;
+    align-items: revert;
+    -webkit-align-content: normal;
+    -ms-flex-line-pack: normal;
+    align-content: normal;
   }
 }
 
@@ -2137,6 +2009,10 @@ exports[`Flex style props renders with responsive props 1`] = `
     --raam-fg-l: 64px;
     --raam-fg-offset: calc(64px * -0.5);
     --raam-fg: calc(64px * 0.5);
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start;
