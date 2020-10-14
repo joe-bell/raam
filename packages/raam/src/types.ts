@@ -14,7 +14,7 @@ export type RaamCSS =
       ]: RaamCSS;
     };
 
-export type RaamStyleProp<K extends keyof CSSProperties, T = void> =
+type RaamStyleProp<K extends keyof CSSProperties, T = void> =
   | CSSProperties[K]
   | T
   | {
@@ -35,16 +35,22 @@ export type RaamStyleProp<K extends keyof CSSProperties, T = void> =
       ]: CSSProperties[K] | T;
     };
 
+type RaamStylePropsAll<T = void> = {
+  [K in keyof CSSProperties]: RaamStyleProp<K, T> | RaamStyleProp<K, T>[];
+};
+
 /**
  * Responsive Style Props
  */
-// export type RaamStyleProps<K extends keyof CSSProperties, T = void> = {
-//   [P in K]?: RaamStyleProp<P, T> | RaamStyleProp<P, T>[];
-// };
+export interface RaamStyleProps extends RaamStylePropsAll {}
 
-export type RaamStyleProps = {
-  [K in keyof CSSProperties]: RaamStyleProp<K> | RaamStyleProp<K>[];
-};
+/**
+ * Default RaamTheme
+ */
+export interface RaamTheme {
+  breakpoints?: StringNumberArr | { [key: string]: StringNumber };
+  space?: StringNumberArr;
+}
 
 /**
  * Allow `string` fallbacks without breaking autocomplete
@@ -54,6 +60,9 @@ type String = string & {};
  * Allow `number` fallbacks without breaking autocomplete
  */
 type Number = number & {};
+
+type StringNumber = string | number;
+type StringNumberArr = StringNumber | StringNumber[];
 
 // csstype v3.0.2
 //

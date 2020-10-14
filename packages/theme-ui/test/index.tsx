@@ -2,11 +2,15 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { matchers } from "jest-emotion";
 import { Flex } from "../src";
+import { RaamTheme } from "raam";
 import { ThemeProvider as ThemeUIProvider } from "theme-ui";
 
 expect.extend(matchers);
 
-const theme = { space: [0, 4, 8, 16, 32, 64, 128, 256, 512] };
+const theme: RaamTheme = {
+  breakpoints: ["40em", "52em", "64em"],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+};
 const renderJSON = (el: React.ReactNode) => renderer.create(el).toJSON();
 
 const themeUIProvider = (el: React.ReactNode) => (
@@ -91,7 +95,7 @@ describe("Flex", () => {
 
     test("renders with defined gap", () => {
       const flex = renderJSON(
-        <Flex gap={5}>
+        <Flex gap="1rem">
           <p>Item 1</p>
           <p>Item 2</p>
           <p>Item 3</p>
@@ -114,13 +118,33 @@ describe("Flex", () => {
 
       expect(flex).toMatchSnapshot();
     });
+
+    test("renders with responsive props", () => {
+      const flex = renderJSON(
+        themeUIProvider(
+          <Flex
+            gap={[3, 4, 5]}
+            // @TODO Debug why first item gets ignored
+            alignContent={["flex-end", "normal", "flex-start"]}
+            alignItems={["top", "revert", "center"]}
+            flexWrap={["nowrap", "wrap-reverse"]}
+          >
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+          </Flex>
+        )
+      );
+
+      expect(flex).toMatchSnapshot();
+    });
   });
 
   describe("Variants", () => {
-    describe("Inline", () => {
+    describe("hStack", () => {
       test("renders", () => {
         const json = renderJSON(
-          <Flex variant="inline" gap={4}>
+          <Flex variant="hStack" gap={4}>
             {["Item 1", "Item 2", "Item 3"]}
           </Flex>
         );
@@ -130,7 +154,7 @@ describe("Flex", () => {
       test("renders with defined theme gap", () => {
         const json = renderJSON(
           themeUIProvider(
-            <Flex variant="inline" gap={4}>
+            <Flex variant="hStack" gap={4}>
               {["Item 1", "Item 2", "Item 3"]}
             </Flex>
           )
@@ -139,7 +163,7 @@ describe("Flex", () => {
       });
     });
 
-    describe("Stack", () => {
+    describe("vStack", () => {
       test("renders", () => {
         const json = renderJSON(
           <Flex variant="vStack" gap={4}>
