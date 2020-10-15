@@ -1,0 +1,43 @@
+{
+  "name": "@raam/stitches",
+  "version": "0.2.3",
+  "description": "Beautifully boring cosmetic-free Stitches utils for structure and layout.",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
+    "clean": "rimraf {dist,.rts2*}",
+    "lint": "npx tsc --noEmit",
+    "dev": "npm run build -- watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-bell/raam.git"
+  },
+  "author": "Joe Bell <joe@joebell.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-bell/raam/issues"
+  },
+  "homepage": "https://github.com/joe-bell/raam#readme",
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "@stitches/core": ">= 0.0.3-canary.4"
+  },
+  "dependencies": {
+    "raam": "^0.2.3"
+  },
+  "devDependencies": {
+    "@stitches/core": "0.0.3-canary.4",
+    "@stitches/react": "0.0.3-canary.4",
+    "react": "16.13.1",
+    "theme-ui": "0.3.1"
+  }
+}
