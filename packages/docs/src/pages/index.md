@@ -112,7 +112,7 @@ In `wrap` based layouts, negative margins are used on the outer component to cou
   For example, the following options are acceptable for `gap`:
 
   - `gap: "2rem"`
-  - `gap: [ "2rem", { "@media (min-width: 40em)": "1rem" } ]`
+  - `gap: { initial: "2rem", "@media (min-width: 40em)": "1rem" }`
 
 ## Components
 
@@ -246,12 +246,10 @@ styles. In this example, we'll reduce the gap size on larger screens.
 () => {
   const wrap = useFlex({
     variant: "wrap",
-    gap: [
-      "2rem",
-      {
-        "@media (min-width: 40em)": "1rem",
-      },
-    ],
+    gap: {
+      initial: "2rem",
+      "@media (min-width: 40em)": "1rem",
+    },
   });
 
   return (
