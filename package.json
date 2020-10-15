@@ -3,7 +3,8 @@
   "name": "root",
   "scripts": {
     "build": "lerna run build",
-    "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
+    "clean": "lerna run clean",
+    "flush": "yarn clean && lerna clean --yes && rimraf node_modules",
     "dev": "lerna run dev --parallel",
     "lint": "lerna run lint --parallel --stream",
     "format": "prettier --write",
