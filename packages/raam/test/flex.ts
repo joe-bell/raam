@@ -154,9 +154,9 @@ describe("useFlex", () => {
       const theme = themeNamed;
       const example = () => {
         const flex = useFlex({
-          gap: ["medium", null, { medium: "large" }, { large: "small" }],
-          alignItems: [null, { medium: "flex-end" }, { large: "flex-start" }],
-          justifyContent: ["center", { [mq(bp)]: "space-between" }],
+          gap: { initial: "medium", medium: "large", large: "small" },
+          alignItems: { medium: "flex-end", large: "flex-start" },
+          justifyContent: { _: "center", [mq(bp)]: "space-between" },
           theme,
         });
 
@@ -165,6 +165,8 @@ describe("useFlex", () => {
           child: flex.child(),
         };
       };
+
+      // console.log(example());
 
       expect(example().parent).toEqual(
         expect.objectContaining({

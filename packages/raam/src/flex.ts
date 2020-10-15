@@ -5,8 +5,16 @@ import {
   FLEX_GAP_CSS_VARS as CSS_VARS,
 } from "./types";
 
+type ValueOf<T> = T[keyof T];
+
 interface WithRaamTheme {
   theme?: RaamTheme;
+}
+interface WithIndex {
+  index?: number;
+}
+interface RaamStylePropsPrivate extends RaamStyleProps {
+  flexGap?: RaamStyleProps["gap"];
 }
 
 // Utils
@@ -30,27 +38,27 @@ const reset: RaamCSS = {
   minWidth: 0,
 };
 
-interface StylePropsToCSS extends RaamStyleProps {
-  flexGap?: RaamStyleProps["gap"];
+const hasThemeKey = (theme: RaamTheme | unknown, key: keyof RaamTheme) =>
+  !(theme == null) && theme.hasOwnProperty(key);
+
+interface GetStyleValue extends WithRaamTheme {
+  property: keyof RaamStylePropsPrivate | ({} & string);
+  srcValue: unknown;
 }
 
-const hasThemeKey = (theme: unknown, key: keyof RaamTheme) =>
-  theme && typeof theme !== "undefined" && theme.hasOwnProperty(key);
-
-const stylePropGetValue = (
+const getStyleValue = ({
   // @TODO This probably shouldn't be a string type
-  property: keyof StylePropsToCSS | ({} & string),
-  originalValue,
-  theme: RaamTheme
-) => {
-  if (typeof originalValue === "undefined" || originalValue === null) {
+  property,
+  srcValue,
+  theme,
+}: GetStyleValue) => {
+  if (srcValue == null) {
     return undefined;
   }
 
   const getValue =
-    (originalValue.constructor.name === "Object" &&
-      Object.values(originalValue)[0]) ||
-    originalValue;
+    (srcValue.constructor.name === "Object" && Object.values(srcValue)[0]) ||
+    srcValue;
 
   if (property === "flexGap") {
     const themedValue =
@@ -64,28 +72,32 @@ const stylePropGetValue = (
   return getValue;
 };
 
-const getBreakpoint = ({ originalValue, arrayIndex, theme }) => {
-  if (originalValue === null || typeof originalValue === "undefined") {
+interface GetBreakpoint extends WithIndex, WithRaamTheme {
+  srcValue: unknown;
+}
+
+const getBreakpoint = ({ srcValue, index, theme }: GetBreakpoint) => {
+  if (srcValue == null) {
     return false;
   }
 
-  const hasOriginalValueKey = originalValue.constructor.name === "Object";
-  const originalValueKey = hasOriginalValueKey && Object.keys(originalValue)[0];
+  const hasSrcValueKey = srcValue.constructor.name === "Object";
+  const srcValueKey = hasSrcValueKey && Object.keys(srcValue)[0];
 
-  if (originalValueKey === null || typeof originalValueKey === "undefined") {
+  if (["initial", "_"].includes(srcValueKey) || srcValueKey == null) {
     return false;
   }
 
-  if (arrayIndex === 0 && hasOriginalValueKey === false) {
+  if (index === 0 && hasSrcValueKey === false) {
     return false;
   }
 
   if (!theme) {
-    return originalValueKey;
+    return srcValueKey;
   }
 
   if (theme) {
-    const themedBreakpointKey = originalValueKey || arrayIndex;
+    const themedBreakpointKey = srcValueKey || index;
     // console.log(themedBreakpointKey);
     return hasThemeKey(theme, "breakpoints") &&
       theme.breakpoints[themedBreakpointKey]
@@ -96,31 +108,31 @@ const getBreakpoint = ({ originalValue, arrayIndex, theme }) => {
               : themedBreakpointKey
           ]
         })`
-      : originalValueKey;
+      : srcValueKey;
   }
 
   return false;
 };
 
-const stylePropToCSS = ({
+interface GetStyleDeclaration extends WithIndex, WithRaamTheme {
+  property: keyof RaamStylePropsPrivate | ({} & string);
+  srcValue: ValueOf<RaamStylePropsPrivate>;
+}
+
+const getStyleDeclaration = ({
   property,
-  originalValue,
-  arrayIndex,
+  srcValue,
+  index,
   theme,
-}: {
-  property: keyof StylePropsToCSS | ({} & string);
-  originalValue;
-  arrayIndex?: number;
-  theme: RaamTheme;
-}): RaamCSS => {
-  const breakpoint = getBreakpoint({ originalValue, arrayIndex, theme });
+}: GetStyleDeclaration): RaamCSS => {
+  const breakpoint = getBreakpoint({
+    srcValue,
+    index,
+    theme,
+  });
+  const value = getStyleValue({ property, srcValue, theme });
 
-  const value = stylePropGetValue(property, originalValue, theme);
-
-  if (
-    !breakpoint &&
-    (originalValue === null || typeof originalValue === "undefined")
-  ) {
+  if (!breakpoint && srcValue == null) {
     return null;
   }
 
@@ -170,35 +182,63 @@ const stylePropToCSS = ({
   return breakpoint ? { [breakpoint]: style } : style;
 };
 
-interface StylePropsToCSSWithTheme extends StylePropsToCSS, WithRaamTheme {}
+interface StylePropsToDeclarations extends WithRaamTheme, WithIndex {
+  props: RaamStylePropsPrivate;
+}
 
-const stylePropsToCSS = ({
+const stylePropsToDeclarations = ({
+  props,
   theme,
-  ...props
-}: StylePropsToCSSWithTheme): RaamCSS => {
-  const transformedStyleOptions = Object.keys(props).map((key) =>
-    Array.isArray(props[key])
-      ? props[key].map((originalValue, arrayIndex) =>
-          stylePropToCSS({
-            property: key,
-            originalValue,
-            arrayIndex,
-            theme,
-          })
-        )
-      : stylePropToCSS({
-          property: key,
-          originalValue: props[key],
-          arrayIndex: 0,
-          theme,
-        })
-  );
+  index = 0,
+}: StylePropsToDeclarations) => {
+  const stylesProps = Object.keys(props).map((property) => {
+    const value = props[property];
 
-  const flattenStyleOptions = flat(transformedStyleOptions).filter(
-    (item) => item
-  );
+    if (value == null) {
+      return null;
+    }
 
-  const mergeMediaQueries = flattenStyleOptions.reduce((acc, cv) => {
+    if (typeof value === "object" && Object.keys(value).length > 1) {
+      return Array.isArray(value)
+        ? value.map((arrayItem, index) =>
+            stylePropsToDeclarations({
+              index,
+              props: { [property]: arrayItem },
+              theme,
+            })
+          )
+        : Object.keys(value).map((mediaQuery) =>
+            stylePropsToDeclarations({
+              props: { [property]: { [mediaQuery]: value[mediaQuery] } },
+              theme,
+            })
+          );
+    }
+
+    return getStyleDeclaration({
+      index,
+      property,
+      srcValue: value,
+      theme,
+    });
+  });
+
+  // @TODO Sort by:
+  // 1. --var
+  // 2. Block
+  // 3. Media Queries
+  return flat(stylesProps).filter((item) => item);
+};
+
+interface StylePropsToCSS extends RaamStylePropsPrivate, WithRaamTheme {}
+
+const stylePropsToCSS = ({ theme, ...props }: StylePropsToCSS): RaamCSS => {
+  const styleDeclarations = stylePropsToDeclarations({
+    props,
+    theme,
+  });
+
+  const mergeMediaQueries = styleDeclarations.reduce((acc, cv) => {
     const mqKey = Object.keys(cv)[0];
     const mqValue = Object.values(cv)[0];
     const isMq =
@@ -303,10 +343,9 @@ const flexParent = ({
 type FlexChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
 
 interface FlexChildProps
-  extends FlexParentProps,
-    Pick<RaamStyleProps, FlexChildStyleProps> {
-  index?: number;
-}
+  extends WithIndex,
+    FlexParentProps,
+    Pick<RaamStyleProps, FlexChildStyleProps> {}
 
 const flexChild = ({
   flex = "0 0 auto",
