@@ -26,7 +26,7 @@
   },
   "jest": {
     "testMatch": [
-      "**/packages/**/test/*.{ts,tsx}"
+      "**/packages/**/test/*.test.{ts,tsx}"
     ],
     "snapshotSerializers": [
       "jest-emotion"
