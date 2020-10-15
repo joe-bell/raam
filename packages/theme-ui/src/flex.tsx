@@ -1,26 +1,6 @@
 import * as React from "react";
 import { Box, useThemeUI } from "theme-ui";
-import {
-  useFlex,
-  UseFlexProps,
-  RaamStyleProps,
-  RaamCSS,
-  UseFlexChildProps,
-} from "raam";
-
-// type FlexStyleProps = {
-//   [K in UseFlexStyleProps]?:
-//     | RaamCSS[K]
-//     | RaamCSS[K][]
-//     | { [breakpointKey: string]: RaamCSS[K] };
-// };
-
-// type FlexProps = UseFlexProps &
-//   Pick<UseFlexParentProps, "as"> &
-//   Pick<UseFlexChildProps, "flex" | "flexBasis" | "flexGrow" | "flexShrink"> &
-//   UseFlexStyleProps & {
-//     sx?: any;
-//   };
+import { useFlex, UseFlexProps, UseFlexChildProps } from "raam";
 
 export interface FlexProps
   extends UseFlexProps,
@@ -114,12 +94,4 @@ export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
       </Box>
     );
   }
-);
-
-const Test = () => (
-  <Flex
-    flexShrink="initial"
-    flexDirection={["initial", "initial", { test: "initial" }]}
-    gap={[4, 5, 6]}
-  />
 );

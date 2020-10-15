@@ -1,3 +1,10 @@
+export enum FLEX_GAP_CSS_VARS {
+  FLEX_GAP_OFFSET = "--raam-fg-offset",
+  FLEX_GAP = "--raam-fg",
+  FLEX_GAP_TOP = "--raam-fg-t",
+  FLEX_GAP_LEFT = "--raam-fg-l",
+}
+
 /**
  * CSS Style Object
  */
@@ -47,10 +54,18 @@ export interface RaamStyleProps extends RaamStylePropsAll {}
 /**
  * Default RaamTheme
  */
+type ResponsiveThemeValue = StringNumberArr | { [key: string]: StringNumber };
+
 export interface RaamTheme {
-  breakpoints?: StringNumberArr | { [key: string]: StringNumber };
-  space?: StringNumberArr;
+  breakpoints?: ResponsiveThemeValue;
+  space?: ResponsiveThemeValue;
 }
+
+const t: RaamTheme = {
+  breakpoints: [0, 2, 4, 5],
+  // space: [0, "2"],
+  space: { large: 3 },
+};
 
 /**
  * Allow `string` fallbacks without breaking autocomplete

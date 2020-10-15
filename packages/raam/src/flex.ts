@@ -1,11 +1,9 @@
-import { RaamCSS, RaamStyleProps, RaamTheme } from "./types";
-
-enum CSS_VARS {
-  FLEX_GAP_OFFSET = "--raam-fg-offset",
-  FLEX_GAP = "--raam-fg",
-  FLEX_GAP_TOP = "--raam-fg-t",
-  FLEX_GAP_LEFT = "--raam-fg-l",
-}
+import {
+  RaamCSS,
+  RaamStyleProps,
+  RaamTheme,
+  FLEX_GAP_CSS_VARS as CSS_VARS,
+} from "./types";
 
 interface WithRaamTheme {
   theme?: RaamTheme;
@@ -87,7 +85,8 @@ const getBreakpoint = ({ originalValue, arrayIndex, theme }) => {
   }
 
   if (theme) {
-    const themedBreakpointKey = arrayIndex || originalValueKey;
+    const themedBreakpointKey = originalValueKey || arrayIndex;
+    // console.log(themedBreakpointKey);
     return hasThemeKey(theme, "breakpoints") &&
       theme.breakpoints[themedBreakpointKey]
       ? `@media screen and (min-width: ${
@@ -187,7 +186,12 @@ const stylePropsToCSS = ({
             theme,
           })
         )
-      : stylePropToCSS({ property: key, originalValue: props[key], theme })
+      : stylePropToCSS({
+          property: key,
+          originalValue: props[key],
+          arrayIndex: 0,
+          theme,
+        })
   );
 
   const flattenStyleOptions = flat(transformedStyleOptions).filter(
@@ -353,13 +357,13 @@ export interface UseFlexStyleProps
   extends Pick<RaamStyleProps, UseFlexStylePropsKeys> {}
 
 export const useFlex = (props?: UseFlexProps) => {
-  const variant = props.variant || "hStack";
+  const variant = props?.variant || "hStack";
 
   // @TODO Support Responsive Variants
   const propsWithVariant = variant
     ? {
         ...flexVariants[variant],
-        ...propsWithoutUndefined(props),
+        ...(props && propsWithoutUndefined(props)),
       }
     : propsWithoutUndefined(props);
 

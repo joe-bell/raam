@@ -93,24 +93,15 @@ In `wrap` based layouts, negative margins are used on the outer component to cou
 | `justifyContent` | `ResponsiveStyleValue`         |          |
 | `justifyItems`   | `ResponsiveStyleValue`         |          |
 
-##### `.parent()`
-
-\*Required
-
-| Name      | Type     | Description                                  |
-| :-------- | :------- | :------------------------------------------- |
-| `as`      | `string` | Determines element reset styles              |
-| `index`\* | `number` | Used in place of `:*-child` pseudo selectors |
-
 ##### `.child()`
 
-| Name         | Type                   | Default    | Description                     |
-| :----------- | :--------------------- | :--------- | :------------------------------ |
-| `as`         | `ResponsiveStyleValue` |            | Determines element reset styles |
-| `flex`       | `ResponsiveStyleValue` | `0 0 auto` |                                 |
-| `flexBasis`  | `ResponsiveStyleValue` |            |                                 |
-| `flexGrow`   | `ResponsiveStyleValue` |            |                                 |
-| `flexShrink` | `ResponsiveStyleValue` |            |                                 |
+| Name         | Type                   | Default                                      | Description |
+| :----------- | :--------------------- | :------------------------------------------- | :---------- |
+| `index`\*    | `number`               | Used in place of `:*-child` pseudo selectors |
+| `flex`       | `ResponsiveStyleValue` | `0 0 auto`                                   |             |
+| `flexBasis`  | `ResponsiveStyleValue` |                                              |             |
+| `flexGrow`   | `ResponsiveStyleValue` |                                              |             |
+| `flexShrink` | `ResponsiveStyleValue` |                                              |             |
 
 #### Types
 
@@ -217,17 +208,14 @@ by the defined [`gap`](#options).
 () => {
   const wrap = useFlex({ variant: "wrap" });
 
-  const parentAs = "ul";
-  const childAs = "li";
-
   return (
-    <Box as={parentAs} sx={wrap.parent({ as: parentAs })}>
+    <Box as="ul" sx={wrap.parent()}>
       {Array.from({ length: 32 }).map((item, index) => (
         <Box
-          as={childAs}
+          as="li"
           key={index}
           sx={{
-            ...wrap.child({ as: childAs, index }),
+            ...wrap.child({ index }),
             width: "2rem",
             height: "2rem",
             backgroundColor: "primary",
@@ -266,18 +254,14 @@ styles. In this example, we'll reduce the gap size on larger screens.
     ],
   });
 
-  const parentAs = "ul";
-  const childAs = "li";
-
   return (
-    <Box as={parentAs} sx={wrap.parent({ as: parentAs })}>
+    <Box as="ul" sx={wrap.parent()}>
       {Array.from({ length: 32 }).map((item, index, arr) => (
         <Box
-          as={childAs}
+          as="li"
           key={index}
           sx={{
             ...wrap.child({
-              as: childAs,
               index,
               flexGrow: arr.length - 1 === index && 2,
             }),
@@ -431,7 +415,6 @@ When combining [`useFlex()`](#useflex) styles, split them across **different** e
 Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
 
 - Padding is added to the [`Stack`](#stack), [not the `Wrap` directly](#how-it-works).
-- [`Wrap`](#wrap) uses the `as` option to render our `ul` with `li` children:
 
 ```jsx live=true
 // import { useFlex } from "raam";
@@ -441,26 +424,17 @@ Let's take a look at a more real-world example; a "tag"-list at the bottom of an
   const stack = useFlex({ variant: "vStack", gap: "1rem" });
   const wrap = useFlex({ variant: "wrap", gap: "1rem" });
 
-  const tagsParentAs = "ul";
-  const tagsChildAs = "li";
-
   return (
-    <Box sx={{ padding: 3, ...stack.parent({}) }}>
+    <Box sx={{ ...stack.parent(), padding: 3 }}>
       <Heading as="h2" sx={stack.child({ index: 0 })}>
         Tags
       </Heading>
 
       <Box sx={stack.child({ index: 1 })}>
-        <Box as={tagsParentAs} sx={wrap.parent({ as: tagsParentAs })}>
+        <Box as="ul" sx={wrap.parent()}>
           {Array.from({ length: 8 }, (v, k) => k + 1).map((item, index) => (
-            <Box
-              key={index}
-              as={tagsChildAs}
-              sx={wrap.child({ as: tagsChildAs, index })}
-            >
-              <Link key={item} href={`#list-item-${item}`}>
-                Tag {item}
-              </Link>
+            <Box key={index} as="li" sx={wrap.child({ index })}>
+              <Link href={`#list-item-${item}`}>Tag {item}</Link>
             </Box>
           ))}
         </Box>
