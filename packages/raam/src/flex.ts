@@ -184,17 +184,19 @@ const getStyleDeclaration = ({
 
 interface StylePropsToDeclarations extends WithRaamTheme, WithIndex {
   props: RaamStylePropsPrivate;
+  depth?: number;
 }
 
 const stylePropsToDeclarations = ({
   props,
   theme,
   index = 0,
+  depth = 0,
 }: StylePropsToDeclarations) => {
   const stylesProps = Object.keys(props).map((property) => {
     const value = props[property];
 
-    if (value == null) {
+    if (value == null || depth >= 2) {
       return null;
     }
 
@@ -202,6 +204,7 @@ const stylePropsToDeclarations = ({
       return Array.isArray(value)
         ? value.map((arrayItem, index) =>
             stylePropsToDeclarations({
+              depth: depth + 1,
               index,
               props: { [property]: arrayItem },
               theme,
@@ -209,6 +212,7 @@ const stylePropsToDeclarations = ({
           )
         : Object.keys(value).map((mediaQuery) =>
             stylePropsToDeclarations({
+              depth: depth + 1,
               props: { [property]: { [mediaQuery]: value[mediaQuery] } },
               theme,
             })
@@ -232,7 +236,10 @@ const stylePropsToDeclarations = ({
 
 interface StylePropsToCSS extends RaamStylePropsPrivate, WithRaamTheme {}
 
-const stylePropsToCSS = ({ theme, ...props }: StylePropsToCSS): RaamCSS => {
+export const stylePropsToCSS = ({
+  theme,
+  ...props
+}: StylePropsToCSS): RaamCSS => {
   const styleDeclarations = stylePropsToDeclarations({
     props,
     theme,
