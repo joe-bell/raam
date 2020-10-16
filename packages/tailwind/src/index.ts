@@ -15,6 +15,21 @@ const raam = plugin(function ({
   const flex = useFlex();
 
   addUtilities(
+    Object.keys(spacing).map(
+      (sp) =>
+        !["0", 0].includes(spacing[sp]) && {
+          [`.flex-gap-${sp}`]: {
+            ...stylePropsToCSS({ flexGap: spacing[sp] }),
+            "& > *:first-child": flex.child({ index: 0 }),
+            "& > *:not(:first-child)": flex.child({ index: 1 }),
+          },
+        }
+    ),
+    variants("flexGap")
+  );
+
+  // Flex settings override the gap
+  addUtilities(
     {
       ".flex-row": stylePropsToCSS({
         flexDirection: "row",
@@ -37,26 +52,13 @@ const raam = plugin(function ({
         flexWrap: "wrap",
       }),
       ".flex-wrap-reverse": stylePropsToCSS({
-        flexWrap: "wrap",
+        flexWrap: "wrap-reverse",
       }),
       ".flex-no-wrap": stylePropsToCSS({
-        flexWrap: "no-wrap",
+        flexWrap: "nowrap",
       }),
     },
     variants("flexWrap")
-  );
-  addUtilities(
-    Object.keys(spacing).map(
-      (sp) =>
-        !["0", 0].includes(spacing[sp]) && {
-          [`.flex-gap-${sp}`]: {
-            ...stylePropsToCSS({ flexGap: spacing[sp] }),
-            "& > *:first-child": flex.child({ index: 0 }),
-            "& > *:not(:first-child)": flex.child({ index: 1 }),
-          },
-        }
-    ),
-    variants("flexGap")
   );
 });
 
