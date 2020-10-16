@@ -2,45 +2,7 @@
 
 exports[`flex returns utilities and responsive variants 1`] = `
 Result {
-  "css": ".flex-row {
-  flex-direction: row;
-  --raam-fg-t: initial;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
-  --raam-fg-t: initial;
-}
-
-.flex-col {
-  flex-direction: column;
-  --raam-fg-l: initial;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
-  --raam-fg-l: initial;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
-}
-
-.flex-no-wrap {
-  flex-wrap: no-wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
-}
-
-.flex-gap-1 {
+  "css": ".flex-gap-1 {
   --raam-fg-t: 0.25rem;
   --raam-fg-l: 0.25rem;
   --raam-fg-offset: calc(0.25rem * -0.5);
@@ -886,6 +848,44 @@ Result {
   flex: 0 0 auto;
 }
 
+.flex-row {
+  flex-direction: row;
+  --raam-fg-t: initial;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+  --raam-fg-t: initial;
+}
+
+.flex-col {
+  flex-direction: column;
+  --raam-fg-l: initial;
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse;
+  --raam-fg-l: initial;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+}
+
+.flex-no-wrap {
+  flex-wrap: nowrap;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+}
+
 @media (min-width: 640px) {
   .sm\\\\:flex-row {
     flex-direction: row;
@@ -914,15 +914,15 @@ Result {
   }
 
   .sm\\\\:flex-wrap-reverse {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
   }
 
   .sm\\\\:flex-no-wrap {
-    flex-wrap: no-wrap;
-    --raam-fg-t: initial;
-    --raam-fg-l: initial;
+    flex-wrap: nowrap;
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
   }
 }
 
@@ -954,15 +954,15 @@ Result {
   }
 
   .md\\\\:flex-wrap-reverse {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
   }
 
   .md\\\\:flex-no-wrap {
-    flex-wrap: no-wrap;
-    --raam-fg-t: initial;
-    --raam-fg-l: initial;
+    flex-wrap: nowrap;
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
   }
 }
 
@@ -994,15 +994,15 @@ Result {
   }
 
   .lg\\\\:flex-wrap-reverse {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
   }
 
   .lg\\\\:flex-no-wrap {
-    flex-wrap: no-wrap;
-    --raam-fg-t: initial;
-    --raam-fg-l: initial;
+    flex-wrap: nowrap;
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
   }
 }
 
@@ -1034,15 +1034,15 @@ Result {
   }
 
   .xl\\\\:flex-wrap-reverse {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
   }
 
   .xl\\\\:flex-no-wrap {
-    flex-wrap: no-wrap;
-    --raam-fg-t: initial;
-    --raam-fg-l: initial;
+    flex-wrap: nowrap;
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
   }
 }",
   "lastPlugin": [Function],
@@ -1062,656 +1062,6 @@ Result {
     "indexes": Object {},
     "lastEach": 26,
     "nodes": Array [
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-direction",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "row",
-          },
-          Object {
-            "prop": "--raam-fg-t",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "",
-        },
-        "selector": ".flex-row",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-direction",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "row-reverse",
-          },
-          Object {
-            "prop": "--raam-fg-t",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-row-reverse",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-direction",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "column",
-          },
-          Object {
-            "prop": "--raam-fg-l",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-col",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-direction",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "column-reverse",
-          },
-          Object {
-            "prop": "--raam-fg-l",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-col-reverse",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-wrap",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "wrap",
-          },
-          Object {
-            "prop": "--raam-fg-t",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-          Object {
-            "prop": "--raam-fg-l",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-wrap",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-wrap",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "wrap",
-          },
-          Object {
-            "prop": "--raam-fg-t",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-          Object {
-            "prop": "--raam-fg-l",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-wrap-reverse",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
-      Object {
-        "indexes": Object {},
-        "lastEach": 28,
-        "nodes": Array [
-          Object {
-            "prop": "flex-wrap",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "no-wrap",
-          },
-          Object {
-            "prop": "--raam-fg-t",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-          Object {
-            "prop": "--raam-fg-l",
-            "raws": Object {
-              "after": "
-  ",
-              "before": "
-  ",
-            },
-            "source": Object {
-              "end": Object {
-                "column": 19,
-                "line": 1,
-              },
-              "input": Input {
-                "css": "@tailwind utilities",
-                "hasBOM": false,
-                "id": "<input css 1>",
-              },
-              "start": Object {
-                "column": 1,
-                "line": 1,
-              },
-            },
-            "type": "decl",
-            "value": "initial",
-          },
-        ],
-        "raws": Object {
-          "after": "
-",
-          "before": "
-
-",
-        },
-        "selector": ".flex-no-wrap",
-        "source": Object {
-          "end": Object {
-            "column": 19,
-            "line": 1,
-          },
-          "input": Input {
-            "css": "@tailwind utilities",
-            "hasBOM": false,
-            "id": "<input css 1>",
-          },
-          "start": Object {
-            "column": 1,
-            "line": 1,
-          },
-        },
-        "type": "rule",
-      },
       Object {
         "indexes": Object {},
         "lastEach": 28,
@@ -1824,9 +1174,7 @@ Result {
         "raws": Object {
           "after": "
 ",
-          "before": "
-
-",
+          "before": "",
           "semicolon": true,
         },
         "selector": ".flex-gap-1",
@@ -17716,6 +17064,658 @@ Result {
       },
       Object {
         "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-direction",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "row",
+          },
+          Object {
+            "prop": "--raam-fg-t",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-row",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-direction",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "row-reverse",
+          },
+          Object {
+            "prop": "--raam-fg-t",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-row-reverse",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-direction",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "column",
+          },
+          Object {
+            "prop": "--raam-fg-l",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-col",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-direction",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "column-reverse",
+          },
+          Object {
+            "prop": "--raam-fg-l",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-col-reverse",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-wrap",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "wrap",
+          },
+          Object {
+            "prop": "--raam-fg-t",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+          Object {
+            "prop": "--raam-fg-l",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-wrap",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-wrap",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "wrap-reverse",
+          },
+          Object {
+            "prop": "--raam-fg-t",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+          Object {
+            "prop": "--raam-fg-l",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-wrap-reverse",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
+        "lastEach": 27,
+        "nodes": Array [
+          Object {
+            "prop": "flex-wrap",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "nowrap",
+          },
+          Object {
+            "prop": "--raam-fg-offset",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+          Object {
+            "prop": "--raam-fg",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "initial",
+          },
+        ],
+        "raws": Object {
+          "after": "
+",
+          "before": "
+
+",
+        },
+        "selector": ".flex-no-wrap",
+        "source": Object {
+          "end": Object {
+            "column": 19,
+            "line": 1,
+          },
+          "input": Input {
+            "css": "@tailwind utilities",
+            "hasBOM": false,
+            "id": "<input css 1>",
+          },
+          "start": Object {
+            "column": 1,
+            "line": 1,
+          },
+        },
+        "type": "rule",
+      },
+      Object {
+        "indexes": Object {},
         "lastEach": 16,
         "name": "media",
         "nodes": Array [
@@ -18182,7 +18182,7 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "wrap",
+                "value": "wrap-reverse",
               },
               Object {
                 "prop": "--raam-fg-t",
@@ -18290,10 +18290,10 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "no-wrap",
+                "value": "nowrap",
               },
               Object {
-                "prop": "--raam-fg-t",
+                "prop": "--raam-fg-offset",
                 "raws": Object {
                   "after": "
     ",
@@ -18319,7 +18319,7 @@ Result {
                 "value": "initial",
               },
               Object {
-                "prop": "--raam-fg-l",
+                "prop": "--raam-fg",
                 "raws": Object {
                   "after": "
     ",
@@ -18849,7 +18849,7 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "wrap",
+                "value": "wrap-reverse",
               },
               Object {
                 "prop": "--raam-fg-t",
@@ -18957,10 +18957,10 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "no-wrap",
+                "value": "nowrap",
               },
               Object {
-                "prop": "--raam-fg-t",
+                "prop": "--raam-fg-offset",
                 "raws": Object {
                   "after": "
     ",
@@ -18986,7 +18986,7 @@ Result {
                 "value": "initial",
               },
               Object {
-                "prop": "--raam-fg-l",
+                "prop": "--raam-fg",
                 "raws": Object {
                   "after": "
     ",
@@ -19516,7 +19516,7 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "wrap",
+                "value": "wrap-reverse",
               },
               Object {
                 "prop": "--raam-fg-t",
@@ -19624,10 +19624,10 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "no-wrap",
+                "value": "nowrap",
               },
               Object {
-                "prop": "--raam-fg-t",
+                "prop": "--raam-fg-offset",
                 "raws": Object {
                   "after": "
     ",
@@ -19653,7 +19653,7 @@ Result {
                 "value": "initial",
               },
               Object {
-                "prop": "--raam-fg-l",
+                "prop": "--raam-fg",
                 "raws": Object {
                   "after": "
     ",
@@ -20183,7 +20183,7 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "wrap",
+                "value": "wrap-reverse",
               },
               Object {
                 "prop": "--raam-fg-t",
@@ -20291,10 +20291,10 @@ Result {
                   },
                 },
                 "type": "decl",
-                "value": "no-wrap",
+                "value": "nowrap",
               },
               Object {
-                "prop": "--raam-fg-t",
+                "prop": "--raam-fg-offset",
                 "raws": Object {
                   "after": "
     ",
@@ -20320,7 +20320,7 @@ Result {
                 "value": "initial",
               },
               Object {
-                "prop": "--raam-fg-l",
+                "prop": "--raam-fg",
                 "raws": Object {
                   "after": "
     ",
