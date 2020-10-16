@@ -5,12 +5,12 @@ import { FLEX_GAP_CSS_VARS as CSS_VARS } from "../../raam/src/types";
 const findById = (property: string, atoms: IAtom[]) =>
   atoms.filter((item) => item.id === property)[0];
 
-describe("withFlex", () => {
+describe("useFlex", () => {
   test("should return with themed gap", () => {
     const css = createCss(config, null);
 
     const atoms = (css({
-      withFlex: {
+      useFlex: {
         gap: "$3",
       },
     }) as any).atoms as IAtom[];
