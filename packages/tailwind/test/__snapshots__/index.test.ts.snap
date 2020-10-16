@@ -7,6 +7,7 @@ Result {
   --raam-fg-l: 0.25rem;
   --raam-fg-offset: calc(0.25rem * -0.5);
   --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-1 > *:first-child {
@@ -54,6 +55,7 @@ Result {
   --raam-fg-l: 0.5rem;
   --raam-fg-offset: calc(0.5rem * -0.5);
   --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-2 > *:first-child {
@@ -101,6 +103,7 @@ Result {
   --raam-fg-l: 0.75rem;
   --raam-fg-offset: calc(0.75rem * -0.5);
   --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-3 > *:first-child {
@@ -148,6 +151,7 @@ Result {
   --raam-fg-l: 1rem;
   --raam-fg-offset: calc(1rem * -0.5);
   --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-4 > *:first-child {
@@ -195,6 +199,7 @@ Result {
   --raam-fg-l: 1.25rem;
   --raam-fg-offset: calc(1.25rem * -0.5);
   --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-5 > *:first-child {
@@ -242,6 +247,7 @@ Result {
   --raam-fg-l: 1.5rem;
   --raam-fg-offset: calc(1.5rem * -0.5);
   --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-6 > *:first-child {
@@ -289,6 +295,7 @@ Result {
   --raam-fg-l: 2rem;
   --raam-fg-offset: calc(2rem * -0.5);
   --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-8 > *:first-child {
@@ -336,6 +343,7 @@ Result {
   --raam-fg-l: 2.5rem;
   --raam-fg-offset: calc(2.5rem * -0.5);
   --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-10 > *:first-child {
@@ -383,6 +391,7 @@ Result {
   --raam-fg-l: 3rem;
   --raam-fg-offset: calc(3rem * -0.5);
   --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-12 > *:first-child {
@@ -430,6 +439,7 @@ Result {
   --raam-fg-l: 4rem;
   --raam-fg-offset: calc(4rem * -0.5);
   --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-16 > *:first-child {
@@ -477,6 +487,7 @@ Result {
   --raam-fg-l: 5rem;
   --raam-fg-offset: calc(5rem * -0.5);
   --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-20 > *:first-child {
@@ -524,6 +535,7 @@ Result {
   --raam-fg-l: 6rem;
   --raam-fg-offset: calc(6rem * -0.5);
   --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-24 > *:first-child {
@@ -571,6 +583,7 @@ Result {
   --raam-fg-l: 8rem;
   --raam-fg-offset: calc(8rem * -0.5);
   --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-32 > *:first-child {
@@ -618,6 +631,7 @@ Result {
   --raam-fg-l: 10rem;
   --raam-fg-offset: calc(10rem * -0.5);
   --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-40 > *:first-child {
@@ -665,6 +679,7 @@ Result {
   --raam-fg-l: 12rem;
   --raam-fg-offset: calc(12rem * -0.5);
   --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-48 > *:first-child {
@@ -712,6 +727,7 @@ Result {
   --raam-fg-l: 14rem;
   --raam-fg-offset: calc(14rem * -0.5);
   --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-56 > *:first-child {
@@ -759,6 +775,7 @@ Result {
   --raam-fg-l: 16rem;
   --raam-fg-offset: calc(16rem * -0.5);
   --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-64 > *:first-child {
@@ -806,6 +823,7 @@ Result {
   --raam-fg-l: 1px;
   --raam-fg-offset: calc(1px * -0.5);
   --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
 }
 
 .flex-gap-px > *:first-child {
@@ -1169,6 +1187,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(0.25rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -2056,6 +2100,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(0.5rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -2946,6 +3016,32 @@ Result {
             "type": "decl",
             "value": "calc(0.75rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -3834,6 +3930,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(1rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -4724,6 +4846,32 @@ Result {
             "type": "decl",
             "value": "calc(1.25rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -5612,6 +5760,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(1.5rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -6502,6 +6676,32 @@ Result {
             "type": "decl",
             "value": "calc(2rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -7390,6 +7590,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(2.5rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -8280,6 +8506,32 @@ Result {
             "type": "decl",
             "value": "calc(3rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -9168,6 +9420,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(4rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -10058,6 +10336,32 @@ Result {
             "type": "decl",
             "value": "calc(5rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -10946,6 +11250,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(6rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -11836,6 +12166,32 @@ Result {
             "type": "decl",
             "value": "calc(8rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -12724,6 +13080,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(10rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -13614,6 +13996,32 @@ Result {
             "type": "decl",
             "value": "calc(12rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -14502,6 +14910,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(14rem * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {
@@ -15392,6 +15826,32 @@ Result {
             "type": "decl",
             "value": "calc(16rem * 0.5)",
           },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
+          },
         ],
         "raws": Object {
           "after": "
@@ -16280,6 +16740,32 @@ Result {
             },
             "type": "decl",
             "value": "calc(1px * 0.5)",
+          },
+          Object {
+            "prop": "margin",
+            "raws": Object {
+              "after": "
+  ",
+              "before": "
+  ",
+            },
+            "source": Object {
+              "end": Object {
+                "column": 19,
+                "line": 1,
+              },
+              "input": Input {
+                "css": "@tailwind utilities",
+                "hasBOM": false,
+                "id": "<input css 1>",
+              },
+              "start": Object {
+                "column": 1,
+                "line": 1,
+              },
+            },
+            "type": "decl",
+            "value": "var(--raam-fg-offset, initial)",
           },
         ],
         "raws": Object {

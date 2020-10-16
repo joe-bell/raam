@@ -20,6 +20,7 @@ const raam = plugin(function ({
         !["0", 0].includes(spacing[sp]) && {
           [`.flex-gap-${sp}`]: {
             ...stylePropsToCSS({ flexGap: spacing[sp] }),
+            margin: flex.parent().margin,
             "& > *:first-child": flex.child({ index: 0 }),
             "& > *:not(:first-child)": flex.child({ index: 1 }),
           },
