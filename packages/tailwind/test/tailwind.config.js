@@ -7,6 +7,5 @@ module.exports = {
       flex: {},
     },
   },
-  variants: {},
   plugins: [require("../dist")],
 };

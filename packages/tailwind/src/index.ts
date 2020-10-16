@@ -4,15 +4,34 @@ import { stylePropsToCSS, useFlex } from "raam";
 
 const raam = plugin(function ({
   addUtilities,
+  addVariant,
+  addBase,
   addComponents,
   e,
   prefix,
   config,
   variants,
   theme,
+  container,
+  postcss,
 }) {
   const spacing = theme("spacing", {});
   const flex = useFlex();
+
+  const hasClassAttr = (className: string) => {
+    const prefixedClass = prefix(className).substring(1);
+
+    return [
+      `[class='${prefixedClass}']`,
+      `[class$=':${prefixedClass}']`,
+      `[class*='${prefixedClass} ']`,
+      `[class*=':${prefixedClass} ']`,
+    ].join(", ");
+  };
+
+  addBase({
+    [hasClassAttr(".flex")]: { margin: flex.parent().margin },
+  });
 
   addUtilities(
     Object.keys(spacing).map(
@@ -20,7 +39,6 @@ const raam = plugin(function ({
         !["0", 0].includes(spacing[sp]) && {
           [`.flex-gap-${sp}`]: {
             ...stylePropsToCSS({ flexGap: spacing[sp] }),
-            margin: flex.parent().margin,
             "& > *:first-child": flex.child({ index: 0 }),
             "& > *:not(:first-child)": flex.child({ index: 1 }),
           },
