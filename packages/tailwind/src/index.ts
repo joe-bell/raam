@@ -1,13 +1,13 @@
-// tailwind.config.js
 import plugin from "tailwindcss/plugin";
-import { RaamStyleProps, stylePropsToCSS, useFlex } from "raam";
+import { RaamStyleProps, stylePropsToCSS, ValueOf } from "@raam/core";
+import { useFlex } from "raam";
 
 type RaamConfigKeys = "flex";
 
 const createUtilities = (
   property: keyof RaamStyleProps,
   values: {
-    [className: string]: RaamStyleProps[keyof RaamStyleProps];
+    [className: string]: ValueOf<RaamStyleProps>;
   }
 ) =>
   Object.keys(values).reduce(

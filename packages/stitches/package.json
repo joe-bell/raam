@@ -39,6 +39,7 @@
     "raam": "^0.2.3"
   },
   "devDependencies": {
+    "@raam/core": "^0.2.3",
     "@stitches/core": "0.0.3-canary.4",
     "@stitches/react": "0.0.3-canary.4",
     "react": "16.13.1",

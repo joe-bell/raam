@@ -28,7 +28,10 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "3.5 kB"
+      "maxSize": "1.6 kB"
     }
-  ]
+  ],
+  "dependencies": {
+    "@raam/core": "^0.2.3"
+  }
 }

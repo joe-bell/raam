@@ -1,17 +1,16 @@
 {
-  "name": "@raam/theme-ui",
+  "name": "@raam/core",
   "version": "0.2.3",
-  "description": "Beautifully boring cosmetic-free Theme UI components for structure and layout.",
+  "description": "Disclaimer: You should probably not consume this directly. Core style transformations for raam",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "scripts": {
-    "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
+    "build": "microbundle --no-compress --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
     "dev": "yarn build -- watch"
   },
@@ -28,19 +27,7 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "1.2 kB"
+      "maxSize": "2.5 kB"
     }
-  ],
-  "peerDependencies": {
-    "react": ">= 16.8.0",
-    "theme-ui": "0.3.1"
-  },
-  "dependencies": {
-    "@raam/core": "^0.2.3",
-    "raam": "^0.2.3"
-  },
-  "devDependencies": {
-    "react": "16.13.1",
-    "theme-ui": "0.3.1"
-  }
+  ]
 }
