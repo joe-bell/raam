@@ -12,14 +12,12 @@
 
 Choose your own boring adventure:
 
-1. [Hooks](#hooks) - complimented by [Recipes](#recipes) <small>(recommended)</small>
+1. [Mixins](#mixins) - complimented by [Recipes](#recipes) <small>(recommended)</small>
 2. [Components](#components)
 
-## Hooks
+## Mixins
 
 JavaScript style functions to quickly roll-your-own resilient layout components (not just for React.js).
-
-> **Note:** Live demos on this page are written in React.js, but that doesn't mean your restricted to this setup. These hooks should (hopefully) work with the setup of your choice.
 
 ### Installation
 
@@ -27,25 +25,25 @@ JavaScript style functions to quickly roll-your-own resilient layout components 
 or  
 `yarn add raam`
 
-### useFlex
+### Flexbox
 
 At the time of writing, "flex-`gap`" is only supported by newer versions of [Edge, Chrome and Firefox](https://caniuse.com/flexbox-gap).
 
 It's often the case to approach new CSS features with a `@supports` query, but unfortunately, this is [**not** an option we can take advantage of](https://github.com/w3c/csswg-drafts/issues/3559).
 
-`useFlex()` aims to address this "`gap`" in support, with a plain CSS polyfill powered by [custom properties](#how-it-works).
+`flexbox()` aims to address this "`gap`" in support, with a plain CSS polyfill powered by [custom properties](#how-it-works).
 
-At the root of your component, `useFlex({ ...options })` is called with your specified options.  
+At the root of your component, `flexbox({ ...options })` is called with your specified options.  
 This returns functional styles for:
 
 - `.parent()`
 - `.child()`
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 
 () => {
-  const { parent, child } = useFlex({
+  const { parent, child } = flexbox({
     gap: "1rem",
   });
 
@@ -116,7 +114,7 @@ In `wrap` based layouts, negative margins are used on the outer component to cou
 
 ## Components
 
-If rolling-your-own components hasn't got you [_hooked_](#hooks), you may be interested in a pre-built option.
+If rolling-your-own components hasn't got you [_hooked_](#mixins), you may be interested in a pre-built option.
 
 Currently offering solutions for:
 
@@ -136,17 +134,19 @@ Currently offering solutions for:
 or  
 `yarn add theme-ui @raam/theme-ui`
 
-### Flex
+### Flexbox
 
-A [`flex`](#use-flex)-based layout primitive that aims to address the `gap`.
-
-**Note**: using `theme` values is still a [work in progress][rfc].
+A [`flexbox`](#flexbox)-based layout primitive that aims to address the `gap`.
 
 ```jsx live=true
-// import { Flex } from "@raam/theme-ui";
+// import { Flexbox } from "@raam/theme-ui";
 // import { Box } from "theme-ui";
 
-<Flex alignItems={["center", "start", "end"]} variant="hStack" gap={[3, 4, 5]}>
+<Flexbox
+  alignItems={["center", "start", "end"]}
+  variant="hStack"
+  gap={[3, 4, 5]}
+>
   {Array.from({ length: 6 }).map((item, index) => (
     <Box
       key={index}
@@ -158,12 +158,12 @@ A [`flex`](#use-flex)-based layout primitive that aims to address the `gap`.
       }}
     />
   ))}
-</Flex>
+</Flexbox>
 ```
 
 #### Props
 
-- Props for [each `useFlex()` option](#options).
+- Props for [each `flexbox()` option](#options).
   - `gap` also accepts a key from `theme.space` (as a string or number), but if that's not found it'll render the provided string (e.g. `em` or `rem`) or number as a `px` value.
 - `as`: change the HTML element rendered ([via Theme UI][theme-ui])
 
@@ -198,15 +198,15 @@ You don't necessarily **need** to follow this approach, feel free to make it you
 
 ### Wrap
 
-A [flex](#useflex)-based layout that renders and 'wraps' children inline, spaced
+A [flex](#flexbox)-based layout that renders and 'wraps' children inline, spaced
 by the defined [`gap`](#options).
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent, child } = useFlex({ variant: "wrap" });
+  const { parent, child } = flexbox({ variant: "wrap" });
 
   return (
     <Box as="ul" sx={parent()}>
@@ -240,11 +240,11 @@ With the [`gap`](#options) prop, we also have the ability to create responsive
 styles. In this example, we'll reduce the gap size on larger screens.
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent, child } = useFlex({
+  const { parent, child } = flexbox({
     variant: "wrap",
     gap: {
       initial: "2rem",
@@ -284,11 +284,11 @@ Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system)
 Renders items in a single column.
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent, child } = useFlex({ variant: "vStack", gap: "1rem" });
+  const { parent, child } = flexbox({ variant: "vStack", gap: "1rem" });
 
   return (
     <Box sx={parent()}>
@@ -316,14 +316,14 @@ Renders items in a single column.
 
 #### HStack
 
-The default setting of `useFlex`; the `HStack` renders items in a single row and makes no assumptions on your `overflow`.
+The default setting of `flexbox`; the `HStack` renders items in a single row and makes no assumptions on your `overflow`.
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent, child } = useFlex({ variant: "hStack", gap: "1rem" });
+  const { parent, child } = flexbox({ variant: "hStack", gap: "1rem" });
 
   return (
     <Box sx={parent()}>
@@ -348,11 +348,11 @@ The default setting of `useFlex`; the `HStack` renders items in a single row and
 If you'd rather let `hStack` items scroll elegantly in a single line, add an `overflowX` declaration alongside your `.child()` styles.
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent, child } = useFlex({ variant: "hStack", gap: "1rem" });
+  const { parent, child } = flexbox({ variant: "hStack", gap: "1rem" });
 
   return (
     <Box sx={{ ...parent(), overflowX: "auto" }}>
@@ -376,13 +376,13 @@ If you'd rather let `hStack` items scroll elegantly in a single line, add an `ov
 or with some more chaotic values…
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
   const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
 
-  const { parent, child } = useFlex({
+  const { parent, child } = flexbox({
     variant: "hStack",
     gap: "1rem",
     alignItems: "center",
@@ -409,23 +409,23 @@ or with some more chaotic values…
 
 ### Combo
 
-When combining [`useFlex()`](#useflex) styles, split them across **different** elements to avoid conflicts.
+When combining [`flexbox()`](#flexbox) styles, split them across **different** elements to avoid conflicts.
 
 Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
 
 - Padding is added to the [`Stack`](#stack), [not the `Wrap` directly](#how-it-works).
 
 ```jsx live=true
-// import { useFlex } from "raam";
+// import { flexbox } from "raam";
 // import { Box } from "./box";
 
 () => {
-  const { parent: stackParent, child: stackChild } = useFlex({
+  const { parent: stackParent, child: stackChild } = flexbox({
     variant: "vStack",
     gap: "1rem",
   });
 
-  const { parent: wrapParent, child: wrapChild } = useFlex({
+  const { parent: wrapParent, child: wrapChild } = flexbox({
     variant: "wrap",
     gap: "1rem",
   });

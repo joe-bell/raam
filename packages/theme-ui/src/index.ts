@@ -1,1 +1,1 @@
-export * from "./flex";
+export * from "./flexbox";

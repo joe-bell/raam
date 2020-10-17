@@ -3,7 +3,7 @@ import { StringNumber, StringNumberArr } from "./utils";
 
 export * from "./utils";
 
-export enum FLEX_GAP_CSS_VARS {
+export enum CSS_VARS {
   FLEX_GAP_OFFSET = "--raam-fg-offset",
   FLEX_GAP = "--raam-fg",
   FLEX_GAP_TOP = "--raam-fg-t",

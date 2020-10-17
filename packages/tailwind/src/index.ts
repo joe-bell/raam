@@ -1,8 +1,8 @@
 import plugin from "tailwindcss/plugin";
 import { RaamStyleProps, stylePropsToCSS, ValueOf } from "@raam/core";
-import { useFlex } from "raam";
+import { flexbox } from "raam";
 
-type RaamConfigKeys = "flex";
+type RaamConfigKeys = "flexbox";
 
 const createUtilities = (
   property: keyof RaamStyleProps,
@@ -57,18 +57,18 @@ const hasClassAttribute = (prefix: (string) => string, className: string) => {
  */
 export default plugin(
   ({ addUtilities, addBase, prefix, config, variants, theme }) => {
-    if (enabledRaamPlugins(theme, "flex")) {
+    if (enabledRaamPlugins(theme, "flexbox")) {
       if (enabledCorePlugins(config, ["flexDirection", "flexWrap"])) {
         console.error(
-          "Please disable the `corePlugins` for `flexDirection` and `flexWrap` for raam to work as expected."
+          "Please disable the `corePlugins` for `flexDirection` and `flexWrap` for @raam/tailwind to work as expected."
         );
       }
 
-      const flex = useFlex();
+      const { child, parent } = flexbox();
       const spacing = theme("spacing", {});
 
       addBase({
-        [hasClassAttribute(prefix, ".flex")]: { margin: flex.parent().margin },
+        [hasClassAttribute(prefix, ".flex")]: { margin: parent().margin },
       });
 
       addUtilities(
@@ -77,8 +77,8 @@ export default plugin(
             !["0", 0].includes(spacing[sp]) && {
               [`.flex-gap-${sp}`]: {
                 ...stylePropsToCSS({ flexGap: spacing[sp] }),
-                "& > *:first-child": flex.child({ index: 0 }),
-                "& > *:not(:first-child)": flex.child({ index: 1 }),
+                "& > *:first-child": child({ index: 0 }),
+                "& > *:not(:first-child)": child({ index: 1 }),
               },
             }
         ),

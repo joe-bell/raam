@@ -1,10 +1,4 @@
-import {
-  RaamCSS,
-  RaamStyleProps,
-  RaamTheme,
-  FLEX_GAP_CSS_VARS as CSS_VARS,
-  ValueOf,
-} from "./types";
+import { RaamCSS, RaamStyleProps, RaamTheme, CSS_VARS, ValueOf } from "./types";
 
 export interface WithRaamTheme {
   theme?: RaamTheme;

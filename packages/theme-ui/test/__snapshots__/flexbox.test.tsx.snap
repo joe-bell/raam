@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Flex Variants Wrap renders 1`] = `
+exports[`Flexbox Variants Wrap renders 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -84,7 +84,7 @@ exports[`Flex Variants Wrap renders 1`] = `
 </div>
 `;
 
-exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
+exports[`Flexbox Variants Wrap renders with defined theme gap 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -168,7 +168,7 @@ exports[`Flex Variants Wrap renders with defined theme gap 1`] = `
 </div>
 `;
 
-exports[`Flex Variants hStack renders 1`] = `
+exports[`Flexbox Variants hStack renders 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -252,7 +252,7 @@ exports[`Flex Variants hStack renders 1`] = `
 </div>
 `;
 
-exports[`Flex Variants hStack renders with defined theme gap 1`] = `
+exports[`Flexbox Variants hStack renders with defined theme gap 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -336,7 +336,7 @@ exports[`Flex Variants hStack renders with defined theme gap 1`] = `
 </div>
 `;
 
-exports[`Flex Variants vStack renders 1`] = `
+exports[`Flexbox Variants vStack renders 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -420,7 +420,7 @@ exports[`Flex Variants vStack renders 1`] = `
 </div>
 `;
 
-exports[`Flex Variants vStack renders with defined theme gap 1`] = `
+exports[`Flexbox Variants vStack renders with defined theme gap 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -504,7 +504,7 @@ exports[`Flex Variants vStack renders with defined theme gap 1`] = `
 </div>
 `;
 
-exports[`Flex renders 1`] = `
+exports[`Flexbox renders 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   margin: 0;
@@ -594,7 +594,7 @@ exports[`Flex renders 1`] = `
 </div>
 `;
 
-exports[`Flex renders an array of children 1`] = `
+exports[`Flexbox renders an array of children 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   margin: 0;
@@ -678,7 +678,7 @@ exports[`Flex renders an array of children 1`] = `
 </div>
 `;
 
-exports[`Flex renders children as list-items 1`] = `
+exports[`Flexbox renders children as list-items 1`] = `
 Array [
   .emotion-0 {
   box-sizing: border-box;
@@ -871,7 +871,7 @@ Array [
 ]
 `;
 
-exports[`Flex renders children with span elements 1`] = `
+exports[`Flexbox renders children with span elements 1`] = `
 Array [
   .emotion-0 {
   box-sizing: border-box;
@@ -1628,7 +1628,7 @@ Array [
 ]
 `;
 
-exports[`Flex style props renders with customised flexbox props 1`] = `
+exports[`Flexbox style props renders with customised flexbox props 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   margin: 0;
@@ -1763,7 +1763,7 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
 </div>
 `;
 
-exports[`Flex style props renders with defined gap 1`] = `
+exports[`Flexbox style props renders with defined gap 1`] = `
 .emotion-3 {
   box-sizing: border-box;
   margin: 0;
@@ -1853,7 +1853,7 @@ exports[`Flex style props renders with defined gap 1`] = `
 </div>
 `;
 
-exports[`Flex style props renders with defined theme gap 1`] = `
+exports[`Flexbox style props renders with defined theme gap 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
@@ -1943,7 +1943,7 @@ exports[`Flex style props renders with defined theme gap 1`] = `
 </div>
 `;
 
-exports[`Flex style props renders with responsive props 1`] = `
+exports[`Flexbox style props renders with responsive props 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;

@@ -1,5 +1,5 @@
-import { FLEX_GAP_CSS_VARS as CSS_VARS, RaamTheme } from "@raam/core";
-import { useFlex } from "../src";
+import { CSS_VARS, RaamTheme } from "@raam/core";
+import { flexbox } from "../src";
 
 // Config
 // ==============================================
@@ -33,15 +33,15 @@ const hStack = (gap: number | string) => ({
 // Tests
 // ==============================================
 
-describe("useFlex", () => {
+describe("flexbox", () => {
   test("renders with defaults", () => {
     const example = () => {
-      const flex = useFlex();
+      const { parent, child } = flexbox();
 
       return {
-        parent: flex.parent(),
-        firstChild: flex.child({ index: 0 }),
-        child: flex.child(),
+        parent: parent(),
+        firstChild: child({ index: 0 }),
+        child: child(),
       };
     };
 
@@ -77,13 +77,13 @@ describe("useFlex", () => {
     test("with single media query", () => {
       const bp = "25em";
       const example = () => {
-        const flex = useFlex({
+        const { parent, child } = flexbox({
           justifyContent: { [mq(bp)]: "space-between" },
         });
 
         return {
-          parent: flex.parent(),
-          child: flex.child(),
+          parent: parent(),
+          child: child(),
         };
       };
 
@@ -99,7 +99,7 @@ describe("useFlex", () => {
       const bp = "25em";
       const theme = themeArr;
       const example = () => {
-        const flex = useFlex({
+        const { parent, child } = flexbox({
           gap: [3, null, 4, "4rem"],
           alignItems: [null, "flex-end", "flex-start"],
           justifyContent: ["center", { [mq(bp)]: "space-between" }],
@@ -107,8 +107,8 @@ describe("useFlex", () => {
         });
 
         return {
-          parent: flex.parent(),
-          child: flex.child(),
+          parent: parent(),
+          child: child(),
         };
       };
 
@@ -152,7 +152,7 @@ describe("useFlex", () => {
       const bp = "25em";
       const theme = themeNamed;
       const example = () => {
-        const flex = useFlex({
+        const { parent, child } = flexbox({
           gap: { initial: "medium", medium: "large", large: "small" },
           alignItems: { medium: "flex-end", large: "flex-start" },
           justifyContent: { _: "center", [mq(bp)]: "space-between" },
@@ -160,8 +160,8 @@ describe("useFlex", () => {
         });
 
         return {
-          parent: flex.parent(),
-          child: flex.child(),
+          parent: parent(),
+          child: child(),
         };
       };
 
@@ -201,15 +201,15 @@ describe("useFlex", () => {
     test("without theme should fallback to last value in array", () => {
       const bp = "25em";
       const example = () => {
-        const flex = useFlex({
+        const { parent, child } = flexbox({
           gap: [3, null, "4rem"],
           alignItems: [null, "flex-end", "center", "flex-start"],
           alignContent: [null, { [mq(bp)]: "space-evenly" }],
         });
 
         return {
-          parent: flex.parent(),
-          child: flex.child(),
+          parent: parent(),
+          child: child(),
         };
       };
 
