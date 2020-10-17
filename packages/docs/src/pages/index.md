@@ -45,17 +45,17 @@ This returns functional styles for:
 // import { useFlex } from "raam";
 
 () => {
-  const flex = useFlex({
+  const { parent, child } = useFlex({
     gap: "1rem",
   });
 
   return (
-    <div style={flex.parent()}>
+    <div style={parent()}>
       {Array.from({ length: 3 }).map((item, index) => (
         <div
           key={index}
           style={{
-            ...flex.child({ index }),
+            ...child({ index }),
             backgroundColor: "var(--color-primary)",
             color: "var(--color-white)",
             padding: "0.5rem 1rem",
@@ -206,16 +206,16 @@ by the defined [`gap`](#options).
 // import { Box } from "./box";
 
 () => {
-  const wrap = useFlex({ variant: "wrap" });
+  const { parent, child } = useFlex({ variant: "wrap" });
 
   return (
-    <Box as="ul" sx={wrap.parent()}>
+    <Box as="ul" sx={parent()}>
       {Array.from({ length: 32 }).map((item, index) => (
         <Box
           as="li"
           key={index}
           sx={{
-            ...wrap.child({ index }),
+            ...child({ index }),
             width: "2rem",
             height: "2rem",
             backgroundColor: "primary",
@@ -244,7 +244,7 @@ styles. In this example, we'll reduce the gap size on larger screens.
 // import { Box } from "./box";
 
 () => {
-  const wrap = useFlex({
+  const { parent, child } = useFlex({
     variant: "wrap",
     gap: {
       initial: "2rem",
@@ -253,13 +253,13 @@ styles. In this example, we'll reduce the gap size on larger screens.
   });
 
   return (
-    <Box as="ul" sx={wrap.parent()}>
+    <Box as="ul" sx={parent()}>
       {Array.from({ length: 32 }).map((item, index, arr) => (
         <Box
           as="li"
           key={index}
           sx={{
-            ...wrap.child({
+            ...child({
               index,
               flexGrow: arr.length - 1 === index && 2,
             }),
@@ -288,15 +288,15 @@ Renders items in a single column.
 // import { Box } from "./box";
 
 () => {
-  const vStack = useFlex({ variant: "vStack", gap: "1rem" });
+  const { parent, child } = useFlex({ variant: "vStack", gap: "1rem" });
 
   return (
-    <Box sx={vStack.parent()}>
+    <Box sx={parent()}>
       {Array.from({ length: 4 }).map((item, index) => (
         <Box
           key={index}
           sx={{
-            ...vStack.child({ index }),
+            ...child({ index }),
             height: "2rem",
             backgroundColor: "primary",
           }}
@@ -323,15 +323,15 @@ The default setting of `useFlex`; the `HStack` renders items in a single row and
 // import { Box } from "./box";
 
 () => {
-  const hStack = useFlex({ variant: "hStack", gap: "1rem" });
+  const { parent, child } = useFlex({ variant: "hStack", gap: "1rem" });
 
   return (
-    <Box sx={hStack.parent()}>
+    <Box sx={parent()}>
       {Array.from({ length: 8 }).map((item, index) => (
         <Box
           key={index}
           sx={{
-            ...hStack.child({ index }),
+            ...child({ index }),
             width: "2rem",
             height: "2rem",
             backgroundColor: "primary",
@@ -352,15 +352,15 @@ If you'd rather let `hStack` items scroll elegantly in a single line, add an `ov
 // import { Box } from "./box";
 
 () => {
-  const inline = useFlex({ variant: "hStack", gap: "1rem" });
+  const { parent, child } = useFlex({ variant: "hStack", gap: "1rem" });
 
   return (
-    <Box sx={{ ...inline.parent(), overflowX: "auto" }}>
+    <Box sx={{ ...parent(), overflowX: "auto" }}>
       {Array.from({ length: 32 }).map((item, index) => (
         <Box
           key={index}
           sx={{
-            ...inline.child({ index }),
+            ...child({ index }),
             width: "2rem",
             height: "2rem",
             backgroundColor: "primary",
@@ -381,19 +381,20 @@ or with some more chaotic values…
 
 () => {
   const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
-  const inline = useFlex({
+
+  const { parent, child } = useFlex({
     variant: "hStack",
     gap: "1rem",
     alignItems: "center",
   });
 
   return (
-    <Box sx={{ ...inline.parent(), overflowX: "auto" }}>
+    <Box sx={{ ...parent(), overflowX: "auto" }}>
       {Array.from({ length: 32 }).map((item, index) => (
         <Box
           key={index}
           sx={{
-            ...inline.child({ index }),
+            ...child({ index }),
             width: size(),
             height: size(),
             backgroundColor: "primary",
@@ -419,19 +420,26 @@ Let's take a look at a more real-world example; a "tag"-list at the bottom of an
 // import { Box } from "./box";
 
 () => {
-  const stack = useFlex({ variant: "vStack", gap: "1rem" });
-  const wrap = useFlex({ variant: "wrap", gap: "1rem" });
+  const { parent: stackParent, child: stackChild } = useFlex({
+    variant: "vStack",
+    gap: "1rem",
+  });
+
+  const { parent: wrapParent, child: wrapChild } = useFlex({
+    variant: "wrap",
+    gap: "1rem",
+  });
 
   return (
-    <Box sx={{ ...stack.parent(), padding: 3 }}>
-      <Heading as="h2" sx={stack.child({ index: 0 })}>
+    <Box sx={{ ...stackParent(), padding: 3 }}>
+      <Heading as="h2" sx={stackChild({ index: 0 })}>
         Tags
       </Heading>
 
-      <Box sx={stack.child({ index: 1 })}>
-        <Box as="ul" sx={wrap.parent()}>
+      <Box sx={stackChild({ index: 1 })}>
+        <Box as="ul" sx={wrapParent()}>
           {Array.from({ length: 8 }, (v, k) => k + 1).map((item, index) => (
-            <Box key={index} as="li" sx={wrap.child({ index })}>
+            <Box key={index} as="li" sx={wrapChild({ index })}>
               <Link href={`#list-item-${item}`}>Tag {item}</Link>
             </Box>
           ))}

@@ -10,7 +10,8 @@
     "format": "prettier --write",
     "bundlesize": "lerna exec --ignore docs -- bundlesize",
     "test": "yarn bundlesize && jest",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "docs": "yarn workspace docs"
   },
   "workspaces": [
     "packages/*"
