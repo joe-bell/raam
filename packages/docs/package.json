@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build && next export",
     "clean": "rimraf {.next,out}",
-    "lint": "tsc --noEmit",
     "start": "next start"
   },
   "dependencies": {

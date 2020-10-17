@@ -6,7 +6,7 @@
     "clean": "lerna run clean",
     "flush": "yarn clean && lerna clean --yes && rimraf node_modules",
     "dev": "lerna run dev --parallel",
-    "lint": "lerna run lint --parallel --stream",
+    "lint": "lerna exec --parallel --stream -- tsc --noEmit",
     "format": "prettier --write",
     "bundlesize": "lerna exec --ignore docs -- bundlesize",
     "test": "yarn bundlesize && jest",
