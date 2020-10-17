@@ -8,7 +8,8 @@
     "dev": "lerna run dev --parallel",
     "lint": "lerna run lint --parallel --stream",
     "format": "prettier --write",
-    "test": "jest",
+    "bundlesize": "lerna exec --ignore docs -- bundlesize",
+    "test": "yarn bundlesize && jest",
     "commit": "git-cz"
   },
   "workspaces": [
@@ -34,12 +35,14 @@
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
+    "@babel/plugin-transform-spread": "7.12.1",
     "@babel/preset-env": "7.11.5",
     "@babel/preset-react": "7.10.4",
     "@babel/preset-typescript": "7.10.4",
     "@types/node": "14.11.8",
     "@types/react": "16.9.52",
     "babel-jest": "26.5.2",
+    "bundlesize": "0.18.0",
     "commitizen": "4.1.2",
     "cz-conventional-changelog": "3.3.0",
     "husky": "4.3.0",

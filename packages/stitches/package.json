@@ -13,9 +13,8 @@
   "scripts": {
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
-    "lint": "npx tsc --noEmit",
-    "dev": "npm run build -- watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tsc --noEmit",
+    "dev": "yarn build -- watch"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,12 @@
     "url": "https://github.com/joe-bell/raam/issues"
   },
   "homepage": "https://github.com/joe-bell/raam#readme",
+  "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "750B"
+    }
+  ],
   "peerDependencies": {
     "react": ">= 16.8.0",
     "@stitches/core": ">= 0.0.3-canary.4"
