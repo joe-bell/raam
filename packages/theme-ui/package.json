@@ -13,7 +13,6 @@
   "scripts": {
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
-    "lint": "tsc --noEmit",
     "dev": "yarn build -- watch"
   },
   "repository": {
