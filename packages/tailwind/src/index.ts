@@ -77,8 +77,8 @@ export default plugin(
             !["0", 0].includes(spacing[sp]) && {
               [`.flex-gap-${sp}`]: {
                 ...stylePropsToCSS({ flexGap: spacing[sp] }),
-                "& > *:first-child": child({ index: 0 }),
-                "& > *:not(:first-child)": child({ index: 1 }),
+                "& > *:first-child": child({ index: 0, flex: null }),
+                "& > *:not(:first-child)": child({ index: 1, flex: null }),
               },
             }
         ),
