@@ -1,82 +1,80 @@
 import * as React from "react";
 import { Box, useThemeUI } from "theme-ui";
-import { DetermineChildProp, determineChild } from "@raam/core";
-import { useFlex, UseFlexProps, UseFlexChildProps } from "raam";
+import {
+  useFlex,
+  FlexProvider,
+  DefaultFlexProps,
+  DefaultFlexElementProps,
+  DefaultFlexChildProps,
+  DefaultFlexParentProps,
+} from "@raam/react";
 
-export interface FlexProps
-  extends UseFlexProps,
-    Omit<UseFlexChildProps, "index"> {
-  children?: React.ReactNode;
-  as?: DetermineChildProp;
+interface FlexElement extends DefaultFlexElementProps {
   sx?: any;
 }
 
-export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
-  (
-    {
-      as,
-      children,
-      // flex parent
-      alignItems,
-      alignContent,
-      flexDirection,
-      flexWrap,
-      gap,
-      justifyContent,
-      justifyItems,
-      variant,
-      // flex child
-      flex,
-      flexBasis,
-      flexGrow,
-      flexShrink,
-      // custom styles
-      sx,
-      ...props
-    },
-    ref
-  ) => {
-    const { theme } = useThemeUI();
+interface FlexParentProps extends DefaultFlexParentProps, FlexElement {}
 
-    const flexStyles = useFlex({
-      alignItems,
-      alignContent,
-      flexDirection,
-      flexWrap,
-      gap,
-      justifyContent,
-      justifyItems,
-      variant,
-      theme,
-      withoutBaseStyles: true,
-    });
+const FlexParent = React.forwardRef<HTMLDivElement, FlexParentProps>(
+  ({ children, sx, ...props }, ref) => {
+    const { parent } = useFlex();
 
     return (
       <Box
         ref={ref}
-        as={as}
+        as={parent.as}
         sx={{
-          ...flexStyles.parent(),
+          ...parent.style(),
           ...(sx && sx),
         }}
         {...props}
       >
-        {React.Children.toArray(children).map((child, index) => (
-          <Box
-            key={index}
-            as={determineChild(as)}
-            sx={flexStyles.child({
-              index,
-              flex,
-              flexBasis,
-              flexGrow,
-              flexShrink,
-            })}
-          >
-            {child}
-          </Box>
-        ))}
+        {children}
       </Box>
+    );
+  }
+);
+
+interface FlexChildProps extends DefaultFlexChildProps, FlexElement {}
+
+const FlexChild = React.forwardRef<HTMLDivElement, FlexChildProps>(
+  (
+    { children, index, flex, flexBasis, flexGrow, flexShrink, sx, ...props },
+    ref
+  ) => {
+    const { child } = useFlex();
+
+    return (
+      <Box
+        ref={ref}
+        as={child.as}
+        sx={{
+          ...child.style({ index, flex, flexBasis, flexGrow, flexShrink }),
+          ...(sx && sx),
+        }}
+        {...props}
+      >
+        {children}
+      </Box>
+    );
+  }
+);
+
+export interface FlexProps extends DefaultFlexProps, FlexElement {}
+
+export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
+  ({ children, sx, ...props }, ref) => {
+    const { theme } = useThemeUI();
+    return (
+      <FlexProvider withoutBaseStyles={true} theme={theme} {...props}>
+        <FlexParent ref={ref}>
+          {React.Children.toArray(children).map((child, index) => (
+            <FlexChild key={index} index={index}>
+              {child}
+            </FlexChild>
+          ))}
+        </FlexParent>
+      </FlexProvider>
     );
   }
 );
