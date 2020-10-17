@@ -1,8 +1,8 @@
 {
-  "name": "@raam/theme-ui",
+  "name": "@raam/react",
   "version": "0.2.3",
-  "description": "Beautifully boring cosmetic-free Theme UI components for structure and layout.",
-  "source": "src/index.ts",
+  "description": "Beautifully boring cosmetic-free React.js hooks for structure and layout.",
+  "source": "src/index.tsx",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -28,19 +28,17 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "1.1 kB"
+      "maxSize": "700 B"
     }
   ],
   "peerDependencies": {
-    "react": ">= 16.8.0",
-    "theme-ui": "0.3.1"
+    "react": ">= 16.8.0"
   },
   "dependencies": {
-    "@raam/react": "^0.2.3"
+    "@raam/core": "^0.2.3",
+    "raam": "^0.2.3"
   },
   "devDependencies": {
-    "@raam/core": "^0.2.3",
-    "react": "16.13.1",
-    "theme-ui": "0.3.1"
+    "react": "16.13.1"
   }
 }

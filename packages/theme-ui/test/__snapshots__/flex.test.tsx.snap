@@ -680,31 +680,7 @@ exports[`Flex renders an array of children 1`] = `
 
 exports[`Flex renders children as list-items 1`] = `
 Array [
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -740,6 +716,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: ul;
 }
 
 <ul
@@ -773,31 +774,7 @@ Array [
       </a>
     </li>
   </ul>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -833,6 +810,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: ol;
 }
 
 <ol
@@ -871,31 +873,7 @@ Array [
 
 exports[`Flex renders children with span elements 1`] = `
 Array [
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -931,6 +909,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: span;
 }
 
 <span
@@ -964,31 +967,7 @@ Array [
       </a>
     </span>
   </span>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1024,6 +1003,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: p;
 }
 
 <p
@@ -1057,31 +1061,7 @@ Array [
       </a>
     </span>
   </p>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1117,6 +1097,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h1;
 }
 
 <h1
@@ -1150,31 +1155,7 @@ Array [
       </a>
     </span>
   </h1>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1210,6 +1191,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h2;
 }
 
 <h2
@@ -1243,31 +1249,7 @@ Array [
       </a>
     </span>
   </h2>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1303,6 +1285,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h3;
 }
 
 <h3
@@ -1336,31 +1343,7 @@ Array [
       </a>
     </span>
   </h3>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1396,6 +1379,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h4;
 }
 
 <h4
@@ -1429,31 +1437,7 @@ Array [
       </a>
     </span>
   </h4>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1489,6 +1473,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h5;
 }
 
 <h5
@@ -1522,31 +1531,7 @@ Array [
       </a>
     </span>
   </h5>,
-  .emotion-3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  box-sizing: border-box;
-  margin: var(--raam-fg-offset,initial);
-  min-width: 0;
-  padding-left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  --raam-fg-t: initial;
-  --raam-fg-l: 1rem;
-  --raam-fg-offset: initial;
-  --raam-fg: initial;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-}
-
-.emotion-0 {
+  .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -1582,6 +1567,31 @@ Array [
 .emotion-1:before {
   position: absolute;
   content: "\\200B";
+}
+
+.emotion-3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: var(--raam-fg-offset,initial);
+  min-width: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  --raam-fg-t: initial;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  as: h6;
 }
 
 <h6
@@ -1641,18 +1651,31 @@ exports[`Flex style props renders with customised flexbox props 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-align-content: flex-end;
-  -ms-flex-line-pack: end;
-  align-content: flex-end;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   justify-items: stretch;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: 100px;
+  -ms-flex-preferred-size: 100px;
+  flex-basis: 100px;
 }
 
 .emotion-0 {
@@ -1993,13 +2016,13 @@ exports[`Flex style props renders with responsive props 1`] = `
     flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    -webkit-align-content: normal;
+    -ms-flex-line-pack: normal;
+    align-content: normal;
     -webkit-align-items: revert;
     -webkit-box-align: revert;
     -ms-flex-align: revert;
     align-items: revert;
-    -webkit-align-content: normal;
-    -ms-flex-line-pack: normal;
-    align-content: normal;
   }
 }
 
@@ -2009,13 +2032,13 @@ exports[`Flex style props renders with responsive props 1`] = `
     --raam-fg-l: 64px;
     --raam-fg-offset: calc(64px * -0.5);
     --raam-fg: calc(64px * 0.5);
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
   }
 }
 
