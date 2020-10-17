@@ -1,5 +1,5 @@
 import { createStyled } from "@stitches/react";
-import { useFlex } from "../src";
+import { flexbox } from "../src";
 
 export const config = {
   tokens: {
@@ -50,7 +50,7 @@ export const config = {
     },
   },
   utils: {
-    useFlex,
+    flexbox,
   },
   breakpoints: {
     bp1: (rule) => `@media (min-width: 520px) { ${rule} }`,

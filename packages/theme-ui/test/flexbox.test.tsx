@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 import { matchers } from "jest-emotion";
-import { Flex } from "../src";
+import { Flexbox } from "../src";
 import { RaamTheme } from "@raam/core";
 import { ThemeProvider as ThemeUIProvider } from "theme-ui";
 
@@ -17,20 +17,22 @@ const themeUIProvider = (el: React.ReactNode) => (
   <ThemeUIProvider theme={theme}>{el}</ThemeUIProvider>
 );
 
-describe("Flex", () => {
+describe("Flexbox", () => {
   test("renders", () => {
     const json = renderJSON(
-      <Flex>
+      <Flexbox>
         <p>Item 1</p>
         <p>Item 2</p>
         <p>Item 3</p>
-      </Flex>
+      </Flexbox>
     );
     expect(json).toMatchSnapshot();
   });
 
   test("renders an array of children", () => {
-    const json = renderJSON(<Flex>{["Item 1", "Item 2", "Item 3"]}</Flex>);
+    const json = renderJSON(
+      <Flexbox>{["Item 1", "Item 2", "Item 3"]}</Flexbox>
+    );
     expect(json).toMatchSnapshot();
   });
 
@@ -39,11 +41,11 @@ describe("Flex", () => {
     const lists = renderJSON(
       <>
         {elements.map((element: typeof elements[number]) => (
-          <Flex key={element} as={element}>
+          <Flexbox key={element} as={element}>
             <a href="#1">Item 1</a>
             <a href="#2">Item 2</a>
             <a href="#3">Item 3</a>
-          </Flex>
+          </Flexbox>
         ))}
       </>
     );
@@ -56,11 +58,11 @@ describe("Flex", () => {
     const span = renderJSON(
       <>
         {elements.map((element: typeof elements[number]) => (
-          <Flex key={element} as={element}>
+          <Flexbox key={element} as={element}>
             <a href="#1">Item 1</a>
             <a href="#2">Item 2</a>
             <a href="#3">Item 3</a>
-          </Flex>
+          </Flexbox>
         ))}
       </>
     );
@@ -71,7 +73,7 @@ describe("Flex", () => {
   describe("style props", () => {
     test("renders with customised flexbox props", () => {
       const flex = renderJSON(
-        <Flex
+        <Flexbox
           gap={5}
           alignContent="flex-end"
           alignItems="center"
@@ -87,7 +89,7 @@ describe("Flex", () => {
           <p>Item 1</p>
           <p>Item 2</p>
           <p>Item 3</p>
-        </Flex>
+        </Flexbox>
       );
 
       expect(flex).toMatchSnapshot();
@@ -95,11 +97,11 @@ describe("Flex", () => {
 
     test("renders with defined gap", () => {
       const flex = renderJSON(
-        <Flex gap="1rem">
+        <Flexbox gap="1rem">
           <p>Item 1</p>
           <p>Item 2</p>
           <p>Item 3</p>
-        </Flex>
+        </Flexbox>
       );
 
       expect(flex).toMatchSnapshot();
@@ -108,11 +110,11 @@ describe("Flex", () => {
     test("renders with defined theme gap", () => {
       const flex = renderJSON(
         themeUIProvider(
-          <Flex gap={5}>
+          <Flexbox gap={5}>
             <p>Item 1</p>
             <p>Item 2</p>
             <p>Item 3</p>
-          </Flex>
+          </Flexbox>
         )
       );
 
@@ -122,7 +124,7 @@ describe("Flex", () => {
     test("renders with responsive props", () => {
       const flex = renderJSON(
         themeUIProvider(
-          <Flex
+          <Flexbox
             gap={[3, null, 5]}
             // @TODO Debug why first item gets ignored
             alignContent={["flex-end", "normal", "flex-start"]}
@@ -132,7 +134,7 @@ describe("Flex", () => {
             <p>Item 1</p>
             <p>Item 2</p>
             <p>Item 3</p>
-          </Flex>
+          </Flexbox>
         )
       );
 
@@ -144,9 +146,9 @@ describe("Flex", () => {
     describe("hStack", () => {
       test("renders", () => {
         const json = renderJSON(
-          <Flex variant="hStack" gap={4}>
+          <Flexbox variant="hStack" gap={4}>
             {["Item 1", "Item 2", "Item 3"]}
-          </Flex>
+          </Flexbox>
         );
         expect(json).toMatchSnapshot();
       });
@@ -154,9 +156,9 @@ describe("Flex", () => {
       test("renders with defined theme gap", () => {
         const json = renderJSON(
           themeUIProvider(
-            <Flex variant="hStack" gap={4}>
+            <Flexbox variant="hStack" gap={4}>
               {["Item 1", "Item 2", "Item 3"]}
-            </Flex>
+            </Flexbox>
           )
         );
         expect(json).toMatchSnapshot();
@@ -166,9 +168,9 @@ describe("Flex", () => {
     describe("vStack", () => {
       test("renders", () => {
         const json = renderJSON(
-          <Flex variant="vStack" gap={4}>
+          <Flexbox variant="vStack" gap={4}>
             {["Item 1", "Item 2", "Item 3"]}
-          </Flex>
+          </Flexbox>
         );
         expect(json).toMatchSnapshot();
       });
@@ -176,9 +178,9 @@ describe("Flex", () => {
       test("renders with defined theme gap", () => {
         const json = renderJSON(
           themeUIProvider(
-            <Flex variant="vStack" gap={4}>
+            <Flexbox variant="vStack" gap={4}>
               {["Item 1", "Item 2", "Item 3"]}
-            </Flex>
+            </Flexbox>
           )
         );
 
@@ -189,7 +191,7 @@ describe("Flex", () => {
     describe("Wrap", () => {
       test("renders", () => {
         const json = renderJSON(
-          <Flex variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flex>
+          <Flexbox variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flexbox>
         );
         expect(json).toMatchSnapshot();
       });
@@ -197,7 +199,7 @@ describe("Flex", () => {
       test("renders with defined theme gap", () => {
         const json = renderJSON(
           themeUIProvider(
-            <Flex variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flex>
+            <Flexbox variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flexbox>
           )
         );
 

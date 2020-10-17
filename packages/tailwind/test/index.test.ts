@@ -18,7 +18,7 @@ const generatePluginCss = (testConfig = {}) => {
 
 describe("flex", () => {
   const flexConfig = {
-    theme: { raam: { flex: true } },
+    theme: { raam: { flexbox: true } },
   };
 
   test("returns utilities and responsive variants", () => {
@@ -32,9 +32,11 @@ describe("flex", () => {
   });
 
   test("returns nothing when disabled", () => {
-    generatePluginCss({ theme: { raam: { flex: false } } }).then((result) => {
-      expect(result).toMatchSnapshot();
-    });
+    generatePluginCss({ theme: { raam: { flexbox: false } } }).then(
+      (result) => {
+        expect(result).toMatchSnapshot();
+      }
+    );
   });
 
   test("returns with prefix", () => {

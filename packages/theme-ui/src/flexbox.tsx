@@ -1,23 +1,25 @@
 import * as React from "react";
 import { Box, useThemeUI } from "theme-ui";
 import {
-  useFlex,
+  useFlexbox,
   FlexProvider,
-  DefaultFlexProps,
-  DefaultFlexElementProps,
-  DefaultFlexChildProps,
-  DefaultFlexParentProps,
+  DefaultFlexboxProps,
+  DefaultFlexboxElementProps,
+  DefaultFlexboxChildProps,
+  DefaultFlexboxParentProps,
 } from "@raam/react";
 
-interface FlexElement extends DefaultFlexElementProps {
+interface FlexboxElement extends DefaultFlexboxElementProps {
   sx?: any;
 }
 
-interface FlexParentProps extends DefaultFlexParentProps, FlexElement {}
+interface FlexboxParentProps
+  extends DefaultFlexboxParentProps,
+    FlexboxElement {}
 
-const FlexParent = React.forwardRef<HTMLDivElement, FlexParentProps>(
+const FlexboxParent = React.forwardRef<HTMLDivElement, FlexboxParentProps>(
   ({ children, sx, ...props }, ref) => {
-    const { parent } = useFlex();
+    const { parent } = useFlexbox();
 
     return (
       <Box
@@ -35,14 +37,14 @@ const FlexParent = React.forwardRef<HTMLDivElement, FlexParentProps>(
   }
 );
 
-interface FlexChildProps extends DefaultFlexChildProps, FlexElement {}
+interface FlexboxChildProps extends DefaultFlexboxChildProps, FlexboxElement {}
 
-const FlexChild = React.forwardRef<HTMLDivElement, FlexChildProps>(
+const FlexboxChild = React.forwardRef<HTMLDivElement, FlexboxChildProps>(
   (
     { children, index, flex, flexBasis, flexGrow, flexShrink, sx, ...props },
     ref
   ) => {
-    const { child } = useFlex();
+    const { child } = useFlexbox();
 
     return (
       <Box
@@ -60,20 +62,20 @@ const FlexChild = React.forwardRef<HTMLDivElement, FlexChildProps>(
   }
 );
 
-export interface FlexProps extends DefaultFlexProps, FlexElement {}
+export interface FlexboxProps extends DefaultFlexboxProps, FlexboxElement {}
 
-export const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
+export const Flexbox = React.forwardRef<HTMLDivElement, FlexboxProps>(
   ({ children, sx, ...props }, ref) => {
     const { theme } = useThemeUI();
     return (
       <FlexProvider withoutBaseStyles={true} theme={theme} {...props}>
-        <FlexParent ref={ref}>
+        <FlexboxParent ref={ref}>
           {React.Children.toArray(children).map((child, index) => (
-            <FlexChild key={index} index={index}>
+            <FlexboxChild key={index} index={index}>
               {child}
-            </FlexChild>
+            </FlexboxChild>
           ))}
-        </FlexParent>
+        </FlexboxParent>
       </FlexProvider>
     );
   }

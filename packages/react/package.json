@@ -2,7 +2,7 @@
   "name": "@raam/react",
   "version": "0.2.3",
   "description": "Beautifully boring cosmetic-free React.js hooks for structure and layout.",
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
@@ -28,7 +28,7 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "700 B"
+      "maxSize": "750 B"
     }
   ],
   "peerDependencies": {

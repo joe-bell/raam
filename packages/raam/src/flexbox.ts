@@ -3,7 +3,7 @@ import {
   RaamStyleProps,
   WithIndex,
   WithRaamTheme,
-  FLEX_GAP_CSS_VARS as CSS_VARS,
+  CSS_VARS,
   stylePropsToCSS,
   reset,
 } from "@raam/core";
@@ -14,11 +14,11 @@ const propsWithoutUndefined = <T>(obj: T) =>
     return acc;
   }, {});
 
-// Flex Variants
+// Flexbox Variants
 // ==============================================
 
-type FlexVariants = "hStack" | "vStack" | "wrap";
-const flexVariants: Record<FlexVariants, FlexParentProps> = {
+type FlexboxVariants = "hStack" | "vStack" | "wrap";
+const flexboxVariants: Record<FlexboxVariants, ParentProps> = {
   vStack: { gap: "1rem", flexDirection: "column", flexWrap: "nowrap" },
   hStack: { gap: "1rem", flexDirection: "row", flexWrap: "nowrap" },
   wrap: {
@@ -30,10 +30,10 @@ const flexVariants: Record<FlexVariants, FlexParentProps> = {
   },
 };
 
-// flex
+// parent
 // ==============================================
 
-type FlexParentStyleProps =
+type ParentStyleProps =
   | "alignItems"
   | "alignContent"
   | "flexDirection"
@@ -44,19 +44,19 @@ type FlexParentStyleProps =
 
 // @TODO Gap types should support numbers
 // @TODO Support Row/Column Gap
-interface FlexParentProps
+interface ParentProps
   extends WithRaamTheme,
-    Pick<RaamStyleProps, FlexParentStyleProps> {
+    Pick<RaamStyleProps, ParentStyleProps> {
   withoutBaseStyles?: boolean;
   withoutElementStyles?: boolean;
 }
 
-const flexParent = ({
+const parent = ({
   gap: flexGap,
   withoutBaseStyles,
   withoutElementStyles,
   ...props
-}: FlexParentProps): RaamCSS => ({
+}: ParentProps): RaamCSS => ({
   ...(withoutBaseStyles && reset),
   ...(!withoutElementStyles && {
     /**
@@ -70,17 +70,17 @@ const flexParent = ({
   ...stylePropsToCSS({ flexGap, ...props }),
 });
 
-// flexChild
+// child
 // ==============================================
 
-type FlexChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
+type ChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
 
-interface FlexChildProps
+interface ChildProps
   extends WithIndex,
-    FlexParentProps,
-    Pick<RaamStyleProps, FlexChildStyleProps> {}
+    ParentProps,
+    Pick<RaamStyleProps, ChildStyleProps> {}
 
-const flexChild = ({
+const child = ({
   flex = "0 0 auto",
   flexBasis,
   flexGrow,
@@ -89,7 +89,7 @@ const flexChild = ({
   withoutBaseStyles,
   withoutElementStyles,
   theme,
-}: FlexChildProps): RaamCSS => ({
+}: ChildProps): RaamCSS => ({
   ...(!withoutBaseStyles && reset),
   ...(!withoutElementStyles && {
     /**
@@ -114,35 +114,35 @@ const flexChild = ({
   ...stylePropsToCSS({ flex, flexBasis, flexGrow, flexShrink, theme }),
 });
 
-// useFlex
+// flexbox
 // ==============================================
 
-export interface UseFlexProps extends FlexParentProps, WithRaamTheme {
-  variant?: FlexVariants;
+export interface FlexboxProps extends ParentProps, WithRaamTheme {
+  variant?: FlexboxVariants;
 }
 
-export interface UseFlexChildProps
-  extends Pick<FlexChildProps, "index" | FlexChildStyleProps> {}
+export interface FlexboxChildProps
+  extends Pick<ChildProps, "index" | ChildStyleProps> {}
 
-export type UseFlexStylePropsKeys = FlexChildStyleProps | FlexParentStyleProps;
-export interface UseFlexStyleProps
-  extends Pick<RaamStyleProps, UseFlexStylePropsKeys> {}
+export type FlexboxStylePropsKeys = ChildStyleProps | ParentStyleProps;
+export interface FlexboxStyleProps
+  extends Pick<RaamStyleProps, FlexboxStylePropsKeys> {}
 
-export const useFlex = (props?: UseFlexProps) => {
+export const flexbox = (props?: FlexboxProps) => {
   const variant = props?.variant || "hStack";
 
   // @TODO Support Responsive Variants
   const propsWithVariant = variant
     ? {
-        ...flexVariants[variant],
+        ...flexboxVariants[variant],
         ...(props && propsWithoutUndefined(props)),
       }
     : propsWithoutUndefined(props);
 
   return {
-    parent: () => flexParent({ ...propsWithVariant }),
-    child: (childProps?: UseFlexChildProps) =>
-      flexChild(
+    parent: () => parent({ ...propsWithVariant }),
+    child: (childProps?: FlexboxChildProps) =>
+      child(
         childProps ? { ...childProps, ...propsWithVariant } : propsWithVariant
       ),
   };
