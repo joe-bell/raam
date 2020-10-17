@@ -1,6 +1,6 @@
 import { createCss, IAtom } from "@stitches/core";
 import { config } from "./stitches.config";
-import { FLEX_GAP_CSS_VARS as CSS_VARS } from "../../raam/src/types";
+import { FLEX_GAP_CSS_VARS as CSS_VARS } from "@raam/core";
 
 const findById = (property: string, atoms: IAtom[]) =>
   atoms.filter((item) => item.id === property)[0];

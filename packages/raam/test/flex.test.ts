@@ -1,6 +1,5 @@
-// @TODO Tests should run from `src`
-import { RaamTheme, useFlex } from "../src";
-import { FLEX_GAP_CSS_VARS as CSS_VARS } from "../src/types";
+import { FLEX_GAP_CSS_VARS as CSS_VARS, RaamTheme } from "@raam/core";
+import { useFlex } from "../src";
 
 // Config
 // ==============================================

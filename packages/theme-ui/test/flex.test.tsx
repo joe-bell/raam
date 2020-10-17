@@ -2,7 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { matchers } from "jest-emotion";
 import { Flex } from "../src";
-import { RaamTheme } from "raam";
+import { RaamTheme } from "@raam/core";
 import { ThemeProvider as ThemeUIProvider } from "theme-ui";
 
 expect.extend(matchers);
