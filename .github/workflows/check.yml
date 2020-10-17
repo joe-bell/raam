@@ -20,7 +20,6 @@ jobs:
       - name: Read .nvmrc
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
         id: nvm
-
       - name: Setup Node.js
         uses: actions/setup-node@v2.1.2
         with:

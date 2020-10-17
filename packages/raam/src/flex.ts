@@ -114,6 +114,36 @@ const getBreakpoint = ({ srcValue, index, theme }: GetBreakpoint) => {
   return false;
 };
 
+export const getCustomProperty = (
+  property: keyof RaamStylePropsPrivate | ({} & string),
+  value
+) =>
+  ({
+    flexDirection: {
+      // column
+      column: {
+        [CSS_VARS.FLEX_GAP_LEFT]: "initial",
+      },
+      "column-reverse": {
+        [CSS_VARS.FLEX_GAP_LEFT]: "initial",
+      },
+      // row
+    }[value] || {
+      [CSS_VARS.FLEX_GAP_TOP]: "initial",
+    },
+    flexWrap: {
+      // nowrap
+      nowrap: {
+        [CSS_VARS.FLEX_GAP_OFFSET]: "initial",
+        [CSS_VARS.FLEX_GAP]: "initial",
+      },
+      // wrap
+    }[value] || {
+      [CSS_VARS.FLEX_GAP_TOP]: "initial",
+      [CSS_VARS.FLEX_GAP_LEFT]: "initial",
+    },
+  }[property] || {});
+
 interface GetStyleDeclaration extends WithIndex, WithRaamTheme {
   property: keyof RaamStylePropsPrivate | ({} & string);
   srcValue: ValueOf<RaamStylePropsPrivate>;
@@ -150,34 +180,7 @@ const getStyleDeclaration = ({
     },
   }[property] || { [property]: value };
 
-  const extend =
-    {
-      flexDirection: {
-        // column
-        column: {
-          [CSS_VARS.FLEX_GAP_LEFT]: "initial",
-        },
-        "column-reverse": {
-          [CSS_VARS.FLEX_GAP_LEFT]: "initial",
-        },
-        // row
-      }[value] || {
-        [CSS_VARS.FLEX_GAP_TOP]: "initial",
-      },
-      flexWrap: {
-        // nowrap
-        nowrap: {
-          [CSS_VARS.FLEX_GAP_OFFSET]: "initial",
-          [CSS_VARS.FLEX_GAP]: "initial",
-        },
-        // wrap
-      }[value] || {
-        [CSS_VARS.FLEX_GAP_TOP]: "initial",
-        [CSS_VARS.FLEX_GAP_LEFT]: "initial",
-      },
-    }[property] || {};
-
-  const style = { ...polyfill, ...extend };
+  const style = { ...polyfill, ...getCustomProperty(property, value) };
 
   return breakpoint ? { [breakpoint]: style } : style;
 };
