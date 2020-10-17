@@ -23,7 +23,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -37,7 +36,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-2 {
   --raam-fg-t: 0.5rem;
   --raam-fg-l: 0.5rem;
@@ -56,7 +54,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -70,7 +67,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-3 {
   --raam-fg-t: 0.75rem;
   --raam-fg-l: 0.75rem;
@@ -89,7 +85,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -103,7 +98,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-4 {
   --raam-fg-t: 1rem;
   --raam-fg-l: 1rem;
@@ -122,7 +116,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -136,7 +129,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-5 {
   --raam-fg-t: 1.25rem;
   --raam-fg-l: 1.25rem;
@@ -155,7 +147,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -169,7 +160,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-6 {
   --raam-fg-t: 1.5rem;
   --raam-fg-l: 1.5rem;
@@ -188,7 +178,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -202,7 +191,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-8 {
   --raam-fg-t: 2rem;
   --raam-fg-l: 2rem;
@@ -221,7 +209,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -235,7 +222,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-10 {
   --raam-fg-t: 2.5rem;
   --raam-fg-l: 2.5rem;
@@ -254,7 +240,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -268,7 +253,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-12 {
   --raam-fg-t: 3rem;
   --raam-fg-l: 3rem;
@@ -287,7 +271,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -301,7 +284,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-16 {
   --raam-fg-t: 4rem;
   --raam-fg-l: 4rem;
@@ -320,7 +302,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -334,7 +315,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-20 {
   --raam-fg-t: 5rem;
   --raam-fg-l: 5rem;
@@ -353,7 +333,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -367,7 +346,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-24 {
   --raam-fg-t: 6rem;
   --raam-fg-l: 6rem;
@@ -386,7 +364,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -400,7 +377,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-32 {
   --raam-fg-t: 8rem;
   --raam-fg-l: 8rem;
@@ -419,7 +395,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -433,7 +408,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-40 {
   --raam-fg-t: 10rem;
   --raam-fg-l: 10rem;
@@ -452,7 +426,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -466,7 +439,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-48 {
   --raam-fg-t: 12rem;
   --raam-fg-l: 12rem;
@@ -485,7 +457,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -499,7 +470,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-56 {
   --raam-fg-t: 14rem;
   --raam-fg-l: 14rem;
@@ -518,7 +488,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -532,7 +501,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-64 {
   --raam-fg-t: 16rem;
   --raam-fg-l: 16rem;
@@ -551,7 +519,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -565,7 +532,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-px {
   --raam-fg-t: 1px;
   --raam-fg-l: 1px;
@@ -584,7 +550,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -598,7 +563,6 @@ exports[`flex returns utilities and responsive variants 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-row {
   flex-direction: row;
   --raam-fg-t: initial;
@@ -799,7 +763,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -813,7 +776,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-2 {
   --raam-fg-t: 0.5rem;
   --raam-fg-l: 0.5rem;
@@ -832,7 +794,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -846,7 +807,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-3 {
   --raam-fg-t: 0.75rem;
   --raam-fg-l: 0.75rem;
@@ -865,7 +825,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -879,7 +838,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-4 {
   --raam-fg-t: 1rem;
   --raam-fg-l: 1rem;
@@ -898,7 +856,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -912,7 +869,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-5 {
   --raam-fg-t: 1.25rem;
   --raam-fg-l: 1.25rem;
@@ -931,7 +887,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -945,7 +900,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-6 {
   --raam-fg-t: 1.5rem;
   --raam-fg-l: 1.5rem;
@@ -964,7 +918,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -978,7 +931,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-8 {
   --raam-fg-t: 2rem;
   --raam-fg-l: 2rem;
@@ -997,7 +949,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1011,7 +962,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-10 {
   --raam-fg-t: 2.5rem;
   --raam-fg-l: 2.5rem;
@@ -1030,7 +980,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1044,7 +993,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-12 {
   --raam-fg-t: 3rem;
   --raam-fg-l: 3rem;
@@ -1063,7 +1011,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1077,7 +1024,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-16 {
   --raam-fg-t: 4rem;
   --raam-fg-l: 4rem;
@@ -1096,7 +1042,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1110,7 +1055,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-20 {
   --raam-fg-t: 5rem;
   --raam-fg-l: 5rem;
@@ -1129,7 +1073,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1143,7 +1086,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-24 {
   --raam-fg-t: 6rem;
   --raam-fg-l: 6rem;
@@ -1162,7 +1104,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1176,7 +1117,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-32 {
   --raam-fg-t: 8rem;
   --raam-fg-l: 8rem;
@@ -1195,7 +1135,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1209,7 +1148,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-40 {
   --raam-fg-t: 10rem;
   --raam-fg-l: 10rem;
@@ -1228,7 +1166,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1242,7 +1179,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-48 {
   --raam-fg-t: 12rem;
   --raam-fg-l: 12rem;
@@ -1261,7 +1197,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1275,7 +1210,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-56 {
   --raam-fg-t: 14rem;
   --raam-fg-l: 14rem;
@@ -1294,7 +1228,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1308,7 +1241,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-64 {
   --raam-fg-t: 16rem;
   --raam-fg-l: 16rem;
@@ -1327,7 +1259,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1341,7 +1272,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-gap-px {
   --raam-fg-t: 1px;
   --raam-fg-l: 1px;
@@ -1360,7 +1290,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1374,7 +1303,6 @@ exports[`flex returns utilities and responsive variants 2`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .flex-row {
   flex-direction: row;
   --raam-fg-t: initial;
@@ -1575,7 +1503,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1589,7 +1516,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-2 {
   --raam-fg-t: 0.5rem;
   --raam-fg-l: 0.5rem;
@@ -1608,7 +1534,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1622,7 +1547,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-3 {
   --raam-fg-t: 0.75rem;
   --raam-fg-l: 0.75rem;
@@ -1641,7 +1565,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1655,7 +1578,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-4 {
   --raam-fg-t: 1rem;
   --raam-fg-l: 1rem;
@@ -1674,7 +1596,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1688,7 +1609,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-5 {
   --raam-fg-t: 1.25rem;
   --raam-fg-l: 1.25rem;
@@ -1707,7 +1627,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1721,7 +1640,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-6 {
   --raam-fg-t: 1.5rem;
   --raam-fg-l: 1.5rem;
@@ -1740,7 +1658,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1754,7 +1671,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-8 {
   --raam-fg-t: 2rem;
   --raam-fg-l: 2rem;
@@ -1773,7 +1689,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1787,7 +1702,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-10 {
   --raam-fg-t: 2.5rem;
   --raam-fg-l: 2.5rem;
@@ -1806,7 +1720,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1820,7 +1733,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-12 {
   --raam-fg-t: 3rem;
   --raam-fg-l: 3rem;
@@ -1839,7 +1751,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1853,7 +1764,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-16 {
   --raam-fg-t: 4rem;
   --raam-fg-l: 4rem;
@@ -1872,7 +1782,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1886,7 +1795,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-20 {
   --raam-fg-t: 5rem;
   --raam-fg-l: 5rem;
@@ -1905,7 +1813,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1919,7 +1826,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-24 {
   --raam-fg-t: 6rem;
   --raam-fg-l: 6rem;
@@ -1938,7 +1844,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1952,7 +1857,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-32 {
   --raam-fg-t: 8rem;
   --raam-fg-l: 8rem;
@@ -1971,7 +1875,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -1985,7 +1888,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-40 {
   --raam-fg-t: 10rem;
   --raam-fg-l: 10rem;
@@ -2004,7 +1906,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -2018,7 +1919,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-48 {
   --raam-fg-t: 12rem;
   --raam-fg-l: 12rem;
@@ -2037,7 +1937,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -2051,7 +1950,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-56 {
   --raam-fg-t: 14rem;
   --raam-fg-l: 14rem;
@@ -2070,7 +1968,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -2084,7 +1981,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-64 {
   --raam-fg-t: 16rem;
   --raam-fg-l: 16rem;
@@ -2103,7 +1999,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -2117,7 +2012,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-gap-px {
   --raam-fg-t: 1px;
   --raam-fg-l: 1px;
@@ -2136,7 +2030,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
-  flex: 0 0 auto;
 } .tw-flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
   margin: 0;
@@ -2150,7 +2043,6 @@ exports[`flex returns with prefix 1`] = `
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
-  flex: 0 0 auto;
 } .tw-flex-row {
   flex-direction: row;
   --raam-fg-t: initial;
