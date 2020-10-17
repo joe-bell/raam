@@ -1,20 +1,38 @@
 import postcss from "postcss";
 import tailwindcss from "tailwindcss";
-import config from "./tailwind.config";
 
-const generatePluginCss = (testConfig = {}, pluginOptions = {}) => {
-  const postcssPlugins = [tailwindcss({ ...config, ...testConfig })];
+const generatePluginCss = (testConfig = {}) => {
+  const postcssPlugins = [
+    tailwindcss({
+      corePlugins: false,
+      theme: {},
+      plugins: [require("../dist")],
+      ...testConfig,
+    }),
+  ];
 
   return postcss(postcssPlugins)
     .process("@tailwind base; @tailwind utilities;", { from: undefined })
-    .then((result) => result);
+    .then((result) => result.css);
 };
 
 describe("flex", () => {
+  const flexConfig = {
+    theme: { raam: { flex: true } },
+  };
+
   test("returns utilities and responsive variants", () => {
-    const testConfig = {};
-    generatePluginCss(testConfig).then((result) => {
-      console.log(result.css);
+    generatePluginCss({}).then((result) => {
+      expect(result).toMatchSnapshot();
+    });
+
+    generatePluginCss(flexConfig).then((result) => {
+      expect(result).toMatchSnapshot();
+    });
+  });
+
+  test("returns nothing when disabled", () => {
+    generatePluginCss({ theme: { raam: { flex: false } } }).then((result) => {
       expect(result).toMatchSnapshot();
     });
   });
@@ -22,8 +40,22 @@ describe("flex", () => {
   test("returns with prefix", () => {
     const testConfig = { prefix: "tw-" };
     generatePluginCss(testConfig).then((result) => {
-      console.log(result.css);
       expect(result).toMatchSnapshot();
     });
+  });
+
+  test("should warn users to disable corePlugins", () => {
+    const consoleSpy = jest
+      .spyOn(console, "error")
+      .mockImplementation(() => {});
+
+    generatePluginCss({
+      corePlugins: true,
+      ...flexConfig,
+    });
+
+    generatePluginCss({ corePlugins: true });
+
+    expect(consoleSpy).toHaveBeenCalledTimes(2);
   });
 });

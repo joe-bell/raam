@@ -1,84 +1,108 @@
 // tailwind.config.js
 import plugin from "tailwindcss/plugin";
-import { stylePropsToCSS, useFlex } from "raam";
+import { RaamStyleProps, stylePropsToCSS, useFlex } from "raam";
 
-const raam = plugin(function ({
-  addUtilities,
-  addVariant,
-  addBase,
-  addComponents,
-  e,
-  prefix,
-  config,
-  variants,
-  theme,
-  container,
-  postcss,
-}) {
-  const spacing = theme("spacing", {});
-  const flex = useFlex();
+type RaamConfigKeys = "flex";
 
-  const hasClassAttr = (className: string) => {
-    const prefixedClass = prefix(className).substring(1);
-
-    return [
-      `[class='${prefixedClass}']`,
-      `[class$=':${prefixedClass}']`,
-      `[class*='${prefixedClass} ']`,
-      `[class*=':${prefixedClass} ']`,
-    ].join(", ");
-  };
-
-  addBase({
-    [hasClassAttr(".flex")]: { margin: flex.parent().margin },
-  });
-
-  addUtilities(
-    Object.keys(spacing).map(
-      (sp) =>
-        !["0", 0].includes(spacing[sp]) && {
-          [`.flex-gap-${sp}`]: {
-            ...stylePropsToCSS({ flexGap: spacing[sp] }),
-            "& > *:first-child": flex.child({ index: 0 }),
-            "& > *:not(:first-child)": flex.child({ index: 1 }),
-          },
-        }
-    ),
-    variants("flexGap")
+const createUtilities = (
+  property: keyof RaamStyleProps,
+  values: {
+    [className: string]: RaamStyleProps[keyof RaamStyleProps];
+  }
+) =>
+  Object.keys(values).reduce(
+    (acc, cv) => ({
+      ...acc,
+      [cv]: stylePropsToCSS({ [property]: values[cv] }),
+    }),
+    {}
   );
 
-  // Flex settings override the gap
-  addUtilities(
-    {
-      ".flex-row": stylePropsToCSS({
-        flexDirection: "row",
-      }),
-      ".flex-row-reverse": stylePropsToCSS({
-        flexDirection: "row-reverse",
-      }),
-      ".flex-col": stylePropsToCSS({
-        flexDirection: "column",
-      }),
-      ".flex-col-reverse": stylePropsToCSS({
-        flexDirection: "column-reverse",
-      }),
-    },
-    variants("flexDirection")
-  );
-  addUtilities(
-    {
-      ".flex-wrap": stylePropsToCSS({
-        flexWrap: "wrap",
-      }),
-      ".flex-wrap-reverse": stylePropsToCSS({
-        flexWrap: "wrap-reverse",
-      }),
-      ".flex-no-wrap": stylePropsToCSS({
-        flexWrap: "nowrap",
-      }),
-    },
-    variants("flexWrap")
-  );
-});
+const enabledCorePlugins = (config: (string) => string[], plugins: string[]) =>
+  plugins.length === 0
+    ? false
+    : plugins
+        .map((plugin) => config("corePlugins").includes(plugin))
+        .includes(true);
 
-export default raam;
+const enabledRaamPlugins = (
+  theme: (string) => { [key in RaamConfigKeys]: boolean } | undefined,
+  key: RaamConfigKeys
+) => {
+  const config = theme("raam");
+
+  if (typeof config === "undefined") {
+    return true;
+  }
+
+  return config[key] && config[key] !== false;
+};
+
+/**
+ * Targets any element that contains a specific class
+ */
+const hasClassAttribute = (prefix: (string) => string, className: string) => {
+  const prefixedClass = prefix(className).substring(1);
+
+  return [
+    `[class='${prefixedClass}']`,
+    `[class$=':${prefixedClass}']`,
+    `[class*='${prefixedClass} ']`,
+    `[class*=':${prefixedClass} ']`,
+  ].join(", ");
+};
+
+/**
+ * `@raam/tailwind` Plugin
+ */
+export default plugin(
+  ({ addUtilities, addBase, prefix, config, variants, theme }) => {
+    if (enabledRaamPlugins(theme, "flex")) {
+      if (enabledCorePlugins(config, ["flexDirection", "flexWrap"])) {
+        console.error(
+          "Please disable the `corePlugins` for `flexDirection` and `flexWrap` for raam to work as expected."
+        );
+      }
+
+      const flex = useFlex();
+      const spacing = theme("spacing", {});
+
+      addBase({
+        [hasClassAttribute(prefix, ".flex")]: { margin: flex.parent().margin },
+      });
+
+      addUtilities(
+        Object.keys(spacing).map(
+          (sp) =>
+            !["0", 0].includes(spacing[sp]) && {
+              [`.flex-gap-${sp}`]: {
+                ...stylePropsToCSS({ flexGap: spacing[sp] }),
+                "& > *:first-child": flex.child({ index: 0 }),
+                "& > *:not(:first-child)": flex.child({ index: 1 }),
+              },
+            }
+        ),
+        variants("flexGap")
+      );
+
+      addUtilities(
+        createUtilities("flexDirection", {
+          ".flex-row": "row",
+          ".flex-row-reverse": "row-reverse",
+          ".flex-col": "column",
+          ".flex-col-reverse": "column-reverse",
+        }),
+        variants("flexDirection")
+      );
+
+      addUtilities(
+        createUtilities("flexWrap", {
+          ".flex-wrap": "wrap",
+          ".flex-wrap-reverse": "wrap-reverse",
+          ".flex-no-wrap": "nowrap",
+        }),
+        variants("flexWrap")
+      );
+    }
+  }
+);
