@@ -1,0 +1,21 @@
+:root {
+  --color-background: #ffffff;
+  --color-primary: ##0072ce;
+  --color-line: #000000;
+  --color-copy: #000000;
+}
+
+@tailwind base;
+@tailwind components;
+
+.scroll-margin-heading {
+  scroll-margin-top: 11rem;
+}
+
+@screen sm {
+  .scroll-margin-heading {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@tailwind utilities;
