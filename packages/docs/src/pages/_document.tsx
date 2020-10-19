@@ -16,7 +16,10 @@ class RaamDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html
+        lang="en"
+        className="text-copy bg-background font-inter font-normal"
+      >
         <Head />
         <body>
           <InitializeColorMode />

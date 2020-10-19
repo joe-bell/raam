@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import * as React from "react";
-import {
-  jsx,
-  useColorMode,
-  useThemeUI,
-  IconButton,
-  IconButtonProps,
-} from "theme-ui";
+import { jsx, useColorMode, useThemeUI, IconButtonProps } from "theme-ui";
+import { cx } from "../styles";
 
-const ToggleColorMode: React.FC<IconButtonProps> = ({ sx, ...props }) => {
+const ToggleColorMode: React.FC<IconButtonProps> = ({
+  className,
+  sx,
+  ...props
+}) => {
   const [mode, setMode] = useColorMode();
   const { theme } = useThemeUI();
   const circleStroke = theme.borderWidths["thick"];
@@ -16,14 +15,27 @@ const ToggleColorMode: React.FC<IconButtonProps> = ({ sx, ...props }) => {
   const circlePosition = circleSize / 2;
 
   return (
-    <IconButton
+    <button
       aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
       // @ts-ignore
       onClick={(e) => {
         e.preventDefault();
         setMode(mode === "dark" ? "default" : "dark");
       }}
-      sx={{ cursor: "pointer", ...sx }}
+      className={cx(
+        "inline-flex",
+        "items-center",
+        "justify-center",
+        "p-1",
+        "w-8",
+        "h-8",
+        "text-copy",
+        "bg-transparent",
+        "border-0",
+        "rounded",
+        "cursor-pointer",
+        className
+      )}
       {...props}
     >
       <svg
@@ -47,7 +59,7 @@ const ToggleColorMode: React.FC<IconButtonProps> = ({ sx, ...props }) => {
           transform={`rotate(90 ${circlePosition} ${circlePosition})`}
         />
       </svg>
-    </IconButton>
+    </button>
   );
 };
 

@@ -1,27 +1,17 @@
-/** @jsx jsx */
-import { jsx, NavLink } from "theme-ui";
+import * as React from "react";
+import { cx } from "../styles";
 
 const heading = (Tag) => (props) => {
   if (!props.id) return <Tag {...props} />;
+
   return (
-    <Tag
-      {...props}
-      sx={{
-        // Rough approximation of header size to avoid overlap
-        scrollMarginTop: ["11rem", "6rem"],
-      }}
-    >
-      <NavLink
-        sx={{
-          textDecoration: "none",
-          "&:hover, &:focus": {
-            textDecoration: "underline",
-          },
-        }}
+    <Tag {...props} className={cx(`c.${Tag}`, "c.headingScrollMargin")}>
+      <a
+        className={cx("c.navLink", "focus: underline", "hover:underline")}
         href={`#${props.id}`}
       >
         {props.children}
-      </NavLink>
+      </a>
     </Tag>
   );
 };
