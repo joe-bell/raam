@@ -78,7 +78,10 @@ type ChildStyleProps = "flex" | "flexGrow" | "flexBasis" | "flexShrink";
 interface ChildProps
   extends WithIndex,
     ParentProps,
-    Pick<RaamStyleProps, ChildStyleProps> {}
+    Pick<RaamStyleProps, ChildStyleProps> {
+  withoutMarginStyles?: boolean;
+  withoutFlexStyles?: boolean;
+}
 
 const child = ({
   flex = "0 0 auto",
@@ -88,6 +91,8 @@ const child = ({
   index = 1,
   withoutBaseStyles,
   withoutElementStyles,
+  withoutMarginStyles,
+  withoutFlexStyles,
   theme,
 }: ChildProps): RaamCSS => ({
   ...(!withoutBaseStyles && reset),
@@ -103,15 +108,20 @@ const child = ({
       content: '"\\200B"',
     },
   }),
-  marginTop: `var(${CSS_VARS.FLEX_GAP}, ${
-    index > 0 ? `var(${CSS_VARS.FLEX_GAP_TOP}, initial)` : "initial"
-  })`,
-  marginRight: `var(${CSS_VARS.FLEX_GAP}, initial)`,
-  marginBottom: `var(${CSS_VARS.FLEX_GAP}, initial)`,
-  marginLeft: `var(${CSS_VARS.FLEX_GAP}, ${
-    index > 0 ? `var(${CSS_VARS.FLEX_GAP_LEFT}, initial)` : "initial"
-  })`,
-  ...stylePropsToCSS({ flex, flexBasis, flexGrow, flexShrink, theme }),
+  ...(!withoutMarginStyles && {
+    // inlineStyle
+    // pseudo elements
+    marginTop: `var(${CSS_VARS.FLEX_GAP}, ${
+      index > 0 ? `var(${CSS_VARS.FLEX_GAP_TOP}, initial)` : "initial"
+    })`,
+    marginRight: `var(${CSS_VARS.FLEX_GAP}, initial)`,
+    marginBottom: `var(${CSS_VARS.FLEX_GAP}, initial)`,
+    marginLeft: `var(${CSS_VARS.FLEX_GAP}, ${
+      index > 0 ? `var(${CSS_VARS.FLEX_GAP_LEFT}, initial)` : "initial"
+    })`,
+  }),
+  ...(!withoutFlexStyles &&
+    stylePropsToCSS({ flex, flexBasis, flexGrow, flexShrink, theme })),
 });
 
 // flexbox
@@ -123,6 +133,7 @@ export interface FlexboxProps extends ParentProps, WithRaamTheme {
 
 export interface FlexboxChildProps
   extends Pick<ChildProps, "index" | ChildStyleProps> {}
+export interface FlexboxChildOwnProps extends Omit<ChildProps, "theme"> {}
 
 export type FlexboxStylePropsKeys = ChildStyleProps | ParentStyleProps;
 export interface FlexboxStyleProps
@@ -141,7 +152,7 @@ export const flexbox = (props?: FlexboxProps) => {
 
   return {
     parent: () => parent({ ...propsWithVariant }),
-    child: (childProps?: FlexboxChildProps) =>
+    child: (childProps?: FlexboxChildOwnProps) =>
       child(
         childProps ? { ...childProps, ...propsWithVariant } : propsWithVariant
       ),

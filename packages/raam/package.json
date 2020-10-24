@@ -20,7 +20,7 @@
     "url": "git+https://github.com/joe-bell/raam.git"
   },
   "author": "Joe Bell <joe@joebell.co.uk>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joe-bell/raam/issues"
   },
