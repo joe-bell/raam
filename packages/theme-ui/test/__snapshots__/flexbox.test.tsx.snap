@@ -6,35 +6,12 @@ exports[`Flexbox Variants Wrap renders 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -63,6 +40,21 @@ exports[`Flexbox Variants Wrap renders 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -72,12 +64,12 @@ exports[`Flexbox Variants Wrap renders 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -90,35 +82,12 @@ exports[`Flexbox Variants Wrap renders with defined theme gap 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -147,6 +116,21 @@ exports[`Flexbox Variants Wrap renders with defined theme gap 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -156,12 +140,12 @@ exports[`Flexbox Variants Wrap renders with defined theme gap 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -174,35 +158,12 @@ exports[`Flexbox Variants hStack renders 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -231,6 +192,21 @@ exports[`Flexbox Variants hStack renders 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -240,12 +216,12 @@ exports[`Flexbox Variants hStack renders 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -258,35 +234,12 @@ exports[`Flexbox Variants hStack renders with defined theme gap 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -315,6 +268,21 @@ exports[`Flexbox Variants hStack renders with defined theme gap 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -324,12 +292,12 @@ exports[`Flexbox Variants hStack renders with defined theme gap 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -342,35 +310,12 @@ exports[`Flexbox Variants vStack renders 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -399,6 +344,21 @@ exports[`Flexbox Variants vStack renders 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -408,12 +368,12 @@ exports[`Flexbox Variants vStack renders 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -426,35 +386,12 @@ exports[`Flexbox Variants vStack renders with defined theme gap 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -483,6 +420,21 @@ exports[`Flexbox Variants vStack renders with defined theme gap 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -492,12 +444,12 @@ exports[`Flexbox Variants vStack renders with defined theme gap 1`] = `
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -529,40 +481,32 @@ exports[`Flexbox renders 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -578,14 +522,14 @@ exports[`Flexbox renders 1`] = `
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 2
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 3
@@ -619,15 +563,26 @@ exports[`Flexbox renders an array of children 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -638,40 +593,22 @@ exports[`Flexbox renders an array of children 1`] = `
   content: "\\200B";
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 <div
   className="emotion-3"
 >
+   
   <div
     className="emotion-0"
   >
     Item 1
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 2
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     Item 3
   </div>
@@ -685,35 +622,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -743,6 +657,21 @@ Array [
   as: ul;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <ul
     className="emotion-3"
   >
@@ -756,7 +685,7 @@ Array [
       </a>
     </li>
     <li
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -765,7 +694,7 @@ Array [
       </a>
     </li>
     <li
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -779,35 +708,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -837,6 +743,21 @@ Array [
   as: ol;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <ol
     className="emotion-3"
   >
@@ -850,7 +771,7 @@ Array [
       </a>
     </li>
     <li
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -859,7 +780,7 @@ Array [
       </a>
     </li>
     <li
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -878,35 +799,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -936,6 +834,21 @@ Array [
   as: span;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <span
     className="emotion-3"
   >
@@ -949,7 +862,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -958,7 +871,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -972,35 +885,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1030,6 +920,21 @@ Array [
   as: p;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <p
     className="emotion-3"
   >
@@ -1043,7 +948,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1052,7 +957,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1066,35 +971,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1124,6 +1006,21 @@ Array [
   as: h1;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h1
     className="emotion-3"
   >
@@ -1137,7 +1034,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1146,7 +1043,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1160,35 +1057,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1218,6 +1092,21 @@ Array [
   as: h2;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h2
     className="emotion-3"
   >
@@ -1231,7 +1120,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1240,7 +1129,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1254,35 +1143,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1312,6 +1178,21 @@ Array [
   as: h3;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h3
     className="emotion-3"
   >
@@ -1325,7 +1206,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1334,7 +1215,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1348,35 +1229,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1406,6 +1264,21 @@ Array [
   as: h4;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h4
     className="emotion-3"
   >
@@ -1419,7 +1292,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1428,7 +1301,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1442,35 +1315,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1500,6 +1350,21 @@ Array [
   as: h5;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h5
     className="emotion-3"
   >
@@ -1513,7 +1378,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1522,7 +1387,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1536,35 +1401,12 @@ Array [
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1594,6 +1436,21 @@ Array [
   as: h6;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <h6
     className="emotion-3"
   >
@@ -1607,7 +1464,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#2"
@@ -1616,7 +1473,7 @@ Array [
       </a>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-0"
     >
       <a
         href="#3"
@@ -1678,15 +1535,26 @@ exports[`Flexbox style props renders with customised flexbox props 1`] = `
   flex-basis: 100px;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1707,35 +1575,6 @@ exports[`Flexbox style props renders with customised flexbox props 1`] = `
   content: "\\200B";
 }
 
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-basis: 100px;
-  -ms-flex-preferred-size: 100px;
-  flex-basis: 100px;
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-  -ms-flex-positive: 2;
-  flex-grow: 2;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-}
-
-.emotion-1:before {
-  position: absolute;
-  content: "\\200B";
-}
-
 <div
   className="emotion-3"
 >
@@ -1747,14 +1586,14 @@ exports[`Flexbox style props renders with customised flexbox props 1`] = `
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 2
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 3
@@ -1788,40 +1627,32 @@ exports[`Flexbox style props renders with defined gap 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 .emotion-0 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1837,14 +1668,14 @@ exports[`Flexbox style props renders with defined gap 1`] = `
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 2
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 3
@@ -1859,35 +1690,12 @@ exports[`Flexbox style props renders with defined theme gap 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -1916,6 +1724,21 @@ exports[`Flexbox style props renders with defined theme gap 1`] = `
   flex-wrap: nowrap;
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -1927,14 +1750,14 @@ exports[`Flexbox style props renders with defined theme gap 1`] = `
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 2
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 3
@@ -1949,35 +1772,12 @@ exports[`Flexbox style props renders with responsive props 1`] = `
   margin: 0;
   min-width: 0;
   list-style-type: none;
-  margin-top: var(--raam-fg,initial);
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,initial);
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 .emotion-0:before {
-  position: absolute;
-  content: "\\200B";
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  list-style-type: none;
-  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
-  margin-right: var(--raam-fg,initial);
-  margin-bottom: var(--raam-fg,initial);
-  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-1:before {
   position: absolute;
   content: "\\200B";
 }
@@ -2042,6 +1842,21 @@ exports[`Flexbox style props renders with responsive props 1`] = `
   }
 }
 
+.emotion-3 > *:not(style) {
+  margin-top: var(--raam-fg,var(--raam-fg-t,initial));
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,var(--raam-fg-l,initial));
+}
+
+.emotion-3 > style:first-child + *:not(style),
+.emotion-3 > *:first-child:not(style) {
+  margin-top: var(--raam-fg,initial);
+  margin-right: var(--raam-fg,initial);
+  margin-bottom: var(--raam-fg,initial);
+  margin-left: var(--raam-fg,initial);
+}
+
 <div
   className="emotion-3"
 >
@@ -2053,14 +1868,14 @@ exports[`Flexbox style props renders with responsive props 1`] = `
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 2
     </p>
   </div>
   <div
-    className="emotion-1"
+    className="emotion-0"
   >
     <p>
       Item 3
