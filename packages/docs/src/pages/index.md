@@ -148,15 +148,16 @@ A [`flexbox`](#flexbox)-based layout primitive that aims to address the `gap`.
   gap={[3, 4, 5]}
 >
   {Array.from({ length: 6 }).map((item, index) => (
-    <Box
-      key={index}
-      sx={{
-        width: "2rem",
-        height: `${index + 1}rem`,
-        backgroundColor: "primary",
-        filter: index > 0 && `brightness(${100 - index * 10}%)`,
-      }}
-    />
+    <FlexboxItem key={index}>
+      <Box
+        sx={{
+          width: "2rem",
+          height: `${index + 1}rem`,
+          backgroundColor: "primary",
+          filter: index > 0 && `brightness(${100 - index * 10}%)`,
+        }}
+      />
+    </FlexboxItem>
   ))}
 </Flexbox>
 ```

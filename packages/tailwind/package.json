@@ -37,8 +37,5 @@
   "dependencies": {
     "@raam/core": "^0.2.3",
     "raam": "^0.2.3"
-  },
-  "devDependencies": {
-    "tailwindcss": "1.9.2"
   }
 }

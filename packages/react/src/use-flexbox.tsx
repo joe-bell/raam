@@ -1,6 +1,11 @@
 import * as React from "react";
 import { DetermineChildProp, determineChild, RaamCSS } from "@raam/core";
-import { flexbox, FlexboxProps, FlexboxChildProps } from "raam";
+import {
+  flexbox,
+  FlexboxProps,
+  FlexboxChildProps,
+  FlexboxChildOwnProps,
+} from "raam";
 
 type FlexboxContextElement<T = void> = {
   as: DetermineChildProp;
@@ -9,7 +14,7 @@ type FlexboxContextElement<T = void> = {
 
 export interface FlexboxContextProps extends FlexboxProps {
   parent: FlexboxContextElement;
-  child: FlexboxContextElement<FlexboxChildProps>;
+  child: FlexboxContextElement<FlexboxChildOwnProps>;
 }
 
 export const FlexboxContext = React.createContext<FlexboxContextProps>(null);

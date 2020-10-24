@@ -28,7 +28,7 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "1.1 kB"
+      "maxSize": "1.32 kB"
     }
   ],
   "peerDependencies": {

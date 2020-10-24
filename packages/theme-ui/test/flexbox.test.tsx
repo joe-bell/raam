@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 import { matchers } from "jest-emotion";
-import { Flexbox } from "../src";
+import { Flexbox, FlexboxItem } from "../src";
 import { RaamTheme } from "@raam/core";
 import { ThemeProvider as ThemeUIProvider } from "theme-ui";
 
@@ -21,9 +21,15 @@ describe("Flexbox", () => {
   test("renders", () => {
     const json = renderJSON(
       <Flexbox>
-        <p>Item 1</p>
-        <p>Item 2</p>
-        <p>Item 3</p>
+        <FlexboxItem>
+          <p>Item 1</p>
+        </FlexboxItem>
+        <FlexboxItem>
+          <p>Item 2</p>
+        </FlexboxItem>
+        <FlexboxItem>
+          <p>Item 3</p>
+        </FlexboxItem>
       </Flexbox>
     );
     expect(json).toMatchSnapshot();
@@ -31,7 +37,14 @@ describe("Flexbox", () => {
 
   test("renders an array of children", () => {
     const json = renderJSON(
-      <Flexbox>{["Item 1", "Item 2", "Item 3"]}</Flexbox>
+      <Flexbox>
+        {" "}
+        {[
+          <FlexboxItem>Item 1</FlexboxItem>,
+          <FlexboxItem>Item 2</FlexboxItem>,
+          <FlexboxItem>Item 3</FlexboxItem>,
+        ]}
+      </Flexbox>
     );
     expect(json).toMatchSnapshot();
   });
@@ -42,9 +55,15 @@ describe("Flexbox", () => {
       <>
         {elements.map((element: typeof elements[number]) => (
           <Flexbox key={element} as={element}>
-            <a href="#1">Item 1</a>
-            <a href="#2">Item 2</a>
-            <a href="#3">Item 3</a>
+            <FlexboxItem>
+              <a href="#1">Item 1</a>
+            </FlexboxItem>
+            <FlexboxItem>
+              <a href="#2">Item 2</a>
+            </FlexboxItem>
+            <FlexboxItem>
+              <a href="#3">Item 3</a>
+            </FlexboxItem>
           </Flexbox>
         ))}
       </>
@@ -59,9 +78,15 @@ describe("Flexbox", () => {
       <>
         {elements.map((element: typeof elements[number]) => (
           <Flexbox key={element} as={element}>
-            <a href="#1">Item 1</a>
-            <a href="#2">Item 2</a>
-            <a href="#3">Item 3</a>
+            <FlexboxItem>
+              <a href="#1">Item 1</a>
+            </FlexboxItem>
+            <FlexboxItem>
+              <a href="#2">Item 2</a>
+            </FlexboxItem>
+            <FlexboxItem>
+              <a href="#3">Item 3</a>
+            </FlexboxItem>
           </Flexbox>
         ))}
       </>
@@ -86,9 +111,15 @@ describe("Flexbox", () => {
           flexDirection="column"
           flexWrap="wrap"
         >
-          <p>Item 1</p>
-          <p>Item 2</p>
-          <p>Item 3</p>
+          <FlexboxItem>
+            <p>Item 1</p>
+          </FlexboxItem>
+          <FlexboxItem>
+            <p>Item 2</p>
+          </FlexboxItem>
+          <FlexboxItem>
+            <p>Item 3</p>
+          </FlexboxItem>
         </Flexbox>
       );
 
@@ -98,9 +129,15 @@ describe("Flexbox", () => {
     test("renders with defined gap", () => {
       const flex = renderJSON(
         <Flexbox gap="1rem">
-          <p>Item 1</p>
-          <p>Item 2</p>
-          <p>Item 3</p>
+          <FlexboxItem>
+            <p>Item 1</p>
+          </FlexboxItem>
+          <FlexboxItem>
+            <p>Item 2</p>
+          </FlexboxItem>
+          <FlexboxItem>
+            <p>Item 3</p>
+          </FlexboxItem>
         </Flexbox>
       );
 
@@ -111,9 +148,15 @@ describe("Flexbox", () => {
       const flex = renderJSON(
         themeUIProvider(
           <Flexbox gap={5}>
-            <p>Item 1</p>
-            <p>Item 2</p>
-            <p>Item 3</p>
+            <FlexboxItem>
+              <p>Item 1</p>
+            </FlexboxItem>
+            <FlexboxItem>
+              <p>Item 2</p>
+            </FlexboxItem>
+            <FlexboxItem>
+              <p>Item 3</p>
+            </FlexboxItem>
           </Flexbox>
         )
       );
@@ -131,9 +174,15 @@ describe("Flexbox", () => {
             alignItems={[null, "revert", "center"]}
             flexWrap={["nowrap", "wrap-reverse"]}
           >
-            <p>Item 1</p>
-            <p>Item 2</p>
-            <p>Item 3</p>
+            <FlexboxItem>
+              <p>Item 1</p>
+            </FlexboxItem>
+            <FlexboxItem>
+              <p>Item 2</p>
+            </FlexboxItem>
+            <FlexboxItem>
+              <p>Item 3</p>
+            </FlexboxItem>
           </Flexbox>
         )
       );
@@ -147,7 +196,11 @@ describe("Flexbox", () => {
       test("renders", () => {
         const json = renderJSON(
           <Flexbox variant="hStack" gap={4}>
-            {["Item 1", "Item 2", "Item 3"]}
+            {[
+              <FlexboxItem>Item 1</FlexboxItem>,
+              <FlexboxItem>Item 2</FlexboxItem>,
+              <FlexboxItem>Item 3</FlexboxItem>,
+            ]}
           </Flexbox>
         );
         expect(json).toMatchSnapshot();
@@ -157,7 +210,11 @@ describe("Flexbox", () => {
         const json = renderJSON(
           themeUIProvider(
             <Flexbox variant="hStack" gap={4}>
-              {["Item 1", "Item 2", "Item 3"]}
+              {[
+                <FlexboxItem>Item 1</FlexboxItem>,
+                <FlexboxItem>Item 2</FlexboxItem>,
+                <FlexboxItem>Item 3</FlexboxItem>,
+              ]}
             </Flexbox>
           )
         );
@@ -169,7 +226,11 @@ describe("Flexbox", () => {
       test("renders", () => {
         const json = renderJSON(
           <Flexbox variant="vStack" gap={4}>
-            {["Item 1", "Item 2", "Item 3"]}
+            {[
+              <FlexboxItem>Item 1</FlexboxItem>,
+              <FlexboxItem>Item 2</FlexboxItem>,
+              <FlexboxItem>Item 3</FlexboxItem>,
+            ]}
           </Flexbox>
         );
         expect(json).toMatchSnapshot();
@@ -179,7 +240,11 @@ describe("Flexbox", () => {
         const json = renderJSON(
           themeUIProvider(
             <Flexbox variant="vStack" gap={4}>
-              {["Item 1", "Item 2", "Item 3"]}
+              {[
+                <FlexboxItem>Item 1</FlexboxItem>,
+                <FlexboxItem>Item 2</FlexboxItem>,
+                <FlexboxItem>Item 3</FlexboxItem>,
+              ]}
             </Flexbox>
           )
         );
@@ -191,7 +256,13 @@ describe("Flexbox", () => {
     describe("Wrap", () => {
       test("renders", () => {
         const json = renderJSON(
-          <Flexbox variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flexbox>
+          <Flexbox variant="vStack">
+            {[
+              <FlexboxItem>Item 1</FlexboxItem>,
+              <FlexboxItem>Item 2</FlexboxItem>,
+              <FlexboxItem>Item 3</FlexboxItem>,
+            ]}
+          </Flexbox>
         );
         expect(json).toMatchSnapshot();
       });
@@ -199,7 +270,13 @@ describe("Flexbox", () => {
       test("renders with defined theme gap", () => {
         const json = renderJSON(
           themeUIProvider(
-            <Flexbox variant="vStack">{["Item 1", "Item 2", "Item 3"]}</Flexbox>
+            <Flexbox variant="vStack">
+              {[
+                <FlexboxItem>Item 1</FlexboxItem>,
+                <FlexboxItem>Item 2</FlexboxItem>,
+                <FlexboxItem>Item 3</FlexboxItem>,
+              ]}
+            </Flexbox>
           )
         );
 

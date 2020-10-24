@@ -19,7 +19,16 @@ interface FlexboxParentProps
 
 const FlexboxParent = React.forwardRef<HTMLDivElement, FlexboxParentProps>(
   ({ children, sx, ...props }, ref) => {
-    const { parent } = useFlexbox();
+    const { child, parent } = useFlexbox();
+
+    const childConfig = {
+      withoutBaseStyles: true,
+      withoutElementStyles: true,
+      withoutFlexStyles: true,
+    };
+
+    const firstChild = child.style({ index: 0, ...childConfig });
+    const nthChild = child.style({ index: 1, ...childConfig });
 
     return (
       <Box
@@ -27,6 +36,14 @@ const FlexboxParent = React.forwardRef<HTMLDivElement, FlexboxParentProps>(
         as={parent.as}
         sx={{
           ...parent.style(),
+          /**
+           * There's a reason why this looks so awful, but let's not get
+           * `emotion`al about it
+           * https://github.com/emotion-js/emotion/issues/898
+           */
+          "& > *:not(style)": nthChild,
+          /* emotion-disable-server-rendering-unsafe-selector-warning-please-do-not-use-this-the-warning-exists-for-a-reason */
+          "& > style:first-child + *:not(style), & > *:first-child:not(style)": firstChild,
           ...(sx && sx),
         }}
         {...props}
@@ -37,9 +54,11 @@ const FlexboxParent = React.forwardRef<HTMLDivElement, FlexboxParentProps>(
   }
 );
 
-interface FlexboxChildProps extends DefaultFlexboxChildProps, FlexboxElement {}
+export interface FlexboxItemProps
+  extends DefaultFlexboxChildProps,
+    FlexboxElement {}
 
-const FlexboxChild = React.forwardRef<HTMLDivElement, FlexboxChildProps>(
+export const FlexboxItem = React.forwardRef<HTMLDivElement, FlexboxItemProps>(
   (
     { children, index, flex, flexBasis, flexGrow, flexShrink, sx, ...props },
     ref
@@ -51,7 +70,14 @@ const FlexboxChild = React.forwardRef<HTMLDivElement, FlexboxChildProps>(
         ref={ref}
         as={child.as}
         sx={{
-          ...child.style({ index, flex, flexBasis, flexGrow, flexShrink }),
+          ...child.style({
+            index,
+            flex,
+            flexBasis,
+            flexGrow,
+            flexShrink,
+            withoutMarginStyles: true,
+          }),
           ...(sx && sx),
         }}
         {...props}
@@ -69,13 +95,7 @@ export const Flexbox = React.forwardRef<HTMLDivElement, FlexboxProps>(
     const { theme } = useThemeUI();
     return (
       <FlexProvider withoutBaseStyles={true} theme={theme} {...props}>
-        <FlexboxParent ref={ref}>
-          {React.Children.toArray(children).map((child, index) => (
-            <FlexboxChild key={index} index={index}>
-              {child}
-            </FlexboxChild>
-          ))}
-        </FlexboxParent>
+        <FlexboxParent ref={ref}>{children}</FlexboxParent>
       </FlexProvider>
     );
   }

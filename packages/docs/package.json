@@ -23,6 +23,6 @@
     "theme-ui": "0.3.1"
   },
   "devDependencies": {
-    "@raam/tailwind": "^1.0.0-alpha.46"
+    "@raam/tailwind": "^0.2.3"
   }
 }
