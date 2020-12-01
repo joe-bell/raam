@@ -11,7 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@mdx-js/loader": "1.6.18",
+    "@mdx-js/loader": "1.6.21",
     "@next/mdx": "9.5.3",
     "next": "9.5.5",
     "next-google-fonts": "1.2.1",
