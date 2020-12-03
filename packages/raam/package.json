@@ -41,10 +41,10 @@
     "@styled-system/space": "5.1.2"
   },
   "devDependencies": {
-    "@emotion/core": "10.1.1",
-    "@emotion/styled": "10.0.27",
+    "@emotion/core": "11.0.0",
+    "@emotion/styled": "11.0.0",
     "@theme-ui/css": "0.3.1",
-    "emotion-theming": "10.0.27",
+    "emotion-theming": "11.0.0",
     "react": "16.14.0"
   },
   "gitHead": "a6e19e2884b0d784a69a7c8af29cae7008a5cb16"
