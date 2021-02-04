@@ -1,5 +1,7 @@
 import manifest from "../public/manifest.json";
 
+const domain = "raam.joebell.co.uk";
+
 const social = {
   github: "joe-bell",
   twitter: "joebell_",
@@ -26,12 +28,12 @@ const config = {
       external: true,
     },
   ],
-  googleAnalyticsID: "UA-111105740-2",
   meta: {
     title: manifest.name,
     description: manifest.description,
     author: "Joe Bell",
-    url: "https://raam.joebell.co.uk",
+    domain,
+    url: `https://${domain}`,
     social,
   },
 };
