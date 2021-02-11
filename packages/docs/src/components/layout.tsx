@@ -70,7 +70,7 @@ const Layout: React.FC = ({ children }) => (
 
     <Box sx={{ ...border, borderTop: 0, paddingY: gap }}>
       <Container as="footer">
-        © 2020{" "}
+        © 2021{" "}
         <NavLink href={`https://twitter.com/${config.meta.social.twitter}`}>
           {config.meta.author}
         </NavLink>
