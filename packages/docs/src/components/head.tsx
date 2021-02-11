@@ -18,7 +18,7 @@ const Head: React.FC = () => {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <title>{config.meta.title}</title>
 
-        <PlausibleSnippet />
+        {process.env.NODE_ENV === "production" && <PlausibleSnippet />}
 
         <meta name="twitter:site" content={config.meta.social.twitter} />
         <meta name="twitter:creator" content={config.meta.social.twitter} />

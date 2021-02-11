@@ -9,4 +9,12 @@ const withMDX = require("@next/mdx")({
 
 module.exports = withMDX({
   pageExtensions: ["ts", "tsx", "md", "mdx"],
+  async rewrites() {
+    return [
+      {
+        source: "/assets/scripts/plausible.js",
+        destination: "https://plausible.io/js/plausible.js",
+      },
+    ];
+  },
 });
