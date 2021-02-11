@@ -9,6 +9,6 @@ export const PlausibleSnippet: React.FC = () => (
     async
     defer
     data-domain={config.meta.domain}
-    src="/assets/scripts/plausible.js"
+    src="https://plausible.io/js/plausible.js"
   />
 );
