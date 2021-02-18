@@ -1,3 +1,5 @@
+# Introduction
+
 > **⚠ <abbr title="Work in Progress">WIP</abbr>**
 >
 > This page documents changes proposed in the [RFC for V1][rfc], and therefore prone to bugs/sudden API changes. Please use with caution.

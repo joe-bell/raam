@@ -1,12 +1,2 @@
-const remarkSlug = require("remark-slug");
-
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkSlug],
-  },
-});
-
-module.exports = withMDX({
-  pageExtensions: ["ts", "tsx", "md", "mdx"],
-});
+const withNextra = require('nextra')('nextra-theme-docs', './theme.config.js')
+module.exports = withNextra()

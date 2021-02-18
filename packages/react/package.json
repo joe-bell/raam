@@ -32,13 +32,13 @@
     }
   ],
   "peerDependencies": {
-    "react": ">= 16.8.0"
+    "react": ">= 17.0.1"
   },
   "dependencies": {
     "@raam/core": "^0.2.3",
     "raam": "^0.2.3"
   },
   "devDependencies": {
-    "react": "16.13.1"
+    "react": "17.0.1"
   }
 }

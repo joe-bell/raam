@@ -32,7 +32,7 @@
     }
   ],
   "peerDependencies": {
-    "react": ">= 16.8.0",
+    "react": ">= 17.0.1",
     "theme-ui": "0.3.1"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@raam/core": "^0.2.3",
-    "react": "16.13.1",
+    "react": "17.0.1",
     "theme-ui": "0.3.1"
   }
 }
