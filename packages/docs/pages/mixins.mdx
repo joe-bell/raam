@@ -1,3 +1,5 @@
+import Callout from "nextra-theme-docs/callout";
+
 # Mixins
 
 JavaScript style functions to quickly roll-your-own resilient layout components (not just for React.js).
@@ -54,7 +56,13 @@ This returns functional styles for:
 
 Under-the-hood, raam replaces gap with a set of custom properties to control parent and child margins. These are toggled off (back to `initial`) depending on the requirements of specific flex properties; a technique heavily inspired by [David Khourshid's "prop-and-lock"][prop-and-lock] technique.
 
-> For example, when `flexWrap` is `nowrap` (i.e. 'stack'-based layouts) the negative offset margin on the flex parent is toggled **off**.
+<Callout>
+  <abbr title="Work in Progress">
+    <strong>WIP</strong>
+  </abbr>
+  For example, when `flexWrap` is `nowrap` (i.e. 'stack'-based layouts) the negative
+  offset margin on the flex parent is toggled **off**.
+</Callout>
 
 In `nowrap` based layouts, margins are used in a single direction excluding the first-child.
 

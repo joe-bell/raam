@@ -1,14 +1,21 @@
+import Callout from "nextra-theme-docs/callout";
+
 # Theme UI
 
 If rolling-your-own components hasn't got you [_hooked_](#mixins), you may be interested in a pre-built option.
 
-> **Migrating from an earlier version of raam?**
->
-> Prior to version 1, **raam** exported a set of individual Theme-UI components. These have now moved to into a single `<Flex />` component with variants:
->
-> - `<Stack {...options} />` => `<Flex variant="vStack" {...options} />`
-> - `<Inline {...options} />` => `<Flex variant="hStack" sx={{ overflowX: "auto" }} {...options} />`
-> - `<Wrap {...options} />` => `<Flex variant="wrap" {...options} />`
+<Callout>
+    **Migrating from an earlier version of raam?**
+
+
+    Prior to version 1, **raam** exported a set of individual Theme-UI components. These have now moved to into a single `<Flex />` component with variants:
+
+    - `<Stack {...options} />` => `<Flex variant="vStack" {...options} />`
+    - `<Inline {...options} />` => `<Flex variant="hStack" sx={{ overflowX: "auto" }} {...options} />`
+    - `<Wrap {...options} />` => `<Flex variant="wrap" {...options} />`
+
+</Callout>
+
 
 ## Installation
 
@@ -190,12 +197,17 @@ Renders items in a single column.
 };
 ```
 
-> "Hold up, why don't you just…"
->
-> - _"…use `display: grid;`"_  
->   Grid is fantastic for page layouts, but has its caveats for a 'simple' `Stack`:
->   - It doesn't behave reliably for all elements (e.g. [`fieldset`](https://bugs.chromium.org/p/chromium/issues/detail?id=854565))
->   - Can lead to ['blow out'](https://css-tricks.com/preventing-a-grid-blowout/).
+<Callout>
+    **Hold up, why don't you just…"**
+
+
+    - **"…use `display: grid;`"**
+      Grid is fantastic for page layouts, but has its caveats for a 'simple' `Stack`:
+      - It doesn't behave reliably for all elements (e.g. [`fieldset`](https://bugs.chromium.org/p/chromium/issues/detail?id=854565))
+      - Can lead to ['blow out'](https://css-tricks.com/preventing-a-grid-blowout/).
+
+</Callout>
+
 
 #### HStack
 

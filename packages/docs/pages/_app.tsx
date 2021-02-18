@@ -4,7 +4,13 @@ import "../styles/raam-tailwind.css";
 
 import * as React from "react";
 import { AppProps } from "next/app";
+import { Head } from "../components/head";
 
 export default function Nextra({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head />
+      <Component {...pageProps} />
+    </>
+  );
 }
