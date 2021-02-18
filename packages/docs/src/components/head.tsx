@@ -4,6 +4,7 @@ import NextHead from "next/head";
 import GoogleFonts from "next-google-fonts";
 import { jsx, useThemeUI } from "theme-ui";
 import config from "../config";
+import { PlausibleSnippet } from "../lib/plausible";
 
 const Head: React.FC = () => {
   const { theme } = useThemeUI();
@@ -16,24 +17,8 @@ const Head: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <title>{config.meta.title}</title>
-        <link rel="preconnect" href="https://www.google-analytics.com" />
 
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsID}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${config.googleAnalyticsID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
-        />
+        {process.env.NODE_ENV === "production" && <PlausibleSnippet />}
 
         <meta name="twitter:site" content={config.meta.social.twitter} />
         <meta name="twitter:creator" content={config.meta.social.twitter} />

@@ -14,4 +14,22 @@
   </b>
 </p>
 
-<p align="center"><a href="https://raam.joebell.co.uk" rel="nofollow">See the Docs</a></p>
+<p align="center"><a href="https://raam.joebell.co.uk" rel="nofollow">Read the Docs 📖</a></p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/raam">
+    <img alt="NPM Version" src="https://badgen.net/npm/v/raam" />
+  </a>
+  <a href="https://www.npmjs.com/package/raam">
+    <img alt="Types Included" src="https://badgen.net/npm/types/raam" />
+  </a>
+  <a href="https://github.com/joe-bell/raam/blob/main/LICENSE">
+    <img alt="MIT License" src="https://badgen.net/github/license/joe-bell/raam" />
+  </a>
+  <a href="https://www.npmjs.com/package/raam">
+    <img alt="NPM Downloads" src="https://badgen.net/npm/dm/raam" />
+  </a>
+  <a href="https://twitter.com/joebell_">
+    <img alt="Follow @joebell_ on Twitter" src="https://img.shields.io/twitter/follow/joebell_.svg?style=social&label=Follow" />
+  </a>
+</p>
