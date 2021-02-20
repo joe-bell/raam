@@ -4,34 +4,27 @@ exports[`flex returns nothing when disabled 1`] = `""`;
 
 exports[`flex returns utilities and responsive variants 1`] = `
 "[class='flex'], [class$=':flex'], [class*='flex '], [class*=':flex '] {
-  margin: var(--raam-fg-offset, initial);
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
 } .flex-gap-1 {
   --raam-fg-t: 0.25rem;
   --raam-fg-l: 0.25rem;
   --raam-fg-offset: calc(0.25rem * -0.5);
   --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-1 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-1 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-1 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-1 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-1 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -41,28 +34,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 0.5rem;
   --raam-fg-offset: calc(0.5rem * -0.5);
   --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-2 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-2 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-2 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-2 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-2 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -72,28 +54,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 0.75rem;
   --raam-fg-offset: calc(0.75rem * -0.5);
   --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-3 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-3 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-3 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-3 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-3 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -103,28 +74,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 1rem;
   --raam-fg-offset: calc(1rem * -0.5);
   --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-4 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-4 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-4 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-4 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-4 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -134,28 +94,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 1.25rem;
   --raam-fg-offset: calc(1.25rem * -0.5);
   --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-5 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-5 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-5 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-5 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-5 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -165,28 +114,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 1.5rem;
   --raam-fg-offset: calc(1.5rem * -0.5);
   --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-6 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-6 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-6 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-6 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-6 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -196,28 +134,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 2rem;
   --raam-fg-offset: calc(2rem * -0.5);
   --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-8 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-8 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-8 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-8 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-8 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -227,28 +154,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 2.5rem;
   --raam-fg-offset: calc(2.5rem * -0.5);
   --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-10 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-10 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-10 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-10 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-10 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -258,28 +174,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 3rem;
   --raam-fg-offset: calc(3rem * -0.5);
   --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-12 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-12 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-12 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-12 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-12 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -289,28 +194,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 4rem;
   --raam-fg-offset: calc(4rem * -0.5);
   --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-16 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-16 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-16 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-16 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-16 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -320,28 +214,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 5rem;
   --raam-fg-offset: calc(5rem * -0.5);
   --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-20 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-20 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-20 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-20 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-20 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -351,28 +234,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 6rem;
   --raam-fg-offset: calc(6rem * -0.5);
   --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-24 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-24 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-24 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-24 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-24 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -382,28 +254,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 8rem;
   --raam-fg-offset: calc(8rem * -0.5);
   --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-32 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-32 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-32 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-32 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-32 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -413,28 +274,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 10rem;
   --raam-fg-offset: calc(10rem * -0.5);
   --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-40 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-40 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-40 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-40 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-40 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -444,28 +294,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 12rem;
   --raam-fg-offset: calc(12rem * -0.5);
   --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-48 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-48 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-48 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-48 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-48 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -475,28 +314,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 14rem;
   --raam-fg-offset: calc(14rem * -0.5);
   --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-56 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-56 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-56 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-56 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-56 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -506,28 +334,17 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 16rem;
   --raam-fg-offset: calc(16rem * -0.5);
   --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-64 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-64 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-64 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-64 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-64 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -537,241 +354,223 @@ exports[`flex returns utilities and responsive variants 1`] = `
   --raam-fg-l: 1px;
   --raam-fg-offset: calc(1px * -0.5);
   --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-px > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-px > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-px > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-px > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-px > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
 } .flex-row {
+  --raam-fg-t: initial;
   flex-direction: row;
-  --raam-fg-t: initial;
 } .flex-row-reverse {
+  --raam-fg-t: initial;
   flex-direction: row-reverse;
-  --raam-fg-t: initial;
 } .flex-col {
+  --raam-fg-l: initial;
   flex-direction: column;
-  --raam-fg-l: initial;
 } .flex-col-reverse {
+  --raam-fg-l: initial;
   flex-direction: column-reverse;
-  --raam-fg-l: initial;
 } .flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
   flex-wrap: wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
 } .flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
   --raam-fg-t: initial;
   --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
 } .flex-no-wrap {
-  flex-wrap: nowrap;
   --raam-fg-offset: initial;
   --raam-fg: initial;
+  flex-wrap: nowrap;
 } @media (min-width: 640px) {
   .sm\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .sm\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .sm\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .sm\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .sm\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .sm\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .sm\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 768px) {
   .md\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .md\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .md\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .md\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .md\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .md\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .md\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1024px) {
   .lg\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .lg\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .lg\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .lg\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .lg\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .lg\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .lg\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1280px) {
   .xl\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .xl\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .xl\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .xl\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .xl\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .xl\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .xl\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 }"
 `;
 
 exports[`flex returns utilities and responsive variants 2`] = `
 "[class='flex'], [class$=':flex'], [class*='flex '], [class*=':flex '] {
-  margin: var(--raam-fg-offset, initial);
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
 } .flex-gap-1 {
   --raam-fg-t: 0.25rem;
   --raam-fg-l: 0.25rem;
   --raam-fg-offset: calc(0.25rem * -0.5);
   --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-1 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-1 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-1 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-1 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-1 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -781,28 +580,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 0.5rem;
   --raam-fg-offset: calc(0.5rem * -0.5);
   --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-2 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-2 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-2 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-2 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-2 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -812,28 +600,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 0.75rem;
   --raam-fg-offset: calc(0.75rem * -0.5);
   --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-3 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-3 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-3 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-3 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-3 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -843,28 +620,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 1rem;
   --raam-fg-offset: calc(1rem * -0.5);
   --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-4 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-4 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-4 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-4 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-4 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -874,28 +640,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 1.25rem;
   --raam-fg-offset: calc(1.25rem * -0.5);
   --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-5 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-5 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-5 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-5 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-5 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -905,28 +660,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 1.5rem;
   --raam-fg-offset: calc(1.5rem * -0.5);
   --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-6 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-6 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-6 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-6 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-6 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -936,28 +680,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 2rem;
   --raam-fg-offset: calc(2rem * -0.5);
   --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-8 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-8 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-8 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-8 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-8 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -967,28 +700,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 2.5rem;
   --raam-fg-offset: calc(2.5rem * -0.5);
   --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-10 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-10 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-10 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-10 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-10 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -998,28 +720,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 3rem;
   --raam-fg-offset: calc(3rem * -0.5);
   --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-12 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-12 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-12 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-12 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-12 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1029,28 +740,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 4rem;
   --raam-fg-offset: calc(4rem * -0.5);
   --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-16 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-16 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-16 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-16 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-16 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1060,28 +760,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 5rem;
   --raam-fg-offset: calc(5rem * -0.5);
   --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-20 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-20 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-20 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-20 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-20 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1091,28 +780,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 6rem;
   --raam-fg-offset: calc(6rem * -0.5);
   --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-24 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-24 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-24 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-24 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-24 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1122,28 +800,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 8rem;
   --raam-fg-offset: calc(8rem * -0.5);
   --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-32 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-32 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-32 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-32 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-32 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1153,28 +820,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 10rem;
   --raam-fg-offset: calc(10rem * -0.5);
   --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-40 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-40 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-40 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-40 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-40 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1184,28 +840,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 12rem;
   --raam-fg-offset: calc(12rem * -0.5);
   --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-48 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-48 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-48 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-48 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-48 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1215,28 +860,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 14rem;
   --raam-fg-offset: calc(14rem * -0.5);
   --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-56 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-56 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-56 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-56 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-56 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1246,28 +880,17 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 16rem;
   --raam-fg-offset: calc(16rem * -0.5);
   --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-64 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-64 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-64 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-64 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-64 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1277,241 +900,223 @@ exports[`flex returns utilities and responsive variants 2`] = `
   --raam-fg-l: 1px;
   --raam-fg-offset: calc(1px * -0.5);
   --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .flex-gap-px > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-px > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-px > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .flex-gap-px > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .flex-gap-px > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
 } .flex-row {
+  --raam-fg-t: initial;
   flex-direction: row;
-  --raam-fg-t: initial;
 } .flex-row-reverse {
+  --raam-fg-t: initial;
   flex-direction: row-reverse;
-  --raam-fg-t: initial;
 } .flex-col {
+  --raam-fg-l: initial;
   flex-direction: column;
-  --raam-fg-l: initial;
 } .flex-col-reverse {
+  --raam-fg-l: initial;
   flex-direction: column-reverse;
-  --raam-fg-l: initial;
 } .flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
   flex-wrap: wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
 } .flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
   --raam-fg-t: initial;
   --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
 } .flex-no-wrap {
-  flex-wrap: nowrap;
   --raam-fg-offset: initial;
   --raam-fg: initial;
+  flex-wrap: nowrap;
 } @media (min-width: 640px) {
   .sm\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .sm\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .sm\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .sm\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .sm\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .sm\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .sm\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 768px) {
   .md\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .md\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .md\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .md\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .md\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .md\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .md\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1024px) {
   .lg\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .lg\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .lg\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .lg\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .lg\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .lg\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .lg\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1280px) {
   .xl\\\\:flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .xl\\\\:flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .xl\\\\:flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .xl\\\\:flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .xl\\\\:flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .xl\\\\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .xl\\\\:flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 }"
 `;
 
 exports[`flex returns with prefix 1`] = `
 "[class='tw-flex'], [class$=':tw-flex'], [class*='tw-flex '], [class*=':tw-flex '] {
-  margin: var(--raam-fg-offset, initial);
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
 } .tw-flex-gap-1 {
   --raam-fg-t: 0.25rem;
   --raam-fg-l: 0.25rem;
   --raam-fg-offset: calc(0.25rem * -0.5);
   --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-1 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-1 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-1 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-1 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-1 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-1 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1521,28 +1126,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 0.5rem;
   --raam-fg-offset: calc(0.5rem * -0.5);
   --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-2 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-2 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-2 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-2 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-2 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-2 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1552,28 +1146,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 0.75rem;
   --raam-fg-offset: calc(0.75rem * -0.5);
   --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-3 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-3 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-3 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-3 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-3 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-3 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1583,28 +1166,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 1rem;
   --raam-fg-offset: calc(1rem * -0.5);
   --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-4 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-4 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-4 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-4 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-4 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-4 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1614,28 +1186,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 1.25rem;
   --raam-fg-offset: calc(1.25rem * -0.5);
   --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-5 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-5 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-5 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-5 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-5 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-5 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1645,28 +1206,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 1.5rem;
   --raam-fg-offset: calc(1.5rem * -0.5);
   --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-6 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-6 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-6 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-6 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-6 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-6 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1676,28 +1226,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 2rem;
   --raam-fg-offset: calc(2rem * -0.5);
   --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-8 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-8 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-8 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-8 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-8 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-8 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1707,28 +1246,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 2.5rem;
   --raam-fg-offset: calc(2.5rem * -0.5);
   --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-10 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-10 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-10 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-10 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-10 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-10 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1738,28 +1266,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 3rem;
   --raam-fg-offset: calc(3rem * -0.5);
   --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-12 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-12 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-12 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-12 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-12 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-12 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1769,28 +1286,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 4rem;
   --raam-fg-offset: calc(4rem * -0.5);
   --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-16 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-16 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-16 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-16 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-16 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-16 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1800,28 +1306,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 5rem;
   --raam-fg-offset: calc(5rem * -0.5);
   --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-20 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-20 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-20 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-20 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-20 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-20 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1831,28 +1326,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 6rem;
   --raam-fg-offset: calc(6rem * -0.5);
   --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-24 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-24 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-24 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-24 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-24 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-24 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1862,28 +1346,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 8rem;
   --raam-fg-offset: calc(8rem * -0.5);
   --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-32 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-32 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-32 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-32 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-32 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-32 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1893,28 +1366,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 10rem;
   --raam-fg-offset: calc(10rem * -0.5);
   --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-40 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-40 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-40 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-40 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-40 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-40 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1924,28 +1386,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 12rem;
   --raam-fg-offset: calc(12rem * -0.5);
   --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-48 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-48 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-48 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-48 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-48 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-48 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1955,28 +1406,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 14rem;
   --raam-fg-offset: calc(14rem * -0.5);
   --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-56 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-56 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-56 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-56 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-56 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-56 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -1986,28 +1426,17 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 16rem;
   --raam-fg-offset: calc(16rem * -0.5);
   --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-64 > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-64 > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-64 > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-64 > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-64 > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-64 > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
@@ -2017,207 +1446,196 @@ exports[`flex returns with prefix 1`] = `
   --raam-fg-l: 1px;
   --raam-fg-offset: calc(1px * -0.5);
   --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
 } .tw-flex-gap-px > *:first-child {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-px > *:first-child:before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-px > *:first-child {
   margin-top: var(--raam-fg, initial);
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, initial);
 } .tw-flex-gap-px > *:not(:first-child) {
   box-sizing: border-box;
-  margin: 0;
   min-width: 0;
-  list-style-type: none;
-} .tw-flex-gap-px > *:not(:first-child):before {
-  position: absolute;
-  content: \\"\\\\200B\\";
-} .tw-flex-gap-px > *:not(:first-child) {
   margin-top: var(--raam-fg, var(--raam-fg-t, initial));
   margin-right: var(--raam-fg, initial);
   margin-bottom: var(--raam-fg, initial);
   margin-left: var(--raam-fg, var(--raam-fg-l, initial));
 } .tw-flex-row {
+  --raam-fg-t: initial;
   flex-direction: row;
-  --raam-fg-t: initial;
 } .tw-flex-row-reverse {
+  --raam-fg-t: initial;
   flex-direction: row-reverse;
-  --raam-fg-t: initial;
 } .tw-flex-col {
+  --raam-fg-l: initial;
   flex-direction: column;
-  --raam-fg-l: initial;
 } .tw-flex-col-reverse {
+  --raam-fg-l: initial;
   flex-direction: column-reverse;
-  --raam-fg-l: initial;
 } .tw-flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
   flex-wrap: wrap;
-  --raam-fg-t: initial;
-  --raam-fg-l: initial;
 } .tw-flex-wrap-reverse {
-  flex-wrap: wrap-reverse;
   --raam-fg-t: initial;
   --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
 } .tw-flex-no-wrap {
-  flex-wrap: nowrap;
   --raam-fg-offset: initial;
   --raam-fg: initial;
+  flex-wrap: nowrap;
 } @media (min-width: 640px) {
   .sm\\\\:tw-flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .sm\\\\:tw-flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .sm\\\\:tw-flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .sm\\\\:tw-flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .sm\\\\:tw-flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .sm\\\\:tw-flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .sm\\\\:tw-flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 768px) {
   .md\\\\:tw-flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .md\\\\:tw-flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .md\\\\:tw-flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .md\\\\:tw-flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .md\\\\:tw-flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .md\\\\:tw-flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .md\\\\:tw-flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1024px) {
   .lg\\\\:tw-flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .lg\\\\:tw-flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .lg\\\\:tw-flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .lg\\\\:tw-flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .lg\\\\:tw-flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .lg\\\\:tw-flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .lg\\\\:tw-flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 } @media (min-width: 1280px) {
   .xl\\\\:tw-flex-row {
-    flex-direction: row;
     --raam-fg-t: initial;
+    flex-direction: row;
   }
 
   .xl\\\\:tw-flex-row-reverse {
-    flex-direction: row-reverse;
     --raam-fg-t: initial;
+    flex-direction: row-reverse;
   }
 
   .xl\\\\:tw-flex-col {
-    flex-direction: column;
     --raam-fg-l: initial;
+    flex-direction: column;
   }
 
   .xl\\\\:tw-flex-col-reverse {
-    flex-direction: column-reverse;
     --raam-fg-l: initial;
+    flex-direction: column-reverse;
   }
 
   .xl\\\\:tw-flex-wrap {
-    flex-wrap: wrap;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap;
   }
 
   .xl\\\\:tw-flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
     --raam-fg-t: initial;
     --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
   }
 
   .xl\\\\:tw-flex-no-wrap {
-    flex-wrap: nowrap;
     --raam-fg-offset: initial;
     --raam-fg: initial;
+    flex-wrap: nowrap;
   }
 }"
 `;

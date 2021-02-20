@@ -1,4 +1,21 @@
-import { String, Number } from "./utils";
+import {
+  TCSSGlobals,
+  TFlexAlignItems,
+  TFlexDirection,
+  TFlexWrap,
+  TCSSSelfPosition,
+} from "./constants";
+
+// Utils
+
+/**
+ * Allow `string` fallbacks without breaking autocomplete
+ */
+type String = string & {};
+/**
+ * Allow `number` fallbacks without breaking autocomplete
+ */
+type Number = number & {};
 
 // csstype v3.0.2
 //
@@ -8,8 +25,7 @@ import { String, Number } from "./utils";
 // Extracted to avoid dependency conflicts with other styling libraries
 // =============================================================================
 
-type Globals = "-moz-initial" | "inherit" | "initial" | "revert" | "unset";
-type GlobalsNumber = Globals | Number;
+type TCSSGlobalsNumber = TCSSGlobals | Number;
 
 type ContentDistribution =
   | "space-around"
@@ -54,16 +70,7 @@ type DisplayOutside = "block" | "inline" | "run-in";
 
 type Quote = "close-quote" | "no-close-quote" | "no-open-quote" | "open-quote";
 
-type SpacingProperty = Globals | "auto" | String | Number;
-
-type SelfPosition =
-  | "center"
-  | "end"
-  | "flex-end"
-  | "flex-start"
-  | "self-end"
-  | "self-start"
-  | "start";
+type SpacingProperty = TCSSGlobals | "auto" | String | Number;
 
 export interface CSSProperties {
   /**
@@ -94,13 +101,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/align-items
    */
-  alignItems?:
-    | Globals
-    | SelfPosition
-    | "baseline"
-    | "normal"
-    | "stretch"
-    | String;
+  alignItems?: TFlexAlignItems | String;
   /**
    * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
    *
@@ -130,7 +131,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/align-content
    */
   alignContent?:
-    | Globals
+    | TCSSGlobals
     | ContentDistribution
     | ContentPosition
     | "baseline"
@@ -149,7 +150,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/content
    */
-  content?: Globals | Quote | "contents" | "none" | "normal" | String;
+  content?: TCSSGlobals | Quote | "contents" | "none" | "normal" | String;
   /**
    * The **`display`** CSS property defines the _display type_ of an element, which consists of the two basic qualities of how an element generates boxes — the **outer display type** defining how the box participates in flow layout, and the **inner display type** defining how the children of the box are laid out.
    *
@@ -164,7 +165,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/display
    */
   display?:
-    | Globals
+    | TCSSGlobals
     | DisplayOutside
     | DisplayInside
     | DisplayInternal
@@ -187,13 +188,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/flex-direction
    */
-  flexDirection?:
-    | Globals
-    | "column"
-    | "column-reverse"
-    | "row"
-    | "row-reverse"
-    | String;
+  flexDirection?: TFlexDirection | String;
   /**
    * The **`flex-wrap`** CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
    *
@@ -208,7 +203,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/flex-wrap
    */
-  flexWrap?: Globals | "nowrap" | "wrap" | "wrap-reverse" | String;
+  flexWrap?: TFlexWrap | String;
   /**
    * The **`gap`** CSS property sets the gaps (gutters) between rows and columns. It is a shorthand for `row-gap` and `column-gap`.
    *
@@ -243,7 +238,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/gap
    */
-  gap?: Globals | "normal" | String | Number;
+  gap?: TCSSGlobals | "normal" | String | Number;
   /**
    * The **`list-style-type`** CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element.
    *
@@ -257,7 +252,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/list-style-type
    */
-  listStyleType?: Globals | "none" | String;
+  listStyleType?: TCSSGlobals | "none" | String;
   /**
    * The **`margin`** CSS property sets the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`.
    *
@@ -408,7 +403,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/position
    */
   position?:
-    | Globals
+    | TCSSGlobals
     | "-webkit-sticky"
     | "absolute"
     | "fixed"
@@ -444,7 +439,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/justify-content
    */
   justifyContent?:
-    | Globals
+    | TCSSGlobals
     | ContentDistribution
     | ContentPosition
     | "left"
@@ -479,8 +474,8 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/justify-items
    */
   justifyItems?:
-    | Globals
-    | SelfPosition
+    | TCSSGlobals
+    | TCSSSelfPosition
     | "baseline"
     | "left"
     | "legacy"
@@ -501,7 +496,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/flex
    */
   flex?:
-    | Globals
+    | TCSSGlobals
     | "auto"
     | "content"
     | "max-content"
@@ -523,7 +518,7 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/flex-grow
    */
-  flexGrow?: GlobalsNumber;
+  flexGrow?: TCSSGlobalsNumber;
   /**
    * The **`flex-basis`** CSS property sets the initial main size of a flex item. It sets the size of the content box unless otherwise set with `box-sizing`.
    *
@@ -539,7 +534,7 @@ export interface CSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/flex-basis
    */
   flexBasis?:
-    | Globals
+    | TCSSGlobals
     | "-moz-max-content"
     | "-moz-min-content"
     | "-webkit-auto"
@@ -562,5 +557,5 @@ export interface CSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/flex-shrink
    */
-  flexShrink?: GlobalsNumber;
+  flexShrink?: TCSSGlobalsNumber;
 }

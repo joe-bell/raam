@@ -1,22 +1,13 @@
 import plugin from "tailwindcss/plugin";
-import { RaamStyleProps, stylePropsToCSS, ValueOf } from "@raam/core";
-import { flexbox } from "raam";
+import {
+  setFlexBase,
+  setFlexReset,
+  setFlexGap,
+  setFlexDirection,
+  setFlexWrap,
+} from "@raam/core";
 
-type RaamConfigKeys = "flexbox";
-
-const createUtilities = (
-  property: keyof RaamStyleProps,
-  values: {
-    [className: string]: ValueOf<RaamStyleProps>;
-  }
-) =>
-  Object.keys(values).reduce(
-    (acc, cv) => ({
-      ...acc,
-      [cv]: stylePropsToCSS({ [property]: values[cv] }),
-    }),
-    {}
-  );
+type TRaamConfigKeys = "flexbox";
 
 const enabledCorePlugins = (config: (string) => string[], plugins: string[]) =>
   plugins.length === 0
@@ -26,8 +17,8 @@ const enabledCorePlugins = (config: (string) => string[], plugins: string[]) =>
         .includes(true);
 
 const enabledRaamPlugins = (
-  theme: (string) => { [key in RaamConfigKeys]: boolean } | undefined,
-  key: RaamConfigKeys
+  theme: (string) => { [key in TRaamConfigKeys]: boolean } | undefined,
+  key: TRaamConfigKeys
 ) => {
   const config = theme("raam");
 
@@ -64,11 +55,13 @@ export default plugin(
         );
       }
 
-      const { child, parent } = flexbox();
       const spacing = theme("spacing", {});
 
       addBase({
-        [hasClassAttribute(prefix, ".flex")]: { margin: parent().margin },
+        [hasClassAttribute(prefix, ".flex")]: {
+          ...setFlexReset("parent"),
+          ...setFlexBase("parent"),
+        },
       });
 
       addUtilities(
@@ -76,9 +69,17 @@ export default plugin(
           (sp) =>
             !["0", 0].includes(spacing[sp]) && {
               [`.flex-gap-${sp}`]: {
-                ...stylePropsToCSS({ flexGap: spacing[sp] }),
-                "& > *:first-child": child({ index: 0, flex: null }),
-                "& > *:not(:first-child)": child({ index: 1, flex: null }),
+                ...setFlexGap({ element: "parent", value: spacing[sp] }),
+                "& > *:first-child": {
+                  ...setFlexReset("firstChild"),
+                  ...setFlexBase("firstChild"),
+                  ...setFlexGap({ element: "firstChild" }),
+                },
+                "& > *:not(:first-child)": {
+                  ...setFlexReset("nthChild"),
+                  ...setFlexBase("nthChild"),
+                  ...setFlexGap({ element: "nthChild" }),
+                },
               },
             }
         ),
@@ -86,21 +87,21 @@ export default plugin(
       );
 
       addUtilities(
-        createUtilities("flexDirection", {
-          ".flex-row": "row",
-          ".flex-row-reverse": "row-reverse",
-          ".flex-col": "column",
-          ".flex-col-reverse": "column-reverse",
-        }),
+        {
+          ".flex-row": setFlexDirection("row"),
+          ".flex-row-reverse": setFlexDirection("row-reverse"),
+          ".flex-col": setFlexDirection("column"),
+          ".flex-col-reverse": setFlexDirection("column-reverse"),
+        },
         variants("flexDirection")
       );
 
       addUtilities(
-        createUtilities("flexWrap", {
-          ".flex-wrap": "wrap",
-          ".flex-wrap-reverse": "wrap-reverse",
-          ".flex-no-wrap": "nowrap",
-        }),
+        {
+          ".flex-wrap": setFlexWrap("wrap"),
+          ".flex-wrap-reverse": setFlexWrap("wrap-reverse"),
+          ".flex-no-wrap": setFlexWrap("nowrap"),
+        },
         variants("flexWrap")
       );
     }

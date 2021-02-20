@@ -28,14 +28,13 @@
   "bundlesize": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "1.4 kB"
+      "maxSize": "2 kB"
     }
   ],
   "peerDependencies": {
     "tailwindcss": ">= 1.9.2"
   },
   "dependencies": {
-    "@raam/core": "^0.2.3",
-    "raam": "^0.2.3"
+    "@raam/core": "^0.2.3"
   }
 }
