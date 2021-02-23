@@ -1,5 +1,17 @@
 import Callout from "nextra-theme-docs/callout";
 
+<div aria-hidden="true" className="mt-4 pb-8">
+  <div className="flex flex-row flex-wrap flex-gap-4">
+    {Array.from({ length: 36 }).map((_, i, arr) => (
+      <div
+        key={i}
+        style={{ opacity: i === 0 ? 1 : 1 - (1 / arr.length) * i }}
+        className={`bg-gray-900 dark:bg-gray-500 w-10 h-10`}
+      />
+    ))}
+  </div>
+</div>
+
 # Introduction
 
 <Callout>
@@ -13,8 +25,6 @@ import Callout from "nextra-theme-docs/callout";
 > **raam** (estonian) ˈrɑːm _**n**._ frame.
 
 **Beautifully boring cosmetic-free primitives for structure and layout.**
-
----
 
 ## Getting Started
 

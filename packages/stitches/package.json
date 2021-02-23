@@ -33,7 +33,7 @@
   ],
   "peerDependencies": {
     "react": ">= 17.0.1",
-    "@stitches/core": ">= 0.0.3-canary.4"
+    "@stitches/core": ">= 0.1.0-canary.7"
   },
   "dependencies": {
     "@raam/core": "^0.2.3"

@@ -1,3 +1,149 @@
+import { Code } from "../../components/code";
+import { DemoGrid } from "../../components/demo";
+import { Box, Flexbox } from "../../components/stitches";
+
 # Stitches
 
-WIP
+Flex `gap` for Stitches, without the browser support worries.
+
+Choose your own strategy; use the **util** or **component**.
+
+<DemoGrid variant="stitches" />
+
+## Installation
+
+1. [Install Stitches][stitches]
+2. Install the plugin via your preferred package manager:
+   ```sh
+   npm install -D @raam/stitches
+   # or
+   yarn add -D @raam/stitches
+   ```
+3. Choose your strategy/strategies:
+
+   - **Util** – add `flexbox` to your `stitches.config` utils:
+
+     ```js
+     // stitches.config.ts
+     import { createCss } from "@stitches/react";
+     import { flexbox } from "@raam/stitches";
+
+     export const { styled, config, theme } = createCss({
+       theme: {
+         // …your theme here
+       },
+       utils: {
+         flexbox,
+       },
+     });
+     ```
+
+   - **Component** – create a new styled component–wherever you wish–with the following implementation:
+
+     ```js
+     // components/flex.tsx
+     import { createFlexbox } from "@raam/stitches";
+     import { styled, config } from "../stitches.config";
+
+     export const Flexbox = styled("div", {
+       ...createFlexbox(config),
+       // Optional: choose your own defaults
+       defaultVariants: {
+         gap: "4",
+         direction: "row",
+         wrap: "nowrap",
+       },
+     });
+     ```
+
+## Util
+
+<Code>
+  <Box
+    css={{
+      flexbox: {
+        direction: "row",
+        wrap: "nowrap",
+        gap: "4",
+      },
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$purple500",
+      },
+    }}
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </Box>
+</Code>
+
+```tsx
+<Box
+  css={{
+    flexbox: {
+      direction: "row",
+      wrap: "nowrap",
+      gap: "4",
+    },
+    "> *": {
+      width: "$space$10",
+      height: "$space$10",
+      backgroundColor: "$purple500",
+    },
+  }}
+>
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+</Box>
+```
+
+## Component
+
+<Code>
+  <Flexbox
+    gap="4"
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$purple500",
+      },
+    }}
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </Flexbox>
+</Code>
+
+```tsx
+<Flexbox
+  gap="4"
+  css={{
+    "> *": {
+      width: "$space$10",
+      height: "$space$10",
+      backgroundColor: "$purple500",
+    },
+  }}
+>
+  <div />
+  <div />
+  <div />
+  <div />
+  <div />
+</Flexbox>
+```
+
+## Recipes
+
+[stitches]: https://stitches.dev

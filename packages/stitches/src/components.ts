@@ -27,7 +27,7 @@ export const createFlexbox = (config) => {
     (acc, cv) => ({
       ...acc,
       [cv]: {
-        ...setFlexGap({ element: "parent", value: cv }),
+        ...setFlexGap({ element: "parent", value: `$space$${cv}` }),
         [firstChild]: setFlexGap({ element: "firstChild" }),
         [nthChild]: setFlexGap({ element: "nthChild" }),
       },
@@ -46,7 +46,7 @@ export const createFlexbox = (config) => {
   const wrap = FLEX_WRAP.reduce(
     (acc, cv) => ({
       ...acc,
-      [cv]: setFlexWrap,
+      [cv]: setFlexWrap(cv),
     }),
     {}
   ) as { [key in TFlexWrap]: InternalCSS };

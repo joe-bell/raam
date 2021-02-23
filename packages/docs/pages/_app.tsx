@@ -1,5 +1,6 @@
 import "../styles/custom-base.css";
 import "nextra-theme-docs/style.css";
+import "../styles/custom-components.css";
 import "../styles/raam-tailwind.css";
 
 import * as React from "react";
