@@ -1,4 +1,5 @@
-import { IConfig, InternalCSS } from "@stitches/core";
+// @ts-nocheck
+import { IConfig, InternalCSS } from "@stitches/react";
 import {
   setFlexGap,
   setFlexReset,

@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "@raam/core": "^0.2.3",
-    "@stitches/core": "0.1.0-canary.7",
     "@stitches/react": "0.1.0-canary.7",
     "react": "17.0.1",
     "theme-ui": "0.3.1"

@@ -1,4 +1,5 @@
 // Note: @peduarte advised me against using InternalCSS, but yolo
+// @ts-nocheck
 import { IConfig, InternalCSS } from "@stitches/react";
 
 import {
