@@ -69,15 +69,14 @@ Choose your own strategy; use the **util** or **component**.
       "> *": {
         width: "$space$10",
         height: "$space$10",
-        backgroundColor: "$purple500",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
       },
     }}
   >
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
   </Box>
 </Code>
 
@@ -92,15 +91,14 @@ Choose your own strategy; use the **util** or **component**.
     "> *": {
       width: "$space$10",
       height: "$space$10",
-      backgroundColor: "$purple500",
+      backgroundColor: "$primary",
+      borderRadius: "$md",
     },
   }}
 >
-  <div />
-  <div />
-  <div />
-  <div />
-  <div />
+  {Array.from({ length: 4 }).map((_, i, arr) => (
+    <div key={i} />
+  ))}
 </Box>
 ```
 
@@ -108,42 +106,139 @@ Choose your own strategy; use the **util** or **component**.
 
 <Code>
   <Flexbox
-    gap="4"
     css={{
       "> *": {
         width: "$space$10",
         height: "$space$10",
-        backgroundColor: "$purple500",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
       },
     }}
   >
-    <div />
-    <div />
-    <div />
-    <div />
-    <div />
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
   </Flexbox>
 </Code>
 
 ```tsx
 <Flexbox
+  direction="row"
   gap="4"
+  wrap="nowrap"
   css={{
     "> *": {
       width: "$space$10",
       height: "$space$10",
-      backgroundColor: "$purple500",
+      backgroundColor: "$primary",
+      borderRadius: "$md",
     },
   }}
 >
-  <div />
-  <div />
-  <div />
-  <div />
-  <div />
+  {Array.from({ length: 4 }).map((_, i, arr) => (
+    <div key={i} />
+  ))}
 </Flexbox>
 ```
 
 ## Recipes
+
+### VStack
+
+<Code>
+  <Flexbox
+    direction="column"
+    gap="4"
+    wrap="nowrap"
+    css={{
+      "> *": {
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "column",
+  "gap": "4",
+  "wrap": "nowrap"
+}
+```
+
+### HStack
+
+<Code>
+  <Flexbox
+    direction="row"
+    gap="4"
+    wrap="nowrap"
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "row",
+  "gap": "4",
+  "wrap": "nowrap"
+}
+```
+
+### Wrap
+
+<Code>
+  <Flexbox
+    direction="row"
+    gap="5"
+    wrap="wrap"
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 24 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "row",
+  "gap": "5",
+  "wrap": "wrap"
+}
+```
 
 [stitches]: https://stitches.dev

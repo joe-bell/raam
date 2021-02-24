@@ -1,18 +1,5 @@
 import Callout from "nextra-theme-docs/callout";
-
-<div aria-hidden="true" className="mt-4 pb-8">
-  <div className="flex flex-row flex-wrap flex-gap-4">
-    {Array.from({ length: 36 }).map((_, i, arr) => (
-      <div
-        key={i}
-        style={{ opacity: i === 0 ? 1 : 1 - (1 / arr.length) * i }}
-        className={`bg-gray-900 dark:bg-gray-500 w-10 h-10`}
-      />
-    ))}
-  </div>
-</div>
-
-# Introduction
+import { DemoGrid } from "../components/demo";
 
 <Callout>
   <abbr title="Work in Progress">
@@ -22,16 +9,28 @@ import Callout from "nextra-theme-docs/callout";
   to bugs/sudden API changes. Please use with caution.
 </Callout>
 
-> **raam** (estonian) ˈrɑːm _**n**._ frame.
+# raam
 
-**Beautifully boring cosmetic-free primitives for structure and layout.**
+> (estonian) ˈrɑːm _**n**._ frame.
+
+Forget about browser support – **use flex `gap` today**.
+
+When using new CSS features, a `@supports` query is the safest route to take.  
+This [isn't an option](https://github.com/w3c/csswg-drafts/issues/3559) for flex `gap`.
+
+**raam** offers an alternative approach.
+
+<DemoGrid variant="grayscale" />
 
 ## Getting Started
 
-Choose your own boring adventure:
+Choose your own adventure:
 
-1. [Mixins](/mixins) - complimented by [Plugins](#) <small>(recommended)</small>
+1. [Mixin](/mixin) (for those that prefer a bit of freedom)
 2. [Plugins](#)
+   1. [Stitches](/plugins/stitches)
+   2. [Tailwind](/plugins/tailwind)
+   3. [Theme UI](/plugins/theme-ui)
 
 [prop-and-lock]: https://twitter.com/davidkpiano/status/1284155737720205313?lang=en
 [reactjs]: https://reactjs.org

@@ -11,10 +11,14 @@ const extractColorPalette = (colors: unknown) =>
     {}
   );
 
-export const { styled, config, theme } = createCss({
+export const { styled, config, theme, global } = createCss({
   theme: {
-    colors: { ...extractColorPalette(tailwindDefaultTheme.colors.purple) },
+    colors: {
+      ...extractColorPalette(tailwindDefaultTheme.colors.purple),
+      primary: "$purple500",
+    },
     space: tailwindDefaultTheme.spacing,
+    radii: tailwindDefaultTheme.borderRadius,
   },
   utils: {
     flexbox,

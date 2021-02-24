@@ -1,6 +1,6 @@
 {
   "index": "Introduction",
-  "mixins": "Mixins",
+  "mixin": "Mixin",
   "plugins": "Plugins",
   "acknowledgements": "Acknowledgements"
 }
