@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel": "yarn --cwd ../ build",
     "clean": "rimraf {.next,out}",
     "start": "next start"
   },
