@@ -1,5 +1,6 @@
 import Callout from "nextra-theme-docs/callout";
-import { DemoGrid } from "../components/demo";
+import { DividerGrid } from "../components/divider";
+import { Hero } from "../components/hero";
 
 <Callout>
   <abbr title="Work in Progress">
@@ -9,20 +10,22 @@ import { DemoGrid } from "../components/demo";
   to bugs/sudden API changes. Please use with caution.
 </Callout>
 
-# raam
+<h1 className="hidden">Getting Started</h1>
 
-> (estonian) ˈrɑːm _**n**._ frame.
+<Hero />
 
-Forget about browser support – **use flex `gap` today**.
+<DividerGrid variant="grayscale" />
+
+## Overview
+
+**raam**'s goal is to become obsolete. No, seriously.
 
 When using new CSS features, a `@supports` query is the safest route to take.  
 This [isn't an option](https://github.com/w3c/csswg-drafts/issues/3559) for flex `gap`.
 
-**raam** offers an alternative approach.
+Until browser support for flex `gap` is more widely accepted, **raam** offers an alternative approach.
 
-<DemoGrid variant="grayscale" />
-
-## Getting Started
+## Installation
 
 Choose your own adventure:
 

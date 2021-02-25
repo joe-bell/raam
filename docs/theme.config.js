@@ -4,8 +4,10 @@ const year = new Date().getFullYear();
 
 export const config = {
   title: "raam",
-  description:
-    "Beautifully boring cosmetic-free React.js components for structure and layout",
+  description: (framework) =>
+    `Forget about browser support, use flex gap ${
+      framework ? `in ${framework}` : ""
+    } today.`,
   author: "Joe Bell",
   twitter: "joebell_",
   domain,

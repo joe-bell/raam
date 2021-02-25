@@ -1,6 +1,5 @@
 {
-  "index": "Introduction",
-  "mixin": "Mixin",
-  "plugins": "Plugins",
+  "index": "Getting Started",
+  "packages": "Packages",
   "acknowledgements": "Acknowledgements"
 }

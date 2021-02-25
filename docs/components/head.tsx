@@ -28,14 +28,14 @@ export const Head: React.FC = () => {
 
       <meta property="og:url" content={config.url} />
       <meta property="og:title" content={config.title} />
-      <meta property="og:description" content={config.description} />
+      <meta property="og:description" content={config.description()} />
       <meta property="og:image" content={`${config.url}/img/logo-og.png`} />
 
       <link rel="shortcut icon" href="/img/favicon@192.png" />
       <link rel="apple-touch-icon" href="/img/icon@192.png" />
       <meta name="apple-mobile-web-app-title" content={config.title} />
 
-      <meta name="description" content={config.description} />
+      <meta name="description" content={config.description()} />
 
       <link rel="canonical" href={canonical} />
 

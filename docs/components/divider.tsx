@@ -1,9 +1,9 @@
-export interface DemoGridProps {
+export interface DividerGridProps {
   className: string;
   variant?: "grayscale" | "tailwind" | "stitches";
 }
 
-export const DemoGrid: React.FC<DemoGridProps> = ({
+export const DividerGrid: React.FC<DividerGridProps> = ({
   className = "mt-8",
   variant = "grayscale",
 }) => (
