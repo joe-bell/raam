@@ -1,0 +1,41 @@
+import Callout from "nextra-theme-docs/callout";
+import { DividerGrid } from "../components/divider";
+import { Hero } from "../components/hero";
+
+<Callout>
+  <abbr title="Work in Progress">
+    <strong>WIP</strong>
+  </abbr>
+  This page documents changes proposed in the [RFC for V1][rfc], and therefore prone
+  to bugs/sudden API changes. Please use with caution.
+</Callout>
+
+<h1 className="hidden">Getting Started</h1>
+
+<Hero />
+
+<DividerGrid variant="grayscale" />
+
+## Overview
+
+**raam**'s goal is to become obsolete. No, seriously.
+
+When using new CSS features, a `@supports` query is the safest route to take.  
+This [isn't an option](https://github.com/w3c/csswg-drafts/issues/3559) for flex `gap`.
+
+Until browser support for flex `gap` is more widely accepted, **raam** offers an alternative approach.
+
+## Installation
+
+Choose your own adventure:
+
+1. [Mixin](/mixin) (for those that prefer a bit of freedom)
+2. [Plugins](#)
+   1. [Stitches](/plugins/stitches)
+   2. [Tailwind](/plugins/tailwind)
+   3. [Theme UI](/plugins/theme-ui)
+
+[prop-and-lock]: https://twitter.com/davidkpiano/status/1284155737720205313?lang=en
+[reactjs]: https://reactjs.org
+[theme-ui]: https://theme-ui.com/
+[rfc]: https://github.com/joe-bell/raam/pull/149

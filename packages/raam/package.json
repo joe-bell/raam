@@ -1,7 +1,7 @@
 {
   "name": "raam",
   "version": "0.2.3",
-  "description": "Beautifully boring cosmetic-free React.js components for structure and layout.",
+  "description": "Beautifully boring cosmetic-free primitives for structure and layout.",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -11,41 +11,27 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "barrelsby --delete --directory src --exclude private",
     "build": "microbundle --no-compress --jsx React.createElement --tsconfig tsconfig.json",
     "clean": "rimraf {dist,.rts2*}",
-    "lint:ts": "npx tsc --noEmit",
-    "dev": "npm run build -- watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "yarn build -- watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joe-bell/raam.git"
   },
   "author": "Joe Bell <joe@joebell.co.uk>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/joe-bell/raam/issues"
   },
   "homepage": "https://github.com/joe-bell/raam#readme",
-  "peerDependencies": {
-    "@emotion/core": ">= 10.0.0",
-    "@emotion/styled": ">= 10.0.0",
-    "@theme-ui/css": ">= 0.3.1",
-    "react": ">= 16.8.0"
-  },
+  "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "1.6 kB"
+    }
+  ],
   "dependencies": {
-    "@styled-system/color": "5.1.2",
-    "@styled-system/core": "5.1.2",
-    "@styled-system/should-forward-prop": "5.1.5",
-    "@styled-system/space": "5.1.2"
-  },
-  "devDependencies": {
-    "@emotion/core": "10.0.35",
-    "@emotion/styled": "10.0.27",
-    "@theme-ui/css": "0.3.1",
-    "emotion-theming": "10.0.27",
-    "react": "16.13.1"
-  },
-  "gitHead": "a6e19e2884b0d784a69a7c8af29cae7008a5cb16"
+    "@raam/core": "^0.2.3"
+  }
 }

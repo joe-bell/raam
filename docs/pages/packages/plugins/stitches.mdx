@@ -1,0 +1,244 @@
+import { Code } from "../../../components/code";
+import { DividerGrid } from "../../../components/divider";
+import { Box, Flexbox } from "../../../components/stitches";
+
+# Stitches
+
+Flex `gap` for Stitches, without the browser support worries.
+
+Choose your own strategy; use the **util** or **component**.
+
+<DividerGrid variant="stitches" />
+
+## Installation
+
+1. [Install Stitches][stitches]
+2. Install the plugin via your preferred package manager:
+   ```sh
+   npm install -D @raam/stitches
+   # or
+   yarn add -D @raam/stitches
+   ```
+3. Choose your strategy/strategies:
+
+   - **Util** – add `flexbox` to your `stitches.config` utils:
+
+     ```js
+     // stitches.config.ts
+     import { createCss } from "@stitches/react";
+     import { flexbox } from "@raam/stitches";
+
+     export const { styled, config, theme } = createCss({
+       theme: {
+         // …your theme here
+       },
+       utils: {
+         flexbox,
+       },
+     });
+     ```
+
+   - **Component** – create a new styled component–wherever you wish–with the following implementation:
+
+     ```js
+     // components/flex.tsx
+     import { createFlexbox } from "@raam/stitches";
+     import { styled, config } from "../stitches.config";
+
+     export const Flexbox = styled("div", {
+       ...createFlexbox(config),
+       // Optional: choose your own defaults
+       defaultVariants: {
+         gap: "4",
+         direction: "row",
+         wrap: "nowrap",
+       },
+     });
+     ```
+
+## Util
+
+<Code>
+  <Box
+    css={{
+      flexbox: {
+        direction: "row",
+        wrap: "nowrap",
+        gap: "4",
+      },
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Box>
+</Code>
+
+```tsx
+<Box
+  css={{
+    flexbox: {
+      direction: "row",
+      wrap: "nowrap",
+      gap: "4",
+    },
+    "> *": {
+      width: "$space$10",
+      height: "$space$10",
+      backgroundColor: "$primary",
+      borderRadius: "$md",
+    },
+  }}
+>
+  {Array.from({ length: 4 }).map((_, i, arr) => (
+    <div key={i} />
+  ))}
+</Box>
+```
+
+## Component
+
+<Code>
+  <Flexbox
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```tsx
+<Flexbox
+  direction="row"
+  gap="4"
+  wrap="nowrap"
+  css={{
+    "> *": {
+      width: "$space$10",
+      height: "$space$10",
+      backgroundColor: "$primary",
+      borderRadius: "$md",
+    },
+  }}
+>
+  {Array.from({ length: 4 }).map((_, i, arr) => (
+    <div key={i} />
+  ))}
+</Flexbox>
+```
+
+## Recipes
+
+### VStack
+
+<Code>
+  <Flexbox
+    direction="column"
+    gap="4"
+    wrap="nowrap"
+    css={{
+      "> *": {
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "column",
+  "gap": "4",
+  "wrap": "nowrap"
+}
+```
+
+### HStack
+
+<Code>
+  <Flexbox
+    direction="row"
+    gap="4"
+    wrap="nowrap"
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 4 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "row",
+  "gap": "4",
+  "wrap": "nowrap"
+}
+```
+
+### Wrap
+
+<Code>
+  <Flexbox
+    direction="row"
+    gap="5"
+    wrap="wrap"
+    css={{
+      "> *": {
+        width: "$space$10",
+        height: "$space$10",
+        backgroundColor: "$primary",
+        borderRadius: "$md",
+      },
+    }}
+  >
+    {Array.from({ length: 24 }).map((_, i, arr) => (
+      <div key={i} />
+    ))}
+  </Flexbox>
+</Code>
+
+```json
+// use as
+// 1. options for the `flexbox` util
+// 2. props for the `<Flexbox />` component
+{
+  "direction": "row",
+  "gap": "5",
+  "wrap": "wrap"
+}
+```
+
+[stitches]: https://stitches.dev

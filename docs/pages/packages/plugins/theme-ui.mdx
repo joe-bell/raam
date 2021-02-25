@@ -1,0 +1,348 @@
+import Callout from "nextra-theme-docs/callout";
+
+# Theme UI
+
+If rolling-your-own components hasn't got you [_hooked_](#mixins), you may be interested in a pre-built option.
+
+<Callout>
+    **Migrating from an earlier version of raam?**
+
+
+    Prior to version 1, **raam** exported a set of individual Theme-UI components. These have now moved to into a single `<Flex />` component with variants:
+
+    - `<Stack {...options} />` => `<Flex variant="vStack" {...options} />`
+    - `<Inline {...options} />` => `<Flex variant="hStack" sx={{ overflowX: "auto" }} {...options} />`
+    - `<Wrap {...options} />` => `<Flex variant="wrap" {...options} />`
+
+</Callout>
+
+
+## Installation
+
+`npm i --save theme-ui @raam/theme-ui`  
+or  
+`yarn add theme-ui @raam/theme-ui`
+
+## Flexbox
+
+A [`flexbox`](#flexbox)-based layout primitive that aims to address the `gap`.
+
+```jsx live=true
+// import { Flexbox } from "@raam/theme-ui";
+// import { Box } from "theme-ui";
+
+<Flexbox
+  alignItems={["center", "start", "end"]}
+  variant="hStack"
+  gap={[3, 4, 5]}
+>
+  {Array.from({ length: 6 }).map((item, index) => (
+    <FlexboxItem key={index}>
+      <Box
+        sx={{
+          width: "2rem",
+          height: `${index + 1}rem`,
+          backgroundColor: "primary",
+          filter: index > 0 && `brightness(${100 - index * 10}%)`,
+        }}
+      />
+    </FlexboxItem>
+  ))}
+</Flexbox>
+```
+
+### Props
+
+- Props for [each `flexbox()` option](#options).
+  - `gap` also accepts a key from `theme.space` (as a string or number), but if that's not found it'll render the provided string (e.g. `em` or `rem`) or number as a `px` value.
+- `as`: change the HTML element rendered ([via Theme UI][theme-ui])
+
+  **raam** makes an **opinionated** choice on how to render a
+  component's children based on the element provided:
+
+  | `as`            | `children` rendered `as`            |
+  | :-------------- | :---------------------------------- |
+  | `div` (default) | `div`                               |
+  | `ol`            | `li` (with `list-style-type` reset) |
+  | `ul`            | `li` (with `list-style-type` reset) |
+  | `span`          | `span`                              |
+  | `p`             | `span`                              |
+  | `h1`-`h6`       | `span`                              |
+
+- `sx`: apply **themed** styles to the component ([via Theme UI](https://theme-ui.com/sx-prop/)).
+
+## Recipes
+
+1. [Box](#box)
+1. [Wrap](#wrap)
+1. [VStack](#vstack)
+1. [HStack](#hstack)
+1. [Inline](#inline)
+1. [Combo](#combo)
+
+### Box
+
+Each recipe assumes you have a [`Box` component](https://styled-system.com/guides/build-a-box/) defined for base styles. In this case, an `sx` prop is used to pass themed style values ([like Theme UI](https://theme-ui.com/sx-prop/)).
+
+You don't necessarily **need** to follow this approach, feel free to make it your own.
+
+### Wrap
+
+A [flex](#flexbox)-based layout that renders and 'wraps' children inline, spaced
+by the defined [`gap`](#options).
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent, child } = flexbox({ variant: "wrap" });
+
+  return (
+    <Box as="ul" sx={parent()}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          as="li"
+          key={index}
+          sx={{
+            ...child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `brightness(${100 - index * 2}%)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+#### Customisation
+
+Let's make it more interesting, let's say we want the last item to fill the
+remaining available space.
+
+When the `index` indicates the "last child" (the array's length - 1),
+we'll pass the additional `flexGrow` parameter to the `.child` and set it to `2`.
+
+With the [`gap`](#options) prop, we also have the ability to create responsive
+styles. In this example, we'll reduce the gap size on larger screens.
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent, child } = flexbox({
+    variant: "wrap",
+    gap: {
+      initial: "2rem",
+      "@media (min-width: 40em)": "1rem",
+    },
+  });
+
+  return (
+    <Box as="ul" sx={parent()}>
+      {Array.from({ length: 32 }).map((item, index, arr) => (
+        <Box
+          as="li"
+          key={index}
+          sx={{
+            ...child({
+              index,
+              flexGrow: arr.length - 1 === index && 2,
+            }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `brightness(${100 - index * 2}%)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+### Stack
+
+Popularised by [Seek's "Braid"](https://github.com/seek-oss/braid-design-system), the "Stack" is a [flex](#use-flex)-based layout that renders children in a single column or row, spaced by the defined [`gap`](#configuration).
+
+#### VStack
+
+Renders items in a single column.
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent, child } = flexbox({ variant: "vStack", gap: "1rem" });
+
+  return (
+    <Box sx={parent()}>
+      {Array.from({ length: 4 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...child({ index }),
+            height: "2rem",
+            backgroundColor: "primary",
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+<Callout>
+    **Hold up, why don't you just…"**
+
+
+    - **"…use `display: grid;`"**
+      Grid is fantastic for page layouts, but has its caveats for a 'simple' `Stack`:
+      - It doesn't behave reliably for all elements (e.g. [`fieldset`](https://bugs.chromium.org/p/chromium/issues/detail?id=854565))
+      - Can lead to ['blow out'](https://css-tricks.com/preventing-a-grid-blowout/).
+
+</Callout>
+
+
+#### HStack
+
+The default setting of `flexbox`; the `HStack` renders items in a single row and makes no assumptions on your `overflow`.
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent, child } = flexbox({ variant: "hStack", gap: "1rem" });
+
+  return (
+    <Box sx={parent()}>
+      {Array.from({ length: 8 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+### Inline
+
+If you'd rather let `hStack` items scroll elegantly in a single line, add an `overflowX` declaration alongside your `.child()` styles.
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent, child } = flexbox({ variant: "hStack", gap: "1rem" });
+
+  return (
+    <Box sx={{ ...parent(), overflowX: "auto" }}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...child({ index }),
+            width: "2rem",
+            height: "2rem",
+            backgroundColor: "primary",
+            filter: index > 0 && `brightness(${100 - index * 2}%)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+or with some more chaotic values…
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const size = () => `${Math.floor(Math.random() * 4) + 1}rem`;
+
+  const { parent, child } = flexbox({
+    variant: "hStack",
+    gap: "1rem",
+    alignItems: "center",
+  });
+
+  return (
+    <Box sx={{ ...parent(), overflowX: "auto" }}>
+      {Array.from({ length: 32 }).map((item, index) => (
+        <Box
+          key={index}
+          sx={{
+            ...child({ index }),
+            width: size(),
+            height: size(),
+            backgroundColor: "primary",
+            filter: index > 0 && `brightness(${100 - index * 2}%)`,
+          }}
+        />
+      ))}
+    </Box>
+  );
+};
+```
+
+### Combo
+
+When combining [`flexbox()`](#flexbox) styles, split them across **different** elements to avoid conflicts.
+
+Let's take a look at a more real-world example; a "tag"-list at the bottom of an article:
+
+- Padding is added to the [`Stack`](#stack), [not the `Wrap` directly](#how-it-works).
+
+```jsx live=true
+// import { flexbox } from "raam";
+// import { Box } from "./box";
+
+() => {
+  const { parent: stackParent, child: stackChild } = flexbox({
+    variant: "vStack",
+    gap: "1rem",
+  });
+
+  const { parent: wrapParent, child: wrapChild } = flexbox({
+    variant: "wrap",
+    gap: "1rem",
+  });
+
+  return (
+    <Box sx={{ ...stackParent(), padding: 3 }}>
+      <Heading as="h2" sx={stackChild({ index: 0 })}>
+        Tags
+      </Heading>
+
+      <Box sx={stackChild({ index: 1 })}>
+        <Box as="ul" sx={wrapParent()}>
+          {Array.from({ length: 8 }, (v, k) => k + 1).map((item, index) => (
+            <Box key={index} as="li" sx={wrapChild({ index })}>
+              <Link href={`#list-item-${item}`}>Tag {item}</Link>
+            </Box>
+          ))}
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+```
+
+[theme-ui]: https://theme-ui.com/

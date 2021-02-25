@@ -1,0 +1,33 @@
+{
+  "name": "@raam/core",
+  "version": "0.2.3",
+  "description": "Disclaimer: You should probably not consume this directly. Core style transformations for raam",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "microbundle --no-compress --tsconfig tsconfig.json",
+    "clean": "rimraf {dist,.rts2*}",
+    "dev": "yarn build -- watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joe-bell/raam.git"
+  },
+  "author": "Joe Bell <joe@joebell.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joe-bell/raam/issues"
+  },
+  "homepage": "https://github.com/joe-bell/raam#readme",
+  "bundlesize": [
+    {
+      "path": "./dist/**/*.js",
+      "maxSize": "1.5 kB"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+import Callout from "nextra-theme-docs/callout";
+
+# raam
+
+JavaScript style functions to quickly roll-your-own resilient layout components (not just for React.js).
+
+## Installation
+
+`npm i --save raam`  
+or  
+`yarn add raam`
+
+## Flexbox
+
+At the time of writing, "flex-`gap`" is only supported by newer versions of [Edge, Chrome and Firefox](https://caniuse.com/flexbox-gap).
+
+It's often the case to approach new CSS features with a `@supports` query, but unfortunately, this is [**not** an option we can take advantage of](https://github.com/w3c/csswg-drafts/issues/3559).
+
+`flexbox()` aims to address this "`gap`" in support, with a plain CSS polyfill powered by [custom properties](#how-it-works).
+
+At the root of your component, `flexbox({ ...options })` is called with your specified options.  
+This returns functional styles for:
+
+- `.parent()`
+- `.child()`
+
+```jsx live=true
+// import { flexbox } from "raam";
+
+() => {
+  const { parent, child } = flexbox({
+    gap: "1rem",
+  });
+
+  return (
+    <div style={parent()}>
+      {Array.from({ length: 3 }).map((item, index) => (
+        <div
+          key={index}
+          style={{
+            ...child({ index }),
+            backgroundColor: "var(--color-primary)",
+            color: "var(--color-white)",
+            padding: "0.5rem 1rem",
+          }}
+        >
+          Item {index + 1}
+        </div>
+      ))}
+    </div>
+  );
+};
+```
+
+### How It Works
+
+Under-the-hood, raam replaces gap with a set of custom properties to control parent and child margins. These are toggled off (back to `initial`) depending on the requirements of specific flex properties; a technique heavily inspired by [David Khourshid's "prop-and-lock"][prop-and-lock] technique.
+
+<Callout>
+  <abbr title="Work in Progress">
+    <strong>WIP</strong>
+  </abbr>
+  For example, when `flexWrap` is `nowrap` (i.e. 'stack'-based layouts) the negative
+  offset margin on the flex parent is toggled **off**.
+</Callout>
+
+In `nowrap` based layouts, margins are used in a single direction excluding the first-child.
+
+In `wrap` based layouts, negative margins are used on the outer component to counteract margins inside.  
+ It will **not** affect adjacent margins, **but** you will experience issues if you try to adjust it directly - instead consider wrapping the element.
+
+### Options
+
+| Name             | Type                           | Default  |
+| :--------------- | :----------------------------- | :------- |
+| `gap`            | `ResponsiveStyleValue`         | `1rem`   |
+| `variant`        | `wrap` \| `hStack` \| `vStack` | `hStack` |
+| `alignContent`   | `ResponsiveStyleValue`         |          |
+| `alignItems`     | `ResponsiveStyleValue`         |          |
+| `flexDirection`  | `ResponsiveStyleValue`         | `row`    |
+| `flexWrap`       | `ResponsiveStyleValue`         | `nowrap` |
+| `justifyContent` | `ResponsiveStyleValue`         |          |
+| `justifyItems`   | `ResponsiveStyleValue`         |          |
+
+#### `.child()`
+
+| Name         | Type                   | Default                                      | Description |
+| :----------- | :--------------------- | :------------------------------------------- | :---------- |
+| `index`\*    | `number`               | Used in place of `:*-child` pseudo selectors |
+| `flex`       | `ResponsiveStyleValue` | `0 0 auto`                                   |             |
+| `flexBasis`  | `ResponsiveStyleValue` |                                              |             |
+| `flexGrow`   | `ResponsiveStyleValue` |                                              |             |
+| `flexShrink` | `ResponsiveStyleValue` |                                              |             |
+
+### Types
+
+- `ResponsiveStyleValue`
+
+  Accepts either a single `value` for the style property's value, or an array of `value` or `{ "@media query": value }`.
+
+  For example, the following options are acceptable for `gap`:
+
+  - `gap: "2rem"`
+  - `gap: { initial: "2rem", "@media (min-width: 40em)": "1rem" }`

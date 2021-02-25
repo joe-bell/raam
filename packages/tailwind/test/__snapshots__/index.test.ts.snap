@@ -1,0 +1,2775 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flex returns nothing when disabled 1`] = `""`;
+
+exports[`flex returns utilities and responsive variants 1`] = `
+"[class='flex'], [class$=':flex'], [class*='flex '], [class*=':flex '] {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+} .flex-gap-0 {
+  --raam-fg-t: 0px;
+  --raam-fg-l: 0px;
+  --raam-fg-offset: calc(0px * -0.5);
+  --raam-fg: calc(0px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-0 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-0 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-1 {
+  --raam-fg-t: 0.25rem;
+  --raam-fg-l: 0.25rem;
+  --raam-fg-offset: calc(0.25rem * -0.5);
+  --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-1 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-1 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-2 {
+  --raam-fg-t: 0.5rem;
+  --raam-fg-l: 0.5rem;
+  --raam-fg-offset: calc(0.5rem * -0.5);
+  --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-2 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-2 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-3 {
+  --raam-fg-t: 0.75rem;
+  --raam-fg-l: 0.75rem;
+  --raam-fg-offset: calc(0.75rem * -0.5);
+  --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-3 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-3 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-4 {
+  --raam-fg-t: 1rem;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: calc(1rem * -0.5);
+  --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-4 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-4 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-5 {
+  --raam-fg-t: 1.25rem;
+  --raam-fg-l: 1.25rem;
+  --raam-fg-offset: calc(1.25rem * -0.5);
+  --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-6 {
+  --raam-fg-t: 1.5rem;
+  --raam-fg-l: 1.5rem;
+  --raam-fg-offset: calc(1.5rem * -0.5);
+  --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-6 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-6 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-7 {
+  --raam-fg-t: 1.75rem;
+  --raam-fg-l: 1.75rem;
+  --raam-fg-offset: calc(1.75rem * -0.5);
+  --raam-fg: calc(1.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-7 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-7 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-8 {
+  --raam-fg-t: 2rem;
+  --raam-fg-l: 2rem;
+  --raam-fg-offset: calc(2rem * -0.5);
+  --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-8 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-8 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-9 {
+  --raam-fg-t: 2.25rem;
+  --raam-fg-l: 2.25rem;
+  --raam-fg-offset: calc(2.25rem * -0.5);
+  --raam-fg: calc(2.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-9 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-9 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-10 {
+  --raam-fg-t: 2.5rem;
+  --raam-fg-l: 2.5rem;
+  --raam-fg-offset: calc(2.5rem * -0.5);
+  --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-10 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-10 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-11 {
+  --raam-fg-t: 2.75rem;
+  --raam-fg-l: 2.75rem;
+  --raam-fg-offset: calc(2.75rem * -0.5);
+  --raam-fg: calc(2.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-11 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-11 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-12 {
+  --raam-fg-t: 3rem;
+  --raam-fg-l: 3rem;
+  --raam-fg-offset: calc(3rem * -0.5);
+  --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-12 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-12 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-14 {
+  --raam-fg-t: 3.5rem;
+  --raam-fg-l: 3.5rem;
+  --raam-fg-offset: calc(3.5rem * -0.5);
+  --raam-fg: calc(3.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-14 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-14 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-16 {
+  --raam-fg-t: 4rem;
+  --raam-fg-l: 4rem;
+  --raam-fg-offset: calc(4rem * -0.5);
+  --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-16 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-16 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-20 {
+  --raam-fg-t: 5rem;
+  --raam-fg-l: 5rem;
+  --raam-fg-offset: calc(5rem * -0.5);
+  --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-20 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-20 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-24 {
+  --raam-fg-t: 6rem;
+  --raam-fg-l: 6rem;
+  --raam-fg-offset: calc(6rem * -0.5);
+  --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-24 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-24 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-28 {
+  --raam-fg-t: 7rem;
+  --raam-fg-l: 7rem;
+  --raam-fg-offset: calc(7rem * -0.5);
+  --raam-fg: calc(7rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-28 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-28 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-32 {
+  --raam-fg-t: 8rem;
+  --raam-fg-l: 8rem;
+  --raam-fg-offset: calc(8rem * -0.5);
+  --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-32 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-32 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-36 {
+  --raam-fg-t: 9rem;
+  --raam-fg-l: 9rem;
+  --raam-fg-offset: calc(9rem * -0.5);
+  --raam-fg: calc(9rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-36 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-36 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-40 {
+  --raam-fg-t: 10rem;
+  --raam-fg-l: 10rem;
+  --raam-fg-offset: calc(10rem * -0.5);
+  --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-40 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-40 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-44 {
+  --raam-fg-t: 11rem;
+  --raam-fg-l: 11rem;
+  --raam-fg-offset: calc(11rem * -0.5);
+  --raam-fg: calc(11rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-44 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-44 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-48 {
+  --raam-fg-t: 12rem;
+  --raam-fg-l: 12rem;
+  --raam-fg-offset: calc(12rem * -0.5);
+  --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-48 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-48 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-52 {
+  --raam-fg-t: 13rem;
+  --raam-fg-l: 13rem;
+  --raam-fg-offset: calc(13rem * -0.5);
+  --raam-fg: calc(13rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-52 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-52 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-56 {
+  --raam-fg-t: 14rem;
+  --raam-fg-l: 14rem;
+  --raam-fg-offset: calc(14rem * -0.5);
+  --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-56 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-56 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-60 {
+  --raam-fg-t: 15rem;
+  --raam-fg-l: 15rem;
+  --raam-fg-offset: calc(15rem * -0.5);
+  --raam-fg: calc(15rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-60 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-60 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-64 {
+  --raam-fg-t: 16rem;
+  --raam-fg-l: 16rem;
+  --raam-fg-offset: calc(16rem * -0.5);
+  --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-64 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-64 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-72 {
+  --raam-fg-t: 18rem;
+  --raam-fg-l: 18rem;
+  --raam-fg-offset: calc(18rem * -0.5);
+  --raam-fg: calc(18rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-72 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-72 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-80 {
+  --raam-fg-t: 20rem;
+  --raam-fg-l: 20rem;
+  --raam-fg-offset: calc(20rem * -0.5);
+  --raam-fg: calc(20rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-80 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-80 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-96 {
+  --raam-fg-t: 24rem;
+  --raam-fg-l: 24rem;
+  --raam-fg-offset: calc(24rem * -0.5);
+  --raam-fg: calc(24rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-96 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-96 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-px {
+  --raam-fg-t: 1px;
+  --raam-fg-l: 1px;
+  --raam-fg-offset: calc(1px * -0.5);
+  --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-px > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-px > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-0.\\\\35 {
+  --raam-fg-t: 0.125rem;
+  --raam-fg-l: 0.125rem;
+  --raam-fg-offset: calc(0.125rem * -0.5);
+  --raam-fg: calc(0.125rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-0.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-0.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-1.\\\\35 {
+  --raam-fg-t: 0.375rem;
+  --raam-fg-l: 0.375rem;
+  --raam-fg-offset: calc(0.375rem * -0.5);
+  --raam-fg: calc(0.375rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-1.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-1.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-2.\\\\35 {
+  --raam-fg-t: 0.625rem;
+  --raam-fg-l: 0.625rem;
+  --raam-fg-offset: calc(0.625rem * -0.5);
+  --raam-fg: calc(0.625rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-2.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-2.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-3.\\\\35 {
+  --raam-fg-t: 0.875rem;
+  --raam-fg-l: 0.875rem;
+  --raam-fg-offset: calc(0.875rem * -0.5);
+  --raam-fg: calc(0.875rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-3.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-3.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-row {
+  --raam-fg-t: initial;
+  flex-direction: row;
+} .flex-row-reverse {
+  --raam-fg-t: initial;
+  flex-direction: row-reverse;
+} .flex-col {
+  --raam-fg-l: initial;
+  flex-direction: column;
+} .flex-col-reverse {
+  --raam-fg-l: initial;
+  flex-direction: column-reverse;
+} .flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap;
+} .flex-wrap-reverse {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
+} .flex-no-wrap {
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  flex-wrap: nowrap;
+} @media (min-width: 640px) {
+  .sm\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .sm\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .sm\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .sm\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .sm\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .sm\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .sm\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 768px) {
+  .md\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .md\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .md\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .md\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .md\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .md\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .md\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1024px) {
+  .lg\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .lg\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .lg\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .lg\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .lg\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .lg\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .lg\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1280px) {
+  .xl\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .xl\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .xl\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .xl\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .xl\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .xl\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .xl\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1536px) {
+  .\\\\32xl\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .\\\\32xl\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .\\\\32xl\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .\\\\32xl\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+}"
+`;
+
+exports[`flex returns utilities and responsive variants 2`] = `
+"[class='flex'], [class$=':flex'], [class*='flex '], [class*=':flex '] {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+} .flex-gap-0 {
+  --raam-fg-t: 0px;
+  --raam-fg-l: 0px;
+  --raam-fg-offset: calc(0px * -0.5);
+  --raam-fg: calc(0px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-0 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-0 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-1 {
+  --raam-fg-t: 0.25rem;
+  --raam-fg-l: 0.25rem;
+  --raam-fg-offset: calc(0.25rem * -0.5);
+  --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-1 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-1 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-2 {
+  --raam-fg-t: 0.5rem;
+  --raam-fg-l: 0.5rem;
+  --raam-fg-offset: calc(0.5rem * -0.5);
+  --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-2 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-2 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-3 {
+  --raam-fg-t: 0.75rem;
+  --raam-fg-l: 0.75rem;
+  --raam-fg-offset: calc(0.75rem * -0.5);
+  --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-3 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-3 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-4 {
+  --raam-fg-t: 1rem;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: calc(1rem * -0.5);
+  --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-4 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-4 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-5 {
+  --raam-fg-t: 1.25rem;
+  --raam-fg-l: 1.25rem;
+  --raam-fg-offset: calc(1.25rem * -0.5);
+  --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-6 {
+  --raam-fg-t: 1.5rem;
+  --raam-fg-l: 1.5rem;
+  --raam-fg-offset: calc(1.5rem * -0.5);
+  --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-6 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-6 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-7 {
+  --raam-fg-t: 1.75rem;
+  --raam-fg-l: 1.75rem;
+  --raam-fg-offset: calc(1.75rem * -0.5);
+  --raam-fg: calc(1.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-7 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-7 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-8 {
+  --raam-fg-t: 2rem;
+  --raam-fg-l: 2rem;
+  --raam-fg-offset: calc(2rem * -0.5);
+  --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-8 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-8 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-9 {
+  --raam-fg-t: 2.25rem;
+  --raam-fg-l: 2.25rem;
+  --raam-fg-offset: calc(2.25rem * -0.5);
+  --raam-fg: calc(2.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-9 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-9 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-10 {
+  --raam-fg-t: 2.5rem;
+  --raam-fg-l: 2.5rem;
+  --raam-fg-offset: calc(2.5rem * -0.5);
+  --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-10 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-10 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-11 {
+  --raam-fg-t: 2.75rem;
+  --raam-fg-l: 2.75rem;
+  --raam-fg-offset: calc(2.75rem * -0.5);
+  --raam-fg: calc(2.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-11 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-11 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-12 {
+  --raam-fg-t: 3rem;
+  --raam-fg-l: 3rem;
+  --raam-fg-offset: calc(3rem * -0.5);
+  --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-12 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-12 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-14 {
+  --raam-fg-t: 3.5rem;
+  --raam-fg-l: 3.5rem;
+  --raam-fg-offset: calc(3.5rem * -0.5);
+  --raam-fg: calc(3.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-14 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-14 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-16 {
+  --raam-fg-t: 4rem;
+  --raam-fg-l: 4rem;
+  --raam-fg-offset: calc(4rem * -0.5);
+  --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-16 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-16 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-20 {
+  --raam-fg-t: 5rem;
+  --raam-fg-l: 5rem;
+  --raam-fg-offset: calc(5rem * -0.5);
+  --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-20 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-20 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-24 {
+  --raam-fg-t: 6rem;
+  --raam-fg-l: 6rem;
+  --raam-fg-offset: calc(6rem * -0.5);
+  --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-24 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-24 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-28 {
+  --raam-fg-t: 7rem;
+  --raam-fg-l: 7rem;
+  --raam-fg-offset: calc(7rem * -0.5);
+  --raam-fg: calc(7rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-28 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-28 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-32 {
+  --raam-fg-t: 8rem;
+  --raam-fg-l: 8rem;
+  --raam-fg-offset: calc(8rem * -0.5);
+  --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-32 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-32 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-36 {
+  --raam-fg-t: 9rem;
+  --raam-fg-l: 9rem;
+  --raam-fg-offset: calc(9rem * -0.5);
+  --raam-fg: calc(9rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-36 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-36 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-40 {
+  --raam-fg-t: 10rem;
+  --raam-fg-l: 10rem;
+  --raam-fg-offset: calc(10rem * -0.5);
+  --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-40 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-40 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-44 {
+  --raam-fg-t: 11rem;
+  --raam-fg-l: 11rem;
+  --raam-fg-offset: calc(11rem * -0.5);
+  --raam-fg: calc(11rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-44 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-44 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-48 {
+  --raam-fg-t: 12rem;
+  --raam-fg-l: 12rem;
+  --raam-fg-offset: calc(12rem * -0.5);
+  --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-48 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-48 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-52 {
+  --raam-fg-t: 13rem;
+  --raam-fg-l: 13rem;
+  --raam-fg-offset: calc(13rem * -0.5);
+  --raam-fg: calc(13rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-52 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-52 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-56 {
+  --raam-fg-t: 14rem;
+  --raam-fg-l: 14rem;
+  --raam-fg-offset: calc(14rem * -0.5);
+  --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-56 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-56 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-60 {
+  --raam-fg-t: 15rem;
+  --raam-fg-l: 15rem;
+  --raam-fg-offset: calc(15rem * -0.5);
+  --raam-fg: calc(15rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-60 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-60 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-64 {
+  --raam-fg-t: 16rem;
+  --raam-fg-l: 16rem;
+  --raam-fg-offset: calc(16rem * -0.5);
+  --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-64 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-64 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-72 {
+  --raam-fg-t: 18rem;
+  --raam-fg-l: 18rem;
+  --raam-fg-offset: calc(18rem * -0.5);
+  --raam-fg: calc(18rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-72 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-72 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-80 {
+  --raam-fg-t: 20rem;
+  --raam-fg-l: 20rem;
+  --raam-fg-offset: calc(20rem * -0.5);
+  --raam-fg: calc(20rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-80 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-80 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-96 {
+  --raam-fg-t: 24rem;
+  --raam-fg-l: 24rem;
+  --raam-fg-offset: calc(24rem * -0.5);
+  --raam-fg: calc(24rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-96 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-96 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-px {
+  --raam-fg-t: 1px;
+  --raam-fg-l: 1px;
+  --raam-fg-offset: calc(1px * -0.5);
+  --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-px > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-px > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-0.\\\\35 {
+  --raam-fg-t: 0.125rem;
+  --raam-fg-l: 0.125rem;
+  --raam-fg-offset: calc(0.125rem * -0.5);
+  --raam-fg: calc(0.125rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-0.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-0.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-1.\\\\35 {
+  --raam-fg-t: 0.375rem;
+  --raam-fg-l: 0.375rem;
+  --raam-fg-offset: calc(0.375rem * -0.5);
+  --raam-fg: calc(0.375rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-1.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-1.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-2.\\\\35 {
+  --raam-fg-t: 0.625rem;
+  --raam-fg-l: 0.625rem;
+  --raam-fg-offset: calc(0.625rem * -0.5);
+  --raam-fg: calc(0.625rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-2.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-2.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-gap-3.\\\\35 {
+  --raam-fg-t: 0.875rem;
+  --raam-fg-l: 0.875rem;
+  --raam-fg-offset: calc(0.875rem * -0.5);
+  --raam-fg: calc(0.875rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .flex-gap-3.\\\\35 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .flex-gap-3.\\\\35 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .flex-row {
+  --raam-fg-t: initial;
+  flex-direction: row;
+} .flex-row-reverse {
+  --raam-fg-t: initial;
+  flex-direction: row-reverse;
+} .flex-col {
+  --raam-fg-l: initial;
+  flex-direction: column;
+} .flex-col-reverse {
+  --raam-fg-l: initial;
+  flex-direction: column-reverse;
+} .flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap;
+} .flex-wrap-reverse {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
+} .flex-no-wrap {
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  flex-wrap: nowrap;
+} @media (min-width: 640px) {
+  .sm\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .sm\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .sm\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .sm\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .sm\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .sm\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .sm\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 768px) {
+  .md\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .md\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .md\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .md\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .md\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .md\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .md\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1024px) {
+  .lg\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .lg\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .lg\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .lg\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .lg\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .lg\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .lg\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1280px) {
+  .xl\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .xl\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .xl\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .xl\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .xl\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .xl\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .xl\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1536px) {
+  .\\\\32xl\\\\:flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .\\\\32xl\\\\:flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .\\\\32xl\\\\:flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .\\\\32xl\\\\:flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .\\\\32xl\\\\:flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+}"
+`;
+
+exports[`flex returns with prefix 1`] = `
+"[class='tw-flex'], [class$=':tw-flex'], [class*='tw-flex '], [class*=':tw-flex '] {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+} .tw-flex-gap-0 {
+  --raam-fg-t: 0px;
+  --raam-fg-l: 0px;
+  --raam-fg-offset: calc(0px * -0.5);
+  --raam-fg: calc(0px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-0 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-0 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-1 {
+  --raam-fg-t: 0.25rem;
+  --raam-fg-l: 0.25rem;
+  --raam-fg-offset: calc(0.25rem * -0.5);
+  --raam-fg: calc(0.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-1 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-1 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-2 {
+  --raam-fg-t: 0.5rem;
+  --raam-fg-l: 0.5rem;
+  --raam-fg-offset: calc(0.5rem * -0.5);
+  --raam-fg: calc(0.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-2 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-2 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-3 {
+  --raam-fg-t: 0.75rem;
+  --raam-fg-l: 0.75rem;
+  --raam-fg-offset: calc(0.75rem * -0.5);
+  --raam-fg: calc(0.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-3 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-3 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-4 {
+  --raam-fg-t: 1rem;
+  --raam-fg-l: 1rem;
+  --raam-fg-offset: calc(1rem * -0.5);
+  --raam-fg: calc(1rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-4 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-4 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-5 {
+  --raam-fg-t: 1.25rem;
+  --raam-fg-l: 1.25rem;
+  --raam-fg-offset: calc(1.25rem * -0.5);
+  --raam-fg: calc(1.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-6 {
+  --raam-fg-t: 1.5rem;
+  --raam-fg-l: 1.5rem;
+  --raam-fg-offset: calc(1.5rem * -0.5);
+  --raam-fg: calc(1.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-6 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-6 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-7 {
+  --raam-fg-t: 1.75rem;
+  --raam-fg-l: 1.75rem;
+  --raam-fg-offset: calc(1.75rem * -0.5);
+  --raam-fg: calc(1.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-7 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-7 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-8 {
+  --raam-fg-t: 2rem;
+  --raam-fg-l: 2rem;
+  --raam-fg-offset: calc(2rem * -0.5);
+  --raam-fg: calc(2rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-8 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-8 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-9 {
+  --raam-fg-t: 2.25rem;
+  --raam-fg-l: 2.25rem;
+  --raam-fg-offset: calc(2.25rem * -0.5);
+  --raam-fg: calc(2.25rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-9 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-9 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-10 {
+  --raam-fg-t: 2.5rem;
+  --raam-fg-l: 2.5rem;
+  --raam-fg-offset: calc(2.5rem * -0.5);
+  --raam-fg: calc(2.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-10 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-10 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-11 {
+  --raam-fg-t: 2.75rem;
+  --raam-fg-l: 2.75rem;
+  --raam-fg-offset: calc(2.75rem * -0.5);
+  --raam-fg: calc(2.75rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-11 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-11 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-12 {
+  --raam-fg-t: 3rem;
+  --raam-fg-l: 3rem;
+  --raam-fg-offset: calc(3rem * -0.5);
+  --raam-fg: calc(3rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-12 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-12 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-14 {
+  --raam-fg-t: 3.5rem;
+  --raam-fg-l: 3.5rem;
+  --raam-fg-offset: calc(3.5rem * -0.5);
+  --raam-fg: calc(3.5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-14 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-14 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-16 {
+  --raam-fg-t: 4rem;
+  --raam-fg-l: 4rem;
+  --raam-fg-offset: calc(4rem * -0.5);
+  --raam-fg: calc(4rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-16 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-16 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-20 {
+  --raam-fg-t: 5rem;
+  --raam-fg-l: 5rem;
+  --raam-fg-offset: calc(5rem * -0.5);
+  --raam-fg: calc(5rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-20 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-20 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-24 {
+  --raam-fg-t: 6rem;
+  --raam-fg-l: 6rem;
+  --raam-fg-offset: calc(6rem * -0.5);
+  --raam-fg: calc(6rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-24 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-24 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-28 {
+  --raam-fg-t: 7rem;
+  --raam-fg-l: 7rem;
+  --raam-fg-offset: calc(7rem * -0.5);
+  --raam-fg: calc(7rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-28 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-28 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-32 {
+  --raam-fg-t: 8rem;
+  --raam-fg-l: 8rem;
+  --raam-fg-offset: calc(8rem * -0.5);
+  --raam-fg: calc(8rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-32 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-32 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-36 {
+  --raam-fg-t: 9rem;
+  --raam-fg-l: 9rem;
+  --raam-fg-offset: calc(9rem * -0.5);
+  --raam-fg: calc(9rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-36 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-36 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-40 {
+  --raam-fg-t: 10rem;
+  --raam-fg-l: 10rem;
+  --raam-fg-offset: calc(10rem * -0.5);
+  --raam-fg: calc(10rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-40 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-40 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-44 {
+  --raam-fg-t: 11rem;
+  --raam-fg-l: 11rem;
+  --raam-fg-offset: calc(11rem * -0.5);
+  --raam-fg: calc(11rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-44 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-44 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-48 {
+  --raam-fg-t: 12rem;
+  --raam-fg-l: 12rem;
+  --raam-fg-offset: calc(12rem * -0.5);
+  --raam-fg: calc(12rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-48 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-48 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-52 {
+  --raam-fg-t: 13rem;
+  --raam-fg-l: 13rem;
+  --raam-fg-offset: calc(13rem * -0.5);
+  --raam-fg: calc(13rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-52 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-52 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-56 {
+  --raam-fg-t: 14rem;
+  --raam-fg-l: 14rem;
+  --raam-fg-offset: calc(14rem * -0.5);
+  --raam-fg: calc(14rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-56 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-56 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-60 {
+  --raam-fg-t: 15rem;
+  --raam-fg-l: 15rem;
+  --raam-fg-offset: calc(15rem * -0.5);
+  --raam-fg: calc(15rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-60 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-60 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-64 {
+  --raam-fg-t: 16rem;
+  --raam-fg-l: 16rem;
+  --raam-fg-offset: calc(16rem * -0.5);
+  --raam-fg: calc(16rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-64 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-64 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-72 {
+  --raam-fg-t: 18rem;
+  --raam-fg-l: 18rem;
+  --raam-fg-offset: calc(18rem * -0.5);
+  --raam-fg: calc(18rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-72 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-72 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-80 {
+  --raam-fg-t: 20rem;
+  --raam-fg-l: 20rem;
+  --raam-fg-offset: calc(20rem * -0.5);
+  --raam-fg: calc(20rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-80 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-80 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-96 {
+  --raam-fg-t: 24rem;
+  --raam-fg-l: 24rem;
+  --raam-fg-offset: calc(24rem * -0.5);
+  --raam-fg: calc(24rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-96 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-96 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-px {
+  --raam-fg-t: 1px;
+  --raam-fg-l: 1px;
+  --raam-fg-offset: calc(1px * -0.5);
+  --raam-fg: calc(1px * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-px > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-px > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-0.tw-5 {
+  --raam-fg-t: 0.125rem;
+  --raam-fg-l: 0.125rem;
+  --raam-fg-offset: calc(0.125rem * -0.5);
+  --raam-fg: calc(0.125rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-0.tw-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-0.tw-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-1.tw-5 {
+  --raam-fg-t: 0.375rem;
+  --raam-fg-l: 0.375rem;
+  --raam-fg-offset: calc(0.375rem * -0.5);
+  --raam-fg: calc(0.375rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-1.tw-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-1.tw-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-2.tw-5 {
+  --raam-fg-t: 0.625rem;
+  --raam-fg-l: 0.625rem;
+  --raam-fg-offset: calc(0.625rem * -0.5);
+  --raam-fg: calc(0.625rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-2.tw-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-2.tw-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-gap-3.tw-5 {
+  --raam-fg-t: 0.875rem;
+  --raam-fg-l: 0.875rem;
+  --raam-fg-offset: calc(0.875rem * -0.5);
+  --raam-fg: calc(0.875rem * 0.5);
+  margin: var(--raam-fg-offset, initial);
+} .tw-flex-gap-3.tw-5 > *:first-child {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, initial);
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, initial);
+} .tw-flex-gap-3.tw-5 > *:not(:first-child) {
+  box-sizing: border-box;
+  min-width: 0;
+  margin-top: var(--raam-fg, var(--raam-fg-t, initial));
+  margin-right: var(--raam-fg, initial);
+  margin-bottom: var(--raam-fg, initial);
+  margin-left: var(--raam-fg, var(--raam-fg-l, initial));
+} .tw-flex-row {
+  --raam-fg-t: initial;
+  flex-direction: row;
+} .tw-flex-row-reverse {
+  --raam-fg-t: initial;
+  flex-direction: row-reverse;
+} .tw-flex-col {
+  --raam-fg-l: initial;
+  flex-direction: column;
+} .tw-flex-col-reverse {
+  --raam-fg-l: initial;
+  flex-direction: column-reverse;
+} .tw-flex-wrap {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap;
+} .tw-flex-wrap-reverse {
+  --raam-fg-t: initial;
+  --raam-fg-l: initial;
+  flex-wrap: wrap-reverse;
+} .tw-flex-no-wrap {
+  --raam-fg-offset: initial;
+  --raam-fg: initial;
+  flex-wrap: nowrap;
+} @media (min-width: 640px) {
+  .sm\\\\:tw-flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .sm\\\\:tw-flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .sm\\\\:tw-flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .sm\\\\:tw-flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .sm\\\\:tw-flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .sm\\\\:tw-flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .sm\\\\:tw-flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 768px) {
+  .md\\\\:tw-flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .md\\\\:tw-flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .md\\\\:tw-flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .md\\\\:tw-flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .md\\\\:tw-flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .md\\\\:tw-flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .md\\\\:tw-flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1024px) {
+  .lg\\\\:tw-flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .lg\\\\:tw-flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .lg\\\\:tw-flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .lg\\\\:tw-flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .lg\\\\:tw-flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .lg\\\\:tw-flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .lg\\\\:tw-flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1280px) {
+  .xl\\\\:tw-flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .xl\\\\:tw-flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .xl\\\\:tw-flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .xl\\\\:tw-flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .xl\\\\:tw-flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .xl\\\\:tw-flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .xl\\\\:tw-flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+} @media (min-width: 1536px) {
+  .\\\\32xl\\\\:tw-flex-row {
+    --raam-fg-t: initial;
+    flex-direction: row;
+  }
+
+  .\\\\32xl\\\\:tw-flex-row-reverse {
+    --raam-fg-t: initial;
+    flex-direction: row-reverse;
+  }
+
+  .\\\\32xl\\\\:tw-flex-col {
+    --raam-fg-l: initial;
+    flex-direction: column;
+  }
+
+  .\\\\32xl\\\\:tw-flex-col-reverse {
+    --raam-fg-l: initial;
+    flex-direction: column-reverse;
+  }
+
+  .\\\\32xl\\\\:tw-flex-wrap {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap;
+  }
+
+  .\\\\32xl\\\\:tw-flex-wrap-reverse {
+    --raam-fg-t: initial;
+    --raam-fg-l: initial;
+    flex-wrap: wrap-reverse;
+  }
+
+  .\\\\32xl\\\\:tw-flex-no-wrap {
+    --raam-fg-offset: initial;
+    --raam-fg: initial;
+    flex-wrap: nowrap;
+  }
+}"
+`;

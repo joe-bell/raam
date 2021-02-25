@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "docs",
+  "version": "0.2.3",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "vercel": "yarn --cwd ../ build",
+    "clean": "rimraf {.next,out}",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@raam/stitches": "^0.2.3",
+    "@stitches/react": "0.1.0-canary.7",
+    "raam": "^0.2.3",
+    "glob": "7.1.6",
+    "next": "10.0.7",
+    "next-google-fonts": "1.2.1",
+    "nextra": "0.4.0",
+    "nextra-theme-docs": "1.1.1",
+    "raam": "^0.2.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-live": "2.2.3"
+  },
+  "devDependencies": {
+    "@raam/tailwind": "^0.2.3",
+    "autoprefixer": "10.2.4",
+    "postcss": "8.2.6",
+    "tailwindcss": "2.0.3"
+  }
+}
