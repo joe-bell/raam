@@ -1,3 +1,7 @@
+> ⚠️ **Deprecated**
+>
+> Flexbox `gap` is relatively [well-supported](https://caniuse.com/flexbox-gap) now, you should use it instead.
+
 > **raam** (estonian) ˈrɑːm _**n**._ frame.
 
 **Beautifully boring cosmetic-free [React.js][reactjs] components for structure and layout.**
