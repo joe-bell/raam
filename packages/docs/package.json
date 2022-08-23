@@ -8,7 +8,8 @@
     "clean": "rimraf {.next,out}",
     "lint:ts": "npx tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next start"
+    "start": "next start",
+    "vercel": "yarn --cwd ../../ build && yarn build"
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.18",

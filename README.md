@@ -1,3 +1,7 @@
+> ⚠️ **Deprecated**
+>
+> Flexbox `gap` is relatively [well-supported](https://caniuse.com/flexbox-gap) now, you should use it instead.
+
 <p align="center">
   <a href="https://raam.joebell.co.uk" rel="nofollow">
     <img src="packages/docs/public/img/logo-readme.png" alt="raam" title="raam" width="320">
